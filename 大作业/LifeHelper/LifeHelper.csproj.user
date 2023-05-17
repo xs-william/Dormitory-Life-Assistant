@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Form\StuComplaint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form\StudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form\StuLifePay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form\StuRepair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form\StuMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form\StuTreeHole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form\StuPunch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form\StuMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form\Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="StuTrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

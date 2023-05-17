@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "oK8njiQTsD3blgjsJSdRg0u/WBGEyWeLx9bXbk+Kq85Dg7NGfV3sbwdOgRf75HHrkGGip2el9ZwajfFCTFcVuA==",
+  "success": true,
+  "projectFilePath": "E:\\大作业\\LifeHelper\\LifeHelper.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\86151\\.nuget\\packages\\sunnyui\\3.3.6\\sunnyui.3.3.6.nupkg.sha512",
+    "C:\\Users\\86151\\.nuget\\packages\\sunnyui.common\\3.3.2\\sunnyui.common.3.3.2.nupkg.sha512"
+  ],
+  "logs": []
+}
