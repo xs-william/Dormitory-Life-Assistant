@@ -73,14 +73,12 @@
             // 
             // uiAvatar1
             // 
-            uiAvatar1.FillColor = Color.Transparent;
             uiAvatar1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
             uiAvatar1.Location = new Point(332, 268);
             uiAvatar1.MinimumSize = new Size(1, 1);
             uiAvatar1.Name = "uiAvatar1";
             uiAvatar1.Shape = Sunny.UI.UIShape.Square;
             uiAvatar1.Size = new Size(110, 110);
-            uiAvatar1.Style = Sunny.UI.UIStyle.Custom;
             uiAvatar1.Symbol = 61846;
             uiAvatar1.SymbolSize = 110;
             uiAvatar1.TabIndex = 3;
@@ -107,7 +105,7 @@
             Controls.Add(uiLine1);
             Controls.Add(complaint);
             Name = "StuComplaint";
-            PageIndex = 1007;
+            PageIndex = 1008;
             Text = "Complaint";
             ResumeLayout(false);
         }

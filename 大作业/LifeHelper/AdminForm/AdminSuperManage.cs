@@ -11,16 +11,11 @@ using System.Windows.Forms;
 
 namespace LifeHelper
 {
-    public partial class StuTreeHole : UIPage
+    public partial class AdminSuperManage : UIPage
     {
-        public StuTreeHole()
+        public AdminSuperManage()
         {
             InitializeComponent();
-        }
-
-        private void uiTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

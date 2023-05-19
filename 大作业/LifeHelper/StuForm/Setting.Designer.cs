@@ -145,7 +145,7 @@
             Controls.Add(uiGroupBox2);
             Controls.Add(uiGroupBox1);
             Name = "Setting";
-            PageIndex = 1008;
+            PageIndex = 1009;
             Text = "Setting";
             uiGroupBox2.ResumeLayout(false);
             uiGroupBox1.ResumeLayout(false);

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\大作业\\LifeHelper\\LifeHelper.csproj": {}
+    "E:\\Documents\\GitHub\\-\\大作业\\LifeHelper\\LifeHelper.csproj": {}
   },
   "projects": {
-    "E:\\大作业\\LifeHelper\\LifeHelper.csproj": {
+    "E:\\Documents\\GitHub\\-\\大作业\\LifeHelper\\LifeHelper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\大作业\\LifeHelper\\LifeHelper.csproj",
+        "projectUniqueName": "E:\\Documents\\GitHub\\-\\大作业\\LifeHelper\\LifeHelper.csproj",
         "projectName": "LifeHelper",
-        "projectPath": "E:\\大作业\\LifeHelper\\LifeHelper.csproj",
+        "projectPath": "E:\\Documents\\GitHub\\-\\大作业\\LifeHelper\\LifeHelper.csproj",
         "packagesPath": "C:\\Users\\86151\\.nuget\\packages\\",
-        "outputPath": "E:\\大作业\\LifeHelper\\obj\\",
+        "outputPath": "E:\\Documents\\GitHub\\-\\大作业\\LifeHelper\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\86151\\AppData\\Roaming\\NuGet\\NuGet.Config",
