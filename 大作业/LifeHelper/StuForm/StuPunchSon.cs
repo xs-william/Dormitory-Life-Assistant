@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sunny.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,16 +8,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Sunny;
-using Sunny.UI;
 
 namespace LifeHelper
 {
-    public partial class StuTrade : UIPage
+    public partial class StuPunchSon : UIForm
     {
-        public StuTrade()
+        public StuPunchSon()
         {
             InitializeComponent();
+        }
+
+        private void uiButton3_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.No;
         }
     }
 }

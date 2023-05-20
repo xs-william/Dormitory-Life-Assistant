@@ -11,27 +11,17 @@ using System.Windows.Forms;
 
 namespace LifeHelper
 {
-    public partial class stuRepair : UIPage
+    public partial class StuRepairSon : UIForm
     {
-        public stuRepair()
+        public StuRepairSon()
         {
             InitializeComponent();
+            uiAvatar1.FillColor = Color.Transparent;
         }
 
         private void uiButton1_Click(object sender, EventArgs e)
         {
-            StuRepairSon stuRepairSon = new StuRepairSon();
-            try
-            {
-                if (stuRepairSon.ShowDialog() == DialogResult.OK)
-                {
-
-                }
-            }
-            catch (Exception e2)
-            {
-                MessageBox.Show(e2.Message);
-            }
+            DialogResult = DialogResult.No;
         }
     }
 }

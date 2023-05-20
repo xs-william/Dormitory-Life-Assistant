@@ -1,6 +1,6 @@
 ﻿namespace LifeHelper
 {
-    partial class FCustomMain
+    partial class StudentForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FCustomMain));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentForm));
             uiNavBar1 = new Sunny.UI.UINavBar();
             uiSmoothLabel1 = new Sunny.UI.UISmoothLabel();
             uiAvatar1 = new Sunny.UI.UIAvatar();
@@ -120,14 +120,14 @@
             tabPage1.Text = "tabPage1";
             tabPage1.UseVisualStyleBackColor = true;
             // 
-            // FCustomMain
+            // StudentForm
             // 
             AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(1140, 627);
             Controls.Add(MainContainer);
             Controls.Add(Choice);
             Controls.Add(uiNavBar1);
-            Name = "FCustomMain";
+            Name = "StudentForm";
             Padding = new Padding(2, 36, 2, 2);
             ShowDragStretch = true;
             ShowRadius = false;

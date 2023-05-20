@@ -17,5 +17,25 @@ namespace LifeHelper
         {
             InitializeComponent();
         }
+
+        private void uiDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //点击button按钮事件
+            if (uiDataGridView1.Columns[e.ColumnIndex].Name == "Punch" && e.RowIndex >= 0)
+            {
+                StuPunchSon stuPunchSon = new StuPunchSon();
+                try
+                {
+                    if (stuPunchSon.ShowDialog() == DialogResult.OK)
+                    {
+
+                    }
+                }
+                catch (Exception e2)
+                {
+                    MessageBox.Show(e2.Message);
+                }
+            }
+        }
     }
 }

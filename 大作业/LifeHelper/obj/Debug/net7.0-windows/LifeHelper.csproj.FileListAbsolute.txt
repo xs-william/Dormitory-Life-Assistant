@@ -37,7 +37,6 @@ E:\Documents\GitHub\-\大作业\LifeHelper\bin\Debug\net7.0-windows\SunnyUI.Comm
 E:\Documents\GitHub\-\大作业\LifeHelper\obj\Debug\net7.0-windows\LifeHelper.csproj.AssemblyReference.cache
 E:\Documents\GitHub\-\大作业\LifeHelper\obj\Debug\net7.0-windows\LifeHelper.Setting.resources
 E:\Documents\GitHub\-\大作业\LifeHelper\obj\Debug\net7.0-windows\LifeHelper.StuComplaint.resources
-E:\Documents\GitHub\-\大作业\LifeHelper\obj\Debug\net7.0-windows\LifeHelper.FCustomMain.resources
 E:\Documents\GitHub\-\大作业\LifeHelper\obj\Debug\net7.0-windows\LifeHelper.StuLifePay.resources
 E:\Documents\GitHub\-\大作业\LifeHelper\obj\Debug\net7.0-windows\LifeHelper.stuMain.resources
 E:\Documents\GitHub\-\大作业\LifeHelper\obj\Debug\net7.0-windows\LifeHelper.StuMessage.resources
@@ -45,7 +44,6 @@ E:\Documents\GitHub\-\大作业\LifeHelper\obj\Debug\net7.0-windows\LifeHelper.S
 E:\Documents\GitHub\-\大作业\LifeHelper\obj\Debug\net7.0-windows\LifeHelper.stuRepair.resources
 E:\Documents\GitHub\-\大作业\LifeHelper\obj\Debug\net7.0-windows\LifeHelper.StuTreeHole.resources
 E:\Documents\GitHub\-\大作业\LifeHelper\obj\Debug\net7.0-windows\LifeHelper.Properties.Resources.resources
-E:\Documents\GitHub\-\大作业\LifeHelper\obj\Debug\net7.0-windows\LifeHelper.StuTrade.resources
 E:\Documents\GitHub\-\大作业\LifeHelper\obj\Debug\net7.0-windows\LifeHelper.csproj.GenerateResource.cache
 E:\Documents\GitHub\-\大作业\LifeHelper\obj\Debug\net7.0-windows\LifeHelper.GeneratedMSBuildEditorConfig.editorconfig
 E:\Documents\GitHub\-\大作业\LifeHelper\obj\Debug\net7.0-windows\LifeHelper.AssemblyInfoInputs.cache
@@ -64,3 +62,7 @@ E:\Documents\GitHub\-\大作业\LifeHelper\obj\Debug\net7.0-windows\LifeHelper.A
 E:\Documents\GitHub\-\大作业\LifeHelper\obj\Debug\net7.0-windows\LifeHelper.AdminSuperManage.resources
 E:\Documents\GitHub\-\大作业\LifeHelper\obj\Debug\net7.0-windows\LifeHelper.AdminDorm.resources
 E:\Documents\GitHub\-\大作业\LifeHelper\obj\Debug\net7.0-windows\LifeHelper.AdminNotice.resources
+E:\Documents\GitHub\-\大作业\LifeHelper\obj\Debug\net7.0-windows\LifeHelper.StudentForm.resources
+E:\Documents\GitHub\-\大作业\LifeHelper\obj\Debug\net7.0-windows\LifeHelper.StuComplaintSon.resources
+E:\Documents\GitHub\-\大作业\LifeHelper\obj\Debug\net7.0-windows\LifeHelper.StuPunchSon.resources
+E:\Documents\GitHub\-\大作业\LifeHelper\obj\Debug\net7.0-windows\LifeHelper.StuRepairSon.resources

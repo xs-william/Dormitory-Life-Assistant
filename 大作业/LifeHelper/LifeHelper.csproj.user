@@ -22,6 +22,9 @@
     <Compile Update="AdminForm\AdminSuperManage.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="StuForm\StuComplaintSon.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="StuForm\StuComplaint.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -49,7 +52,10 @@
     <Compile Update="StuForm\Setting.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="StuForm\StuTrade.cs">
+    <Compile Update="StuForm\StuPunchSon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="StuForm\StuRepairSon.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

@@ -63,6 +63,7 @@
             uiButton2.Size = new Size(125, 44);
             uiButton2.TabIndex = 0;
             uiButton2.Text = "确认注销";
+            uiButton2.Click += uiButton2_Click;
             // 
             // uiGroupBox1
             // 
@@ -91,6 +92,7 @@
             uiButton1.Size = new Size(125, 44);
             uiButton1.TabIndex = 4;
             uiButton1.Text = "确认更改";
+            uiButton1.Click += uiButton1_Click;
             // 
             // confirmpassword
             // 

@@ -16,11 +16,23 @@ namespace LifeHelper
         public StuComplaint()
         {
             InitializeComponent();
+
         }
 
-        private void uiAvatar1_Click(object sender, EventArgs e)
+        private void uiButton1_Click(object sender, EventArgs e)
         {
-
+            StuComplaintSon stuComplaintSon = new StuComplaintSon();
+            try
+            {
+                if (stuComplaintSon.ShowDialog() == DialogResult.OK)
+                {
+                    
+                }
+            }
+            catch (Exception e2)
+            {
+                MessageBox.Show(e2.Message);
+            }
         }
     }
 }

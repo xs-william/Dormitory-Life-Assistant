@@ -28,63 +28,133 @@
         /// </summary>
         private void InitializeComponent()
         {
-            uiButton1 = new Sunny.UI.UIButton();
-            uiTextBox1 = new Sunny.UI.UITextBox();
-            uiButton2 = new Sunny.UI.UIButton();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            uiDataGridView1 = new Sunny.UI.UIDataGridView();
+            IssueTime = new DataGridViewTextBoxColumn();
+            Issuer = new DataGridViewTextBoxColumn();
+            Status = new DataGridViewTextBoxColumn();
+            PunchTime = new DataGridViewTextBoxColumn();
+            Punch = new DataGridViewButtonColumn();
+            ((System.ComponentModel.ISupportInitialize)uiDataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // uiButton1
+            // uiDataGridView1
             // 
-            uiButton1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiButton1.Location = new Point(232, 108);
-            uiButton1.MinimumSize = new Size(1, 1);
-            uiButton1.Name = "uiButton1";
-            uiButton1.Size = new Size(125, 44);
-            uiButton1.TabIndex = 0;
-            uiButton1.Text = "获取定位";
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(243, 249, 255);
+            uiDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            uiDataGridView1.BackgroundColor = Color.FromArgb(243, 249, 255);
+            uiDataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(80, 160, 255);
+            dataGridViewCellStyle2.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(80, 160, 255);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            uiDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            uiDataGridView1.ColumnHeadersHeight = 32;
+            uiDataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            uiDataGridView1.Columns.AddRange(new DataGridViewColumn[] { IssueTime, Issuer, Status, PunchTime, Punch });
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(220, 236, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            uiDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            uiDataGridView1.Dock = DockStyle.Fill;
+            uiDataGridView1.EnableHeadersVisualStyles = false;
+            uiDataGridView1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            uiDataGridView1.GridColor = Color.FromArgb(104, 173, 255);
+            uiDataGridView1.Location = new Point(0, 0);
+            uiDataGridView1.Name = "uiDataGridView1";
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(243, 249, 255);
+            dataGridViewCellStyle4.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(80, 160, 255);
+            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            uiDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            uiDataGridView1.RowHeadersWidth = 51;
+            dataGridViewCellStyle5.BackColor = Color.White;
+            dataGridViewCellStyle5.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(220, 236, 255);
+            dataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(48, 48, 48);
+            uiDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            uiDataGridView1.RowTemplate.Height = 29;
+            uiDataGridView1.ScrollBarRectColor = Color.FromArgb(80, 160, 255);
+            uiDataGridView1.SelectedIndex = -1;
+            uiDataGridView1.Size = new Size(975, 490);
+            uiDataGridView1.TabIndex = 3;
+            uiDataGridView1.CellContentClick += uiDataGridView1_CellContentClick;
             // 
-            // uiTextBox1
+            // IssueTime
             // 
-            uiTextBox1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiTextBox1.Location = new Point(389, 108);
-            uiTextBox1.Margin = new Padding(4, 5, 4, 5);
-            uiTextBox1.MinimumSize = new Size(1, 16);
-            uiTextBox1.Multiline = true;
-            uiTextBox1.Name = "uiTextBox1";
-            uiTextBox1.ReadOnly = true;
-            uiTextBox1.ShowText = false;
-            uiTextBox1.Size = new Size(250, 125);
-            uiTextBox1.TabIndex = 1;
-            uiTextBox1.TextAlignment = ContentAlignment.MiddleLeft;
-            uiTextBox1.Watermark = "";
+            IssueTime.HeaderText = "发布时间";
+            IssueTime.MinimumWidth = 10;
+            IssueTime.Name = "IssueTime";
+            IssueTime.ReadOnly = true;
+            IssueTime.Width = 225;
             // 
-            // uiButton2
+            // Issuer
             // 
-            uiButton2.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiButton2.Location = new Point(389, 293);
-            uiButton2.MinimumSize = new Size(1, 1);
-            uiButton2.Name = "uiButton2";
-            uiButton2.Size = new Size(125, 44);
-            uiButton2.TabIndex = 2;
-            uiButton2.Text = "打卡";
+            Issuer.HeaderText = "发布人";
+            Issuer.MinimumWidth = 6;
+            Issuer.Name = "Issuer";
+            Issuer.ReadOnly = true;
+            Issuer.Width = 175;
+            // 
+            // Status
+            // 
+            Status.HeaderText = "是否打卡";
+            Status.MinimumWidth = 6;
+            Status.Name = "Status";
+            Status.ReadOnly = true;
+            Status.Width = 150;
+            // 
+            // PunchTime
+            // 
+            PunchTime.HeaderText = "打卡时间";
+            PunchTime.MinimumWidth = 6;
+            PunchTime.Name = "PunchTime";
+            PunchTime.ReadOnly = true;
+            PunchTime.Width = 225;
+            // 
+            // Punch
+            // 
+            Punch.HeaderText = "打卡";
+            Punch.MinimumWidth = 6;
+            Punch.Name = "Punch";
+            Punch.Text = "打卡";
+            Punch.UseColumnTextForButtonValue = true;
+            Punch.Width = 150;
             // 
             // StuPunch
             // 
             AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(975, 490);
-            Controls.Add(uiButton2);
-            Controls.Add(uiTextBox1);
-            Controls.Add(uiButton1);
+            Controls.Add(uiDataGridView1);
             Name = "StuPunch";
             PageIndex = 1005;
             Text = "Punch";
+            ((System.ComponentModel.ISupportInitialize)uiDataGridView1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Sunny.UI.UIButton uiButton1;
-        private Sunny.UI.UITextBox uiTextBox1;
-        private Sunny.UI.UIButton uiButton2;
+        private Sunny.UI.UIDataGridView uiDataGridView1;
+        private DataGridViewTextBoxColumn IssueTime;
+        private DataGridViewTextBoxColumn Issuer;
+        private DataGridViewTextBoxColumn Status;
+        private DataGridViewTextBoxColumn PunchTime;
+        private DataGridViewButtonColumn Punch;
     }
 }

@@ -28,94 +28,172 @@
         /// </summary>
         private void InitializeComponent()
         {
-            complaint = new Sunny.UI.UITextBox();
-            uiLine1 = new Sunny.UI.UILine();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            uiPanel1 = new Sunny.UI.UIPanel();
+            uiTableLayoutPanel1 = new Sunny.UI.UITableLayoutPanel();
             uiButton1 = new Sunny.UI.UIButton();
-            uiAvatar1 = new Sunny.UI.UIAvatar();
-            uiLabel1 = new Sunny.UI.UILabel();
+            uiDataGridView1 = new Sunny.UI.UIDataGridView();
+            ComplaintContent = new DataGridViewTextBoxColumn();
+            SubmitTime = new DataGridViewTextBoxColumn();
+            Status = new DataGridViewTextBoxColumn();
+            Confirm = new DataGridViewButtonColumn();
+            uiPanel1.SuspendLayout();
+            uiTableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)uiDataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // complaint
+            // uiPanel1
             // 
-            complaint.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            complaint.Location = new Point(242, 139);
-            complaint.Margin = new Padding(4, 5, 4, 5);
-            complaint.MinimumSize = new Size(1, 16);
-            complaint.Multiline = true;
-            complaint.Name = "complaint";
-            complaint.ShowText = false;
-            complaint.Size = new Size(450, 121);
-            complaint.StyleCustomMode = true;
-            complaint.TabIndex = 0;
-            complaint.TextAlignment = ContentAlignment.MiddleLeft;
-            complaint.Watermark = "";
+            uiPanel1.Controls.Add(uiTableLayoutPanel1);
+            uiPanel1.Controls.Add(uiDataGridView1);
+            uiPanel1.Dock = DockStyle.Fill;
+            uiPanel1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            uiPanel1.Location = new Point(0, 0);
+            uiPanel1.Margin = new Padding(4, 5, 4, 5);
+            uiPanel1.MinimumSize = new Size(1, 1);
+            uiPanel1.Name = "uiPanel1";
+            uiPanel1.Size = new Size(975, 490);
+            uiPanel1.TabIndex = 0;
+            uiPanel1.Text = null;
+            uiPanel1.TextAlignment = ContentAlignment.MiddleCenter;
             // 
-            // uiLine1
+            // uiTableLayoutPanel1
             // 
-            uiLine1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiLine1.Location = new Point(242, 95);
-            uiLine1.MinimumSize = new Size(1, 1);
-            uiLine1.Name = "uiLine1";
-            uiLine1.Size = new Size(450, 36);
-            uiLine1.TabIndex = 1;
-            uiLine1.Text = "投诉/举报内容";
-            uiLine1.TextAlign = ContentAlignment.MiddleLeft;
+            uiTableLayoutPanel1.ColumnCount = 1;
+            uiTableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            uiTableLayoutPanel1.Controls.Add(uiButton1, 0, 0);
+            uiTableLayoutPanel1.Dock = DockStyle.Fill;
+            uiTableLayoutPanel1.Location = new Point(0, 0);
+            uiTableLayoutPanel1.Name = "uiTableLayoutPanel1";
+            uiTableLayoutPanel1.RowCount = 1;
+            uiTableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            uiTableLayoutPanel1.Size = new Size(975, 41);
+            uiTableLayoutPanel1.TabIndex = 3;
+            uiTableLayoutPanel1.TagString = null;
             // 
             // uiButton1
             // 
             uiButton1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiButton1.Location = new Point(378, 401);
+            uiButton1.Location = new Point(3, 3);
             uiButton1.MinimumSize = new Size(1, 1);
             uiButton1.Name = "uiButton1";
-            uiButton1.Size = new Size(169, 36);
-            uiButton1.TabIndex = 2;
-            uiButton1.Text = "提交";
+            uiButton1.Size = new Size(159, 35);
+            uiButton1.TabIndex = 0;
+            uiButton1.Text = "提交投诉/举报";
+            uiButton1.Click += uiButton1_Click;
             // 
-            // uiAvatar1
+            // uiDataGridView1
             // 
-            uiAvatar1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiAvatar1.Location = new Point(332, 268);
-            uiAvatar1.MinimumSize = new Size(1, 1);
-            uiAvatar1.Name = "uiAvatar1";
-            uiAvatar1.Shape = Sunny.UI.UIShape.Square;
-            uiAvatar1.Size = new Size(110, 110);
-            uiAvatar1.Symbol = 61846;
-            uiAvatar1.SymbolSize = 110;
-            uiAvatar1.TabIndex = 3;
-            uiAvatar1.Text = "uiAvatar1";
-            uiAvatar1.Click += uiAvatar1_Click;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(243, 249, 255);
+            uiDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            uiDataGridView1.BackgroundColor = Color.FromArgb(243, 249, 255);
+            uiDataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(80, 160, 255);
+            dataGridViewCellStyle2.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(80, 160, 255);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            uiDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            uiDataGridView1.ColumnHeadersHeight = 32;
+            uiDataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            uiDataGridView1.Columns.AddRange(new DataGridViewColumn[] { ComplaintContent, SubmitTime, Status, Confirm });
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(220, 236, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            uiDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            uiDataGridView1.Dock = DockStyle.Bottom;
+            uiDataGridView1.EnableHeadersVisualStyles = false;
+            uiDataGridView1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            uiDataGridView1.GridColor = Color.FromArgb(104, 173, 255);
+            uiDataGridView1.Location = new Point(0, 41);
+            uiDataGridView1.Name = "uiDataGridView1";
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(243, 249, 255);
+            dataGridViewCellStyle4.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(80, 160, 255);
+            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            uiDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            uiDataGridView1.RowHeadersWidth = 51;
+            dataGridViewCellStyle5.BackColor = Color.White;
+            dataGridViewCellStyle5.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(220, 236, 255);
+            dataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(48, 48, 48);
+            uiDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            uiDataGridView1.RowTemplate.Height = 29;
+            uiDataGridView1.ScrollBarRectColor = Color.FromArgb(80, 160, 255);
+            uiDataGridView1.SelectedIndex = -1;
+            uiDataGridView1.Size = new Size(975, 449);
+            uiDataGridView1.TabIndex = 2;
             // 
-            // uiLabel1
+            // ComplaintContent
             // 
-            uiLabel1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiLabel1.Location = new Point(242, 323);
-            uiLabel1.Name = "uiLabel1";
-            uiLabel1.Size = new Size(125, 29);
-            uiLabel1.TabIndex = 4;
-            uiLabel1.Text = "添加图片";
-            uiLabel1.TextAlign = ContentAlignment.MiddleLeft;
+            ComplaintContent.HeaderText = "投诉/举报内容";
+            ComplaintContent.MinimumWidth = 10;
+            ComplaintContent.Name = "ComplaintContent";
+            ComplaintContent.ReadOnly = true;
+            ComplaintContent.Width = 600;
+            // 
+            // SubmitTime
+            // 
+            SubmitTime.HeaderText = "提交时间";
+            SubmitTime.MinimumWidth = 6;
+            SubmitTime.Name = "SubmitTime";
+            SubmitTime.ReadOnly = true;
+            SubmitTime.Width = 125;
+            // 
+            // Status
+            // 
+            Status.HeaderText = "状态";
+            Status.MinimumWidth = 6;
+            Status.Name = "Status";
+            Status.ReadOnly = true;
+            Status.Width = 75;
+            // 
+            // Confirm
+            // 
+            Confirm.HeaderText = "确认完成";
+            Confirm.MinimumWidth = 6;
+            Confirm.Name = "Confirm";
+            Confirm.Text = "完成";
+            Confirm.UseColumnTextForButtonValue = true;
+            Confirm.Width = 125;
             // 
             // StuComplaint
             // 
             AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(975, 490);
-            Controls.Add(uiAvatar1);
-            Controls.Add(uiLabel1);
-            Controls.Add(uiButton1);
-            Controls.Add(uiLine1);
-            Controls.Add(complaint);
+            Controls.Add(uiPanel1);
             Name = "StuComplaint";
             PageIndex = 1008;
             Text = "Complaint";
+            uiPanel1.ResumeLayout(false);
+            uiTableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)uiDataGridView1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Sunny.UI.UITextBox complaint;
-        private Sunny.UI.UILine uiLine1;
+        private Sunny.UI.UIPanel uiPanel1;
+        private Sunny.UI.UITableLayoutPanel uiTableLayoutPanel1;
         private Sunny.UI.UIButton uiButton1;
-        private Sunny.UI.UIAvatar uiAvatar1;
-        private Sunny.UI.UILabel uiLabel1;
+        private Sunny.UI.UIDataGridView uiDataGridView1;
+        private DataGridViewTextBoxColumn ComplaintContent;
+        private DataGridViewTextBoxColumn SubmitTime;
+        private DataGridViewTextBoxColumn Status;
+        private DataGridViewButtonColumn Confirm;
     }
 }

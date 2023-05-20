@@ -34,6 +34,7 @@
             uiButton1 = new Sunny.UI.UIButton();
             uiTextBox2 = new Sunny.UI.UITextBox();
             uiComboBox2 = new Sunny.UI.UIComboBox();
+            uiButton2 = new Sunny.UI.UIButton();
             uiPanel1.SuspendLayout();
             uiPanel2.SuspendLayout();
             uiTableLayoutPanel3.SuspendLayout();
@@ -70,14 +71,16 @@
             // uiTableLayoutPanel3
             // 
             uiTableLayoutPanel3.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
-            uiTableLayoutPanel3.ColumnCount = 4;
+            uiTableLayoutPanel3.ColumnCount = 5;
             uiTableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 38.77551F));
             uiTableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 61.22449F));
             uiTableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 111F));
-            uiTableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 471F));
+            uiTableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 131F));
+            uiTableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 360F));
             uiTableLayoutPanel3.Controls.Add(uiButton1, 2, 0);
             uiTableLayoutPanel3.Controls.Add(uiTextBox2, 1, 0);
             uiTableLayoutPanel3.Controls.Add(uiComboBox2, 0, 0);
+            uiTableLayoutPanel3.Controls.Add(uiButton2, 3, 0);
             uiTableLayoutPanel3.Dock = DockStyle.Top;
             uiTableLayoutPanel3.Location = new Point(0, 0);
             uiTableLayoutPanel3.Name = "uiTableLayoutPanel3";
@@ -90,7 +93,7 @@
             // uiButton1
             // 
             uiButton1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiButton1.Location = new Point(393, 4);
+            uiButton1.Location = new Point(372, 4);
             uiButton1.MinimumSize = new Size(1, 1);
             uiButton1.Name = "uiButton1";
             uiButton1.Size = new Size(105, 36);
@@ -100,12 +103,12 @@
             // uiTextBox2
             // 
             uiTextBox2.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiTextBox2.Location = new Point(156, 6);
+            uiTextBox2.Location = new Point(148, 6);
             uiTextBox2.Margin = new Padding(4, 5, 4, 5);
             uiTextBox2.MinimumSize = new Size(1, 16);
             uiTextBox2.Name = "uiTextBox2";
             uiTextBox2.ShowText = false;
-            uiTextBox2.Size = new Size(229, 32);
+            uiTextBox2.Size = new Size(216, 32);
             uiTextBox2.TabIndex = 1;
             uiTextBox2.TextAlignment = ContentAlignment.MiddleLeft;
             uiTextBox2.Watermark = "";
@@ -121,10 +124,20 @@
             uiComboBox2.MinimumSize = new Size(63, 0);
             uiComboBox2.Name = "uiComboBox2";
             uiComboBox2.Padding = new Padding(0, 0, 30, 2);
-            uiComboBox2.Size = new Size(142, 32);
+            uiComboBox2.Size = new Size(134, 32);
             uiComboBox2.TabIndex = 2;
             uiComboBox2.TextAlignment = ContentAlignment.MiddleLeft;
             uiComboBox2.Watermark = "";
+            // 
+            // uiButton2
+            // 
+            uiButton2.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            uiButton2.Location = new Point(484, 4);
+            uiButton2.MinimumSize = new Size(1, 1);
+            uiButton2.Name = "uiButton2";
+            uiButton2.Size = new Size(125, 36);
+            uiButton2.TabIndex = 3;
+            uiButton2.Text = "发布打卡";
             // 
             // AdminPunch
             // 
@@ -148,5 +161,6 @@
         private Sunny.UI.UIButton uiButton1;
         private Sunny.UI.UITextBox uiTextBox2;
         private Sunny.UI.UIComboBox uiComboBox2;
+        private Sunny.UI.UIButton uiButton2;
     }
 }

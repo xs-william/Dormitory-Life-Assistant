@@ -5,33 +5,24 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LifeHelper
 {
-    public partial class stuRepair : UIPage
+    public partial class StuComplaintSon : UIForm
     {
-        public stuRepair()
+        public StuComplaintSon()
         {
             InitializeComponent();
+            uiAvatar1.FillColor = Color.Transparent;
         }
 
         private void uiButton1_Click(object sender, EventArgs e)
         {
-            StuRepairSon stuRepairSon = new StuRepairSon();
-            try
-            {
-                if (stuRepairSon.ShowDialog() == DialogResult.OK)
-                {
-
-                }
-            }
-            catch (Exception e2)
-            {
-                MessageBox.Show(e2.Message);
-            }
+            DialogResult = DialogResult.No;
         }
     }
 }
