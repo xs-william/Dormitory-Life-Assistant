@@ -14,9 +14,9 @@ namespace Dormitory_Life_Assistant
     internal class Repair
     {
         Blob Picture;//图片
-        string Content;
+        String Content;
         DateTime RepairTime;//报修时间
         bool Status;//是否已经解决
-        string ID;//id用来查询报修信息
+        String ID;//id用来查询报修信息
     }
 }
