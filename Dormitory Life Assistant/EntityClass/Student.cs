@@ -28,8 +28,8 @@ namespace Dormitory_Life_Assistant
         Blob Profile;//头像
         List<Message> myMessage;
 
-        public void changePassword(string pass);//修改密码
-        public void changeProfile();//修改头像
+        public void changePassword(string pass) { }//修改密码
+        public void changeProfile() { }//修改头像
 
     }
 }

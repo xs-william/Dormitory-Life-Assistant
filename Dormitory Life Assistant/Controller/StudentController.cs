@@ -12,10 +12,10 @@ namespace Dormitory_Life_Assistant
         MessageService mes;
         PaymentService pas;
         RepairServicce res;
-        ComplaintServicce cos;
+        ComplaintService cos;
         ScheduleService scs;
         ClockInService cls;
 
-        public StudentController();
+        public StudentController() { }
     }
 }

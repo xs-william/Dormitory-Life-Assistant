@@ -24,9 +24,9 @@ namespace Dormitory_Life_Assistant
         List<Supervisor> supervisor; //管理的宿管员
         List<Message> myMessage;
         List<Message> systemMessage;
-        public void changeTele();
-        public void changePassword(string pass);//修改密码
-        public void changeProfile();//修改头像
+        public void changeTele() { }
+        public void changePassword(string pass) { }//修改密码
+        public void changeProfile() { }//修改头像
 
     }
 }

@@ -8,9 +8,9 @@ namespace Dormitory_Life_Assistant
 {
     internal class MessageService
     {
-        public List<Message> getAllMessage();
-        public void addMessage(Message m);
-        public void deleteMessage();
-        public void searchMessage();
+        public List<Message> getAllMessage() { return null; }
+        public void addMessage(Message m) { }
+        public void deleteMessage() { }
+        public void searchMessage() { }
     }
 }

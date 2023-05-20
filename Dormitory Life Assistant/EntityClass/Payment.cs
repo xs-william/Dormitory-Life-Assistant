@@ -11,7 +11,7 @@ namespace Dormitory_Life_Assistant
         double Amount;
         DateTime PayTime;
         bool Status;//是否缴费
-        String type;
-        String ID;//id用来查询账单
+        string type;
+        string ID;//id用来查询账单
     }
 }
