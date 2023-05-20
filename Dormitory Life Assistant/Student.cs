@@ -1,6 +1,9 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,7 +25,7 @@ namespace Dormitory_Life_Assistant
         List<ClockIn> clockIn;//打卡信息及历史打卡信息
         List<Schedule> schedule;
         String Password;//密码
-        MEDIUMBLOB Profile;//头像
+        Blob Profile;//头像
         List<Message> myMessage;
 
         public void changePassword(string pass);//修改密码
