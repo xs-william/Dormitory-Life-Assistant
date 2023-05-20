@@ -1,0 +1,141 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0-windows7.0": {
+      "SunnyUI/3.3.6": {
+        "type": "package",
+        "dependencies": {
+          "SunnyUI.Common": "3.3.2"
+        },
+        "compile": {
+          "lib/net7.0-windows7.0/SunnyUI.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-windows7.0/SunnyUI.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "SunnyUI.Common/3.3.2": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/SunnyUI.Common.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0/SunnyUI.Common.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SunnyUI/3.3.6": {
+      "sha512": "BEX1YOhs3Hn1IEVLs+y4sUwjwk5jUFTOH3GoQqB6QBzEiY45u/TOl2RWeIOYYKfwhscuBSfZzMpbTQ1mJEysjw==",
+      "type": "package",
+      "path": "sunnyui/3.3.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "SunnyUI.png",
+        "lib/net40/SunnyUI.dll",
+        "lib/net472/SunnyUI.dll",
+        "lib/net6.0-windows7.0/SunnyUI.dll",
+        "lib/net7.0-windows7.0/SunnyUI.dll",
+        "sunnyui.3.3.6.nupkg.sha512",
+        "sunnyui.nuspec"
+      ]
+    },
+    "SunnyUI.Common/3.3.2": {
+      "sha512": "ZEtwPos6Jul3U2GVWkJuaZR8G18eARqbAC+bduakyydHSKcwUqeOKIQaNuZ39c6r83BQjsNIF/i94Zkc2cqKWg==",
+      "type": "package",
+      "path": "sunnyui.common/3.3.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "SunnyUI.png",
+        "lib/net40/SunnyUI.Common.dll",
+        "lib/net472/SunnyUI.Common.dll",
+        "lib/net6.0/SunnyUI.Common.dll",
+        "lib/net7.0/SunnyUI.Common.dll",
+        "lib/netstandard2.0/SunnyUI.Common.dll",
+        "sunnyui.common.3.3.2.nupkg.sha512",
+        "sunnyui.common.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0-windows7.0": [
+      "SunnyUI >= 3.3.6"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\86151\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "E:\\Documents\\GitHub\\-\\SystemForm\\SystemForm.csproj",
+      "projectName": "SystemForm",
+      "projectPath": "E:\\Documents\\GitHub\\-\\SystemForm\\SystemForm.csproj",
+      "packagesPath": "C:\\Users\\86151\\.nuget\\packages\\",
+      "outputPath": "E:\\Documents\\GitHub\\-\\SystemForm\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\86151\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0-windows7.0": {
+          "targetAlias": "net7.0-windows",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0-windows7.0": {
+        "targetAlias": "net7.0-windows",
+        "dependencies": {
+          "SunnyUI": {
+            "target": "Package",
+            "version": "[3.3.6, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
