@@ -66,7 +66,7 @@
 
        将一个宿舍加入到一栋宿舍楼中
     */
-        public void addDorm(List<Supervisor> sup, Student stu) {
+        public List<Supervisor> addDorm(List<Supervisor> sup, Student stu) {
              List<Building> buildingList=findBuilding(sup);
             //在这里加上try catch语句
                 var building =buildingList
@@ -78,6 +78,19 @@
                            .ToList();
                 Dorm dor=dorm.First();
                 dor.Member.Add(stu);
+            //更新宿管的保存
+            foreach(Supervisor s in sup)
+            {
+                foreach(Building b in s.ManageBuilding)
+                {
+                    var newBuilding = buildingList
+                        .Where(bu => bu.BuildingName == b.BuildingName)
+                        .ToList();
+                    Building newBuild=newBuilding.First();
+                    b.DormContent = newBuild.DormContent;
+                }
+            }
+            return sup;
         }
         //添加宿管,创建后直接加入到数组里面就行了
         public void addSupDorm(List<Supervisor> sup,Supervisor super)
