@@ -11,19 +11,19 @@ namespace Dormitory_Life_Assistant
 {
     internal class Supervisor
     {
-        String Name;
-        String ID;
-        String Tele;
-        String Gender;
-        Blob Profile;//头像
-        String Password;
-        List<Payment> bill;
-        List<Repair> repair;
-        List<Complaint> complain;
-        List<Schedule> schedule;
-        List<Building> ManageBuilding; //管理的楼栋
-        List<Message> myMessage;
-        List<Message> systemMessage;
+        public String Name;
+        public String ID;
+        public String Tele;
+        public String Gender;
+        public Blob Profile;//头像
+        public String Password;
+        public List<Payment> bill;
+        public List<Repair> repair;
+        public List<Complaint> complain;
+        public List<Schedule> schedule;
+        public List<Building> ManageBuilding; //管理的楼栋
+        public List<Message> myMessage;
+        public List<Message> systemMessage;
 
         public void changeTele() { }
         public void changePassword(string pass) { }//修改密码

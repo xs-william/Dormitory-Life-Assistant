@@ -8,14 +8,18 @@ namespace Dormitory_Life_Assistant
 {
     internal class StudentController
     {
-        Student stu;
-        MessageService mes;
-        PaymentService pas;
-        RepairServicce res;
-        ComplaintService cos;
-        ScheduleService scs;
-        ClockInService cls;
+        public Student stu;
+        public MessageService mes;
+        public PaymentService pas;
+        public RepairServicce res;
+        public ComplaintService cos;
+        public ScheduleService scs;
+        public ClockInService cls;
 
-        public StudentController() { }
+        public StudentController()
+        {
+            stu = new Student();
+            res = new RepairServicce(stu, null, null);
+        }
     }
 }
