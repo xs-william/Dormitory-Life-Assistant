@@ -11,6 +11,7 @@ namespace Dormitory_Life_Assistant
 {
     internal class Student
     {
+
         public String Name;
         public String ID;
         public int Grade;
@@ -27,6 +28,8 @@ namespace Dormitory_Life_Assistant
         public String Password;//密码
         public Blob Profile;//头像
         public List<Message> myMessage;
+=======
+>>>>>>> a2c85046356632145c3f23b0c30627ff501a74cf
 
         public void changePassword(string pass) { }//修改密码
         public void changeProfile() { }//修改头像

@@ -13,8 +13,14 @@ namespace Dormitory_Life_Assistant
     {
         Blob Picture;
         bool status;
-        String Content;
+        string Content;
         DateTime ComplaintTime;
-        String ID;
+        public string ID;
+        public override bool Equals(object obj)//重写equals，利用ID判断对象是否相等
+        {
+            Complaint c = obj as Complaint;
+            return c.ID == ID;
+        }
     }
+
 }

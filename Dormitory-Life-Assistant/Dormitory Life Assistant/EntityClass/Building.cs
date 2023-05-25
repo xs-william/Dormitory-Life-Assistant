@@ -8,7 +8,10 @@ namespace Dormitory_Life_Assistant
 {
     internal class Building
     {
-        String BuildingName;//楼栋名
+        public string BuildingName//楼栋名
+        {
+            get; set;
+        }
         List<Dorm> DormContent;//包含宿舍
 
         //构造函数
@@ -17,4 +20,6 @@ namespace Dormitory_Life_Assistant
             this.BuildingName = BuildingName;
         }
     }
+=======
+>>>>>>> a2c85046356632145c3f23b0c30627ff501a74cf
 }
