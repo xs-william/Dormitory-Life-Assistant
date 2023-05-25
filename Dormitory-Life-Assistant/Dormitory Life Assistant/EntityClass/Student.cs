@@ -15,13 +15,17 @@ namespace Dormitory_Life_Assistant
         String ID;
         int Grade;
         String Department;//所在系
-        String BuildingName;//所在宿舍楼栋
+        public String BuildingName//所在宿舍楼栋
+        {
+            get;
+            set;
+        }
         String DormNumber;//所在宿舍号
         String Class; //所在班级
         String Gender;
         List<Payment> bill;
         List<Repair> repair;
-        List<Complaint> complain;
+        public List<Complaint> complain;
         List<ClockIn> clockIn;//打卡信息及历史打卡信息
         List<Schedule> schedule;
         String Password;//密码

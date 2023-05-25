@@ -16,7 +16,7 @@ namespace Dormitory_Life_Assistant
         ScheduleService scs;
         ClockInService cls;
 
-        public SupervisorController() { }
 
+        public SupervisorController() { }
     }
 }

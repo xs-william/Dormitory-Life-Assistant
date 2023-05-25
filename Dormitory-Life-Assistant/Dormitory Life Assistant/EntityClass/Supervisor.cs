@@ -19,9 +19,9 @@ namespace Dormitory_Life_Assistant
         String Password;
         List<Payment> bill;
         List<Repair> repair;
-        List<Complaint> complain;
+        public List<Complaint> complain;
         List<Schedule> schedule;
-        List<Building> ManageBuilding; //管理的楼栋
+        public List<Building> ManageBuilding; //管理的楼栋
         List<Message> myMessage;
         List<Message> systemMessage;
 
