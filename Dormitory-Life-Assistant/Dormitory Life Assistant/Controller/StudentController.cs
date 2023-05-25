@@ -21,7 +21,5 @@ namespace Dormitory_Life_Assistant
             stu = new Student();
             res = new RepairServicce(stu, null, null);
         }
-=======
->>>>>>> a2c85046356632145c3f23b0c30627ff501a74cf
     }
 }

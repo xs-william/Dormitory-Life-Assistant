@@ -20,6 +20,4 @@ namespace Dormitory_Life_Assistant
             this.BuildingName = BuildingName;
         }
     }
-=======
->>>>>>> a2c85046356632145c3f23b0c30627ff501a74cf
 }

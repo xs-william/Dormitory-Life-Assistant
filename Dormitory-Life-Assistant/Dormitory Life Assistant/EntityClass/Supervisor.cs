@@ -24,8 +24,6 @@ namespace Dormitory_Life_Assistant
         public List<Building> ManageBuilding; //管理的楼栋
         public List<Message> myMessage;
         public List<Message> systemMessage;
-=======
->>>>>>> a2c85046356632145c3f23b0c30627ff501a74cf
 
         public void changeTele() { }
         public void changePassword(string pass) { }//修改密码
