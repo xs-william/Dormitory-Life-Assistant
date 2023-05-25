@@ -11,8 +11,8 @@ namespace Dormitory_Life_Assistant
 {
     internal class Supervisor
     {
-        String Name;
-        String ID;
+        public String Name;
+        public String ID;
         String Tele;
         String Gender;
         Blob Profile;//头像
@@ -21,7 +21,7 @@ namespace Dormitory_Life_Assistant
         List<Repair> repair;
         List<Complaint> complain;
         List<Schedule> schedule;
-        List<Building> ManageBuilding; //管理的楼栋
+        public List<Building> ManageBuilding; //管理的楼栋
         List<Message> myMessage;
         List<Message> systemMessage;
 

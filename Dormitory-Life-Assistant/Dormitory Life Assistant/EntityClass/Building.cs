@@ -8,7 +8,7 @@ namespace Dormitory_Life_Assistant
 {
     internal class Building
     {
-        String BuildingName;//楼栋名
-        List<Dorm> DormContent;//包含宿舍
+        public String BuildingName { get; set; }//楼栋名
+        public List<Dorm> DormContent;//包含宿舍
     }
 }

@@ -11,13 +11,13 @@ namespace Dormitory_Life_Assistant
 {
     internal class Student
     {
-        String Name;
-        String ID;
+        public String Name;
+        public String ID;
         int Grade;
-        String Department;//所在系
-        String BuildingName;//所在宿舍楼栋
-        String DormNumber;//所在宿舍号
-        String Class; //所在班级
+        public String Department;//所在系
+        public String BuildingName;//所在宿舍楼栋
+        public String DormNumber;//所在宿舍号
+        public String Class; //所在班级
         String Gender;
         List<Payment> bill;
         List<Repair> repair;
