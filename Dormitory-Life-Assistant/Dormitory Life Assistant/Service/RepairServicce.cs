@@ -43,7 +43,7 @@ namespace Dormitory_Life_Assistant
         List<Repair> repairsList = new List<Repair>();
         List<Message> messagesList = new List<Message>();
 
-        public void addRepair(Repair r)
+        public void addRepair(Repair r)//看exchangemessage如何将填入信息打包
         {
             repairsList.Add(r);//添加报修信息
             DateTime now = DateTime.Now;
