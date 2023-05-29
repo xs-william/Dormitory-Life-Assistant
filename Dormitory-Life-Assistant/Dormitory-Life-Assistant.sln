@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dormitory Life Assistant", "Dormitory Life Assistant\Dormitory Life Assistant.csproj", "{1BD0BB44-73E2-4330-8410-891D418EBCF1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SystemForm", "SystemForm\SystemForm.csproj", "{20DEE0DE-FDA3-48D6-912C-0EC7E7D07604}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1BD0BB44-73E2-4330-8410-891D418EBCF1} = {1BD0BB44-73E2-4330-8410-891D418EBCF1}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -11,7 +11,7 @@ namespace Dormitory_Life_Assistant
 {
     internal class Supervisor
     {
-        String Name;
+        String SupervisorName;
         String ID;
         String Tele;
         String Gender;
@@ -22,8 +22,8 @@ namespace Dormitory_Life_Assistant
         public List<Complaint> complain;
         List<Schedule> schedule;
         public List<Building> ManageBuilding; //管理的楼栋
-        List<Message> myMessage;
-        List<Message> systemMessage;
+        //List<ExchangeMessage> myMessage;
+        List<ExchangeMessage> systemMessage;
 
         public void changeTele() { }
         public void changePassword(string pass) { }//修改密码

@@ -30,7 +30,7 @@ namespace Dormitory_Life_Assistant
         List<Schedule> schedule;
         String Password;//密码
         Blob Profile;//头像
-        List<Message> myMessage;
+        List<ExchangeMessage> myMessage;
 
         public void changePassword(string pass) { }//修改密码
         public void changeProfile() { }//修改头像
