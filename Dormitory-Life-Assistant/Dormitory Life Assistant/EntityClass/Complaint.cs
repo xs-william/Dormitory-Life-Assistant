@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Dormitory_Life_Assistant
 {
-    internal class Complaint
+    public class Complaint
     {
         Blob Picture;
         bool status;

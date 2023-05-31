@@ -60,7 +60,7 @@ namespace Dormitory_Life_Assistant.Service
                 ctx.SaveChanges();
             }
         }
-        //避免级联添加或修改Customer和Goods
+        //避免级联添加或修改Administrator
         private static void FixSystemMessage(SystemMessage newSystemMessage)
         {
             newSystemMessage.AdministratorId = newSystemMessage.Administrator.AdministratorId;

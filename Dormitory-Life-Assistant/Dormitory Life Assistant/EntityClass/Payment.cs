@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dormitory_Life_Assistant
 {
-    internal class Payment
+    public class Payment
     {
         double Amount;
         DateTime PayTime;

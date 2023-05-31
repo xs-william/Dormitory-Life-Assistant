@@ -14,5 +14,9 @@ namespace Dormitory_Life_Assistant
         }
         public DbSet<SystemMessage> SystemMessages { get; set; }
         public DbSet<Administrator> Administrators { get; set; }
+        public DbSet<ExchangeMessage> ExchangeMessages { get; set; }
+        public DbSet<Student> Students { get; set; }
+        public DbSet<Supervisor> Supervisors { get; set; }
+        public DbSet<DormMessage> DormMessages { get; set; }
     }
 }

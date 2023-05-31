@@ -17,11 +17,12 @@ namespace SystemForm
 {
     public partial class AdminNotice : UIPage
     {
-        Administrator administrator = new Administrator("2", "高珺");
+        private Administrator administrator;
         SystemMessageService systemMessageService;
-        public AdminNotice()
+        public AdminNotice(Administrator administrator)
         {
             InitializeComponent();
+            this.administrator = administrator;
             systemMessageService = new SystemMessageService();
             systemMessageBindingSource.DataSource = systemMessageService.SystemMessages;
             uiComboBox1.SelectedIndex = 0;
@@ -37,7 +38,7 @@ namespace SystemForm
         {
             switch (uiComboBox1.SelectedIndex)
             {
-                case 0://所有订单
+                case 0://所有消息
                     systemMessageBindingSource.DataSource = systemMessageService.SystemMessages;
                     break;
                 case 1://根据日期查询

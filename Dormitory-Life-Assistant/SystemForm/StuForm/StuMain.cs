@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dormitory_Life_Assistant;
 using Dormitory_Life_Assistant.Service;
 using Sunny.UI;
 
@@ -15,11 +16,15 @@ namespace SystemForm
     public partial class stuMain : UIPage
     {
         private SystemMessageService systemMessageService = new SystemMessageService();
+        private DormMessageService dormMessageService = new DormMessageService();
         public stuMain()
         {
             InitializeComponent();
             systemMessageBindingSource.DataSource = systemMessageService.SystemMessages;
+            dormMessageBindingSource.DataSource = dormMessageService.DormMessages;
             uiDataGridView1.AllowUserToAddRows = false;
+            uiDataGridView2.AllowUserToAddRows = false;
+            uiCalendar1.Date = Convert.ToDateTime(DateTime.Now.ToString("D"));
         }
     }
 }
