@@ -21,5 +21,14 @@ namespace SystemForm
             systemMessageBindingSource.DataSource = systemMessageService.SystemMessages;
             uiDataGridView1.AllowUserToAddRows = false;
         }
+
+        private void uiButton1_Click(object sender, EventArgs e)
+        {
+            Application.EnableVisualStyles();
+            Schedule form = new Schedule();
+           
+            form.ShowDialog();
+
+        }
     }
 }

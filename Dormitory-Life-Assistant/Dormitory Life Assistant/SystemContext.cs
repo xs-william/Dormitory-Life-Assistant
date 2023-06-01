@@ -6,7 +6,7 @@ using System.Security.Policy;
 namespace Dormitory_Life_Assistant
 {
     [DbConfigurationType(typeof(MySqlEFConfiguration))]
-    public class SystemContext:DbContext
+    public class SystemContext : DbContext
     {
         public SystemContext() : base("DLADataBase")
         {
@@ -14,5 +14,6 @@ namespace Dormitory_Life_Assistant
         }
         public DbSet<SystemMessage> SystemMessages { get; set; }
         public DbSet<Administrator> Administrators { get; set; }
+        public DbSet<ClockIn> ClockIns { get; set; }
     }
 }

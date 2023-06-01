@@ -47,6 +47,7 @@
             // btnOK
             // 
             btnOK.Location = new Point(460, 12);
+           
             // 
             // messageContent
             // 
@@ -65,7 +66,7 @@
             // uiLabel1
             // 
             uiLabel1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiLabel1.Location = new Point(121, 121);
+            uiLabel1.Location = new Point(112, 121);
             uiLabel1.Name = "uiLabel1";
             uiLabel1.Size = new Size(125, 29);
             uiLabel1.TabIndex = 3;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
@@ -39,13 +40,23 @@
             Status = new DataGridViewTextBoxColumn();
             PunchTime = new DataGridViewTextBoxColumn();
             Punch = new DataGridViewButtonColumn();
+            clockInBindingSource = new BindingSource(components);
+            
+            
+           
+            
+
+       
+            
             ((System.ComponentModel.ISupportInitialize)uiDataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)clockInBindingSource).BeginInit();
             SuspendLayout();
             // 
             // uiDataGridView1
             // 
             dataGridViewCellStyle1.BackColor = Color.FromArgb(243, 249, 255);
             uiDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            uiDataGridView1.AutoGenerateColumns = false;
             uiDataGridView1.BackgroundColor = Color.FromArgb(243, 249, 255);
             uiDataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -58,7 +69,8 @@
             uiDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             uiDataGridView1.ColumnHeadersHeight = 32;
             uiDataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            uiDataGridView1.Columns.AddRange(new DataGridViewColumn[] { IssueTime, Issuer, Status, PunchTime, Punch });
+            uiDataGridView1.Columns.AddRange(new DataGridViewColumn[] { IssueTime, Issuer, Status, PunchTime, Punch});
+            uiDataGridView1.DataSource = clockInBindingSource;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -97,6 +109,9 @@
             // 
             // IssueTime
             // 
+            
+            
+            IssueTime.DataPropertyName = "publishtime";
             IssueTime.HeaderText = "发布时间";
             IssueTime.MinimumWidth = 10;
             IssueTime.Name = "IssueTime";
@@ -105,6 +120,7 @@
             // 
             // Issuer
             // 
+            Issuer.DataPropertyName = "publisher";
             Issuer.HeaderText = "发布人";
             Issuer.MinimumWidth = 6;
             Issuer.Name = "Issuer";
@@ -113,6 +129,7 @@
             // 
             // Status
             // 
+            Status.DataPropertyName = "Status";
             Status.HeaderText = "是否打卡";
             Status.MinimumWidth = 6;
             Status.Name = "Status";
@@ -121,6 +138,7 @@
             // 
             // PunchTime
             // 
+            PunchTime.DataPropertyName = "Date";
             PunchTime.HeaderText = "打卡时间";
             PunchTime.MinimumWidth = 6;
             PunchTime.Name = "PunchTime";
@@ -129,12 +147,23 @@
             // 
             // Punch
             // 
+            
             Punch.HeaderText = "打卡";
             Punch.MinimumWidth = 6;
             Punch.Name = "Punch";
             Punch.Text = "打卡";
             Punch.UseColumnTextForButtonValue = true;
             Punch.Width = 150;
+            // 
+            // clockInBindingSource
+            // 
+            clockInBindingSource.DataSource = typeof(Dormitory_Life_Assistant.ClockIn);
+         
+       
+        
+            // 
+            
+            
             // 
             // StuPunch
             // 
@@ -145,6 +174,7 @@
             PageIndex = 1005;
             Text = "Punch";
             ((System.ComponentModel.ISupportInitialize)uiDataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)clockInBindingSource).EndInit();
             ResumeLayout(false);
         }
 
@@ -156,5 +186,13 @@
         private DataGridViewTextBoxColumn Status;
         private DataGridViewTextBoxColumn PunchTime;
         private DataGridViewButtonColumn Punch;
+        private BindingSource clockInBindingSource;
+       
+      
+        
+        
+        
+       
+        
     }
 }
