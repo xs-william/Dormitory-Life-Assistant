@@ -9,21 +9,37 @@ using System.Threading.Tasks;
 
 namespace Dormitory_Life_Assistant
 {
-    internal class Supervisor
+    public class Supervisor
     {
-        public String Name;
-        public String ID;
-        String Tele;
-        String Gender;
-        Blob Profile;//头像
-        String Password;
+        public String SupervisorName { get; set; }
+        public String SupervisorID { get; set; }
+        public String Tele { get; set; }
+        public String Gender { get; set; }
+        Blob Profile; //头像
+        public String Password { get; set; }
+        public String SupBuildingName { get; set; }
         List<Payment> bill;
         List<Repair> repair;
         List<Complaint> complain;
         List<Schedule> schedule;
-        public List<Building> ManageBuilding; //管理的楼栋
-        List<Message> myMessage;
-        List<Message> systemMessage;
+        List<ExchangeMessage> systemMessage;
+
+        public Supervisor()
+        {
+            SupervisorID = Guid.NewGuid().ToString();
+        }
+        public Supervisor(string supervisorName, string supervisorID, string tele, string gender, string password, string buildingName)
+        {
+            SupervisorName = supervisorName;
+            SupervisorID = supervisorID;
+            Tele = tele;
+            Gender = gender;
+            Password = password;
+            Profile = new Blob();
+            SupBuildingName = buildingName;
+
+        }
+
 
         public void changeTele() { }
         public void changePassword(string pass) { }//修改密码

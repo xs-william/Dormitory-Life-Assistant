@@ -1,13 +1,24 @@
 using Sunny.UI;
-
+using Dormitory_Life_Assistant;
 namespace SystemForm
 {
     public partial class StudentForm : UIForm
     {
+        ComplaintService complaintService=new ComplaintService();
         public StudentForm()
         {
             InitializeComponent();
-
+            //Student s1 = new Student("1", "小李");
+            //Student s2 = new Student("2", "小王");
+            using (var ctx = new SystemContext())
+            {
+                if (ctx.Students.Count() == 0)
+                {
+                   // ctx.Students.Add(s1);
+                   // ctx.Students.Add(s2);
+                    ctx.SaveChanges();
+                }
+            }
             Choice.TabControl = MainContainer;
             //增加页面到Main
             AddPage(new stuMain(), 1001);
@@ -16,7 +27,7 @@ namespace SystemForm
             AddPage(new StuTreeHole(), 1004);
             AddPage(new StuPunch(), 1005);
             AddPage(new StuMessage(), 1006);
-            AddPage(new StuComplaint(), 1008);
+            //AddPage(new StuComplaint(s1), 1008);
             AddPage(new Setting(), 1009);
 
 

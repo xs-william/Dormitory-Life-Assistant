@@ -16,6 +16,7 @@ namespace Dormitory_Life_Assistant
         ScheduleService scs;
         ClockInService cls;
 
+        List<Supervisor> supervisors;//可能要添加所有宿管的表，方便查找
         public StudentController() { }
     }
 }
