@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection.Metadata;
 using System.Text;
@@ -9,25 +10,34 @@ using System.Threading.Tasks;
 
 namespace Dormitory_Life_Assistant
 {
-    internal class Supervisor
+    public class Supervisor
     {
-        public String Name;
-        public String ID;
-        public String Tele;
-        public String Gender;
-        public Blob Profile;//头像
-        public String Password;
-        public List<Payment> bill;
-        public List<Repair> repair;
+        public String SupervisorName { get; set; }
+        [Key]
+        public String ID { get; set; }
+        public String Tele { get; set; }
+        public String Gender { get; set; }
+        public Blob Profile { get; set; }//头像
+        public String Password { get; set; }
+        List<Payment> bill;
+        List<Repair> repair;
         public List<Complaint> complain;
-        public List<Schedule> schedule;
+        List<Schedule> schedule;
         public List<Building> ManageBuilding; //管理的楼栋
-        public List<Message> myMessage;
-        public List<Message> systemMessage;
+        //List<ExchangeMessage> myMessage;
+        List<ExchangeMessage> systemMessage;
 
         public void changeTele() { }
         public void changePassword(string pass) { }//修改密码
         public void changeProfile() { }//修改头像
+
+        public Supervisor() { }
+
+        public Supervisor(string id, List<Building> build)
+        {
+            this.ID = id;
+            ManageBuilding = build;
+        }
 
     }
 }

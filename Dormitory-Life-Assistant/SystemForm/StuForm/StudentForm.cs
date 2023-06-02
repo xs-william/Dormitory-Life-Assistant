@@ -1,4 +1,5 @@
 using Sunny.UI;
+using Dormitory_Life_Assistant;
 
 namespace SystemForm
 {
@@ -7,12 +8,19 @@ namespace SystemForm
         public StudentForm()
         {
             InitializeComponent();
+            //先创建一个学生对象用来测试,先往数据库里存一个宿舍用来测试
+            Student stu = new Student("2021302111113", "C4-308");
+            /*using (var ctx = new SystemContext())
+            {
+                ctx.Dorms.Add(new Dorm("C4-308"));
+                ctx.SaveChanges();
+            }*/
 
             Choice.TabControl = MainContainer;
             //增加页面到Main
             AddPage(new stuMain(), 1001);
-            AddPage(new StuLifePay(), 1002);
-            AddPage(new stuRepair(), 1003);
+            AddPage(new StuLifePay(stu), 1002);
+            AddPage(new stuRepair(stu), 1003);
             AddPage(new StuTreeHole(), 1004);
             AddPage(new StuPunch(), 1005);
             AddPage(new StuMessage(), 1006);
@@ -33,6 +41,11 @@ namespace SystemForm
 
             //显示默认界面
             Choice.SelectFirst();
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

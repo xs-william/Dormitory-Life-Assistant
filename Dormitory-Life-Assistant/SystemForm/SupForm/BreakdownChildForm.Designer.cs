@@ -33,18 +33,18 @@
             MainContainer = new Sunny.UI.UITabControl();
             tabPage1 = new TabPage();
             uiGroupBox1 = new Sunny.UI.UIGroupBox();
+            pictureBox1 = new PictureBox();
             uiTextBox1 = new Sunny.UI.UITextBox();
             tableLayoutPanel1 = new TableLayoutPanel();
             uiLabel1 = new Sunny.UI.UILabel();
             uiLabel2 = new Sunny.UI.UILabel();
             uiLabel3 = new Sunny.UI.UILabel();
-            pictureBox1 = new PictureBox();
             uiNavBar1.SuspendLayout();
             MainContainer.SuspendLayout();
             tabPage1.SuspendLayout();
             uiGroupBox1.SuspendLayout();
-            tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // uiNavBar1
@@ -116,6 +116,17 @@
             uiGroupBox1.Text = "故障详情：";
             uiGroupBox1.TextAlignment = ContentAlignment.MiddleCenter;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.picture;
+            pictureBox1.Location = new Point(24, 220);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(469, 174);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
             // uiTextBox1
             // 
             uiTextBox1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -129,6 +140,7 @@
             uiTextBox1.TabIndex = 1;
             uiTextBox1.TextAlignment = ContentAlignment.MiddleLeft;
             uiTextBox1.Watermark = "";
+            uiTextBox1.TextChanged += uiTextBox1_TextChanged;
             // 
             // tableLayoutPanel1
             // 
@@ -179,16 +191,6 @@
             uiLabel3.Text = "C4-101";
             uiLabel3.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.picture;
-            pictureBox1.Location = new Point(24, 220);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(469, 174);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 2;
-            pictureBox1.TabStop = false;
-            // 
             // BreakdownChildForm
             // 
             AutoScaleMode = AutoScaleMode.None;
@@ -206,8 +208,8 @@
             MainContainer.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             uiGroupBox1.ResumeLayout(false);
-            tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            tableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 

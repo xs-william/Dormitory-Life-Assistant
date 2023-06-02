@@ -1,3 +1,4 @@
+using Dormitory_Life_Assistant;
 using Sunny.UI;
 
 namespace SystemForm
@@ -8,13 +9,24 @@ namespace SystemForm
         public TMainForm()
         {
             InitializeComponent();
+            //创建一个宿舍管理员用来测试
+            List<Building> bud = new List<Building>();
+            bud.Add(new Building("C4"));
+            Supervisor sup = new Supervisor("01", bud);
+
+            /*//存一个楼栋用来测试
+            using (var ctx = new SystemContext())
+            {
+                ctx.Buildings.Add(new Building("C4"));
+                ctx.SaveChanges();
+            }*/
 
             Choice.TabControl = MainContainer;
             //增加页面到Main
             AddPage(new TMySelfForm(), 1001);
             AddPage(new TStudentForm(), 1002);
-            AddPage(new TBreakdownForm(), 1003);
-            AddPage(new TCostForm(), 1004);
+            AddPage(new TBreakdownForm(sup), 1003);
+            AddPage(new TCostForm(sup), 1004);
             AddPage(new TComplaintForm(), 1005);
             AddPage(new TInformationForm(), 1006);
             AddPage(new Setting(), 1007);

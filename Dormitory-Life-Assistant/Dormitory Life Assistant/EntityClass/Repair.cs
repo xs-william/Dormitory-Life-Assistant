@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection.Metadata;
 using System.Text;
@@ -11,18 +12,31 @@ using System.Threading.Tasks;
 
 namespace Dormitory_Life_Assistant
 {
-    internal class Repair
+    public class Repair
     {
-        public Student stu;//增加一个添加维修信息的学生对象
-        public Blob Picture;//图片
-        public string Content;
-        public DateTime RepairTime;//报修时间
-        public bool Status;//是否已经解决
-        public string ID;//id用来查询报修信息
+        [Key]
+        public int ID { get; set; }//id用来查询报修信息
+        public string CallerID { get; set; }//创建维修账单者的ID
+        public string CallerDorm { get; set; }//创建维修宿舍号
+        public Blob Picture { get; set; }//图片
+        public string Content { get; set; }
+        public DateTime RepairTime { get; set; }//报修时间
+        public bool Status { get; set; }//是否已经解决
 
-        public Repair()
+        public Repair() { }
+
+        public Repair(int id, string content, string callerID)
         {
-            stu = this.stu;
+            Content = content;
+            ID = id;
+            CallerID = callerID;
+            this.RepairTime = DateTime.Now;
+            using (var ctx = new SystemContext())
+            {
+                this.CallerDorm = ctx.Students.FirstOrDefault(s => s.ID == callerID)?.DormNumber;
+
+            }
         }
+
     }
 }

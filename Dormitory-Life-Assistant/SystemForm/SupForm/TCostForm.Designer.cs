@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
@@ -39,16 +40,19 @@
             CostIndex = new Sunny.UI.UITextBox();
             CostButton = new Sunny.UI.UIButton();
             uiGroupBox2 = new Sunny.UI.UIGroupBox();
-            CostDataGridView = new Sunny.UI.UIDataGridView();
-            DormNum = new DataGridViewTextBoxColumn();
-            Time = new DataGridViewTextBoxColumn();
-            Money = new DataGridViewTextBoxColumn();
-            Or = new DataGridViewTextBoxColumn();
+            UI2Button = new Sunny.UI.UIButton();
             uiButton1 = new Sunny.UI.UIButton();
+            CostDataGridView = new Sunny.UI.UIDataGridView();
+            paymentBindingSource = new BindingSource(components);
+            callerDormDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            amountDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            typeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            Or = new DataGridViewTextBoxColumn();
             uiGroupBox1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             uiGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)CostDataGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)paymentBindingSource).BeginInit();
             SuspendLayout();
             // 
             // uiGroupBox1
@@ -87,7 +91,7 @@
             uiComboBox1.DataSource = null;
             uiComboBox1.FillColor = Color.White;
             uiComboBox1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiComboBox1.Items.AddRange(new object[] { "按欠费宿舍号查询", "按欠费时间查询", "按欠费金额查询", "按是否缴费查询" });
+            uiComboBox1.Items.AddRange(new object[] { "按欠费宿舍号查询" });
             uiComboBox1.Location = new Point(4, 7);
             uiComboBox1.Margin = new Padding(4, 5, 4, 5);
             uiComboBox1.MinimumSize = new Size(63, 0);
@@ -97,6 +101,7 @@
             uiComboBox1.TabIndex = 0;
             uiComboBox1.TextAlignment = ContentAlignment.MiddleLeft;
             uiComboBox1.Watermark = "";
+            uiComboBox1.SelectedIndexChanged += uiComboBox1_SelectedIndexChanged;
             // 
             // CostIndex
             // 
@@ -111,6 +116,7 @@
             CostIndex.TabIndex = 1;
             CostIndex.TextAlignment = ContentAlignment.MiddleLeft;
             CostIndex.Watermark = "";
+            CostIndex.TextChanged += CostIndex_TextChanged;
             // 
             // CostButton
             // 
@@ -122,9 +128,11 @@
             CostButton.Size = new Size(97, 41);
             CostButton.TabIndex = 2;
             CostButton.Text = "查询";
+            CostButton.Click += CostButton_Click;
             // 
             // uiGroupBox2
             // 
+            uiGroupBox2.Controls.Add(UI2Button);
             uiGroupBox2.Controls.Add(uiButton1);
             uiGroupBox2.Controls.Add(CostDataGridView);
             uiGroupBox2.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -138,10 +146,33 @@
             uiGroupBox2.Text = "欠费信息";
             uiGroupBox2.TextAlignment = ContentAlignment.MiddleCenter;
             // 
+            // UI2Button
+            // 
+            UI2Button.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            UI2Button.Location = new Point(517, 256);
+            UI2Button.MinimumSize = new Size(1, 1);
+            UI2Button.Name = "UI2Button";
+            UI2Button.Size = new Size(67, 32);
+            UI2Button.TabIndex = 3;
+            UI2Button.Text = "刷新";
+            UI2Button.Click += uiButton2_Click;
+            // 
+            // uiButton1
+            // 
+            uiButton1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            uiButton1.Location = new Point(237, 238);
+            uiButton1.MinimumSize = new Size(1, 1);
+            uiButton1.Name = "uiButton1";
+            uiButton1.Size = new Size(175, 50);
+            uiButton1.TabIndex = 2;
+            uiButton1.Text = "查看欠费详情";
+            uiButton1.Click += uiButton1_Click;
+            // 
             // CostDataGridView
             // 
             dataGridViewCellStyle1.BackColor = Color.FromArgb(243, 249, 255);
             CostDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            CostDataGridView.AutoGenerateColumns = false;
             CostDataGridView.BackgroundColor = Color.FromArgb(243, 249, 255);
             CostDataGridView.BorderStyle = BorderStyle.None;
             CostDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -155,7 +186,8 @@
             CostDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             CostDataGridView.ColumnHeadersHeight = 32;
             CostDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            CostDataGridView.Columns.AddRange(new DataGridViewColumn[] { DormNum, Time, Money, Or });
+            CostDataGridView.Columns.AddRange(new DataGridViewColumn[] { callerDormDataGridViewTextBoxColumn, amountDataGridViewTextBoxColumn, typeDataGridViewTextBoxColumn, Or });
+            CostDataGridView.DataSource = paymentBindingSource;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -191,44 +223,41 @@
             CostDataGridView.TabIndex = 1;
             CostDataGridView.CellContentClick += CostDataGridView_CellContentClick;
             // 
-            // DormNum
+            // paymentBindingSource
             // 
-            DormNum.HeaderText = "欠费宿舍号";
-            DormNum.MinimumWidth = 6;
-            DormNum.Name = "DormNum";
-            DormNum.Width = 125;
+            paymentBindingSource.DataSource = typeof(Dormitory_Life_Assistant.Payment);
             // 
-            // Time
+            // callerDormDataGridViewTextBoxColumn
             // 
-            Time.HeaderText = "欠费时间";
-            Time.MinimumWidth = 6;
-            Time.Name = "Time";
-            Time.Width = 125;
+            callerDormDataGridViewTextBoxColumn.DataPropertyName = "CallerDorm";
+            callerDormDataGridViewTextBoxColumn.HeaderText = "欠费宿舍号";
+            callerDormDataGridViewTextBoxColumn.MinimumWidth = 6;
+            callerDormDataGridViewTextBoxColumn.Name = "callerDormDataGridViewTextBoxColumn";
+            callerDormDataGridViewTextBoxColumn.Width = 125;
             // 
-            // Money
+            // amountDataGridViewTextBoxColumn
             // 
-            Money.HeaderText = "欠费金额";
-            Money.MinimumWidth = 6;
-            Money.Name = "Money";
-            Money.Width = 125;
+            amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
+            amountDataGridViewTextBoxColumn.HeaderText = "欠费金额";
+            amountDataGridViewTextBoxColumn.MinimumWidth = 6;
+            amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
+            amountDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // typeDataGridViewTextBoxColumn
+            // 
+            typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
+            typeDataGridViewTextBoxColumn.HeaderText = "欠费类型";
+            typeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            typeDataGridViewTextBoxColumn.Width = 125;
             // 
             // Or
             // 
+            Or.DataPropertyName = "Status";
             Or.HeaderText = "是否缴费";
             Or.MinimumWidth = 6;
             Or.Name = "Or";
             Or.Width = 125;
-            // 
-            // uiButton1
-            // 
-            uiButton1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiButton1.Location = new Point(240, 230);
-            uiButton1.MinimumSize = new Size(1, 1);
-            uiButton1.Name = "uiButton1";
-            uiButton1.Size = new Size(175, 50);
-            uiButton1.TabIndex = 2;
-            uiButton1.Text = "查看欠费详情";
-            uiButton1.Click += uiButton1_Click;
             // 
             // TCostForm
             // 
@@ -243,6 +272,7 @@
             tableLayoutPanel1.ResumeLayout(false);
             uiGroupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)CostDataGridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)paymentBindingSource).EndInit();
             ResumeLayout(false);
         }
 
@@ -254,10 +284,12 @@
         private Sunny.UI.UIButton CostButton;
         private Sunny.UI.UIGroupBox uiGroupBox2;
         private Sunny.UI.UIDataGridView CostDataGridView;
-        private DataGridViewTextBoxColumn DormNum;
-        private DataGridViewTextBoxColumn Time;
-        private DataGridViewTextBoxColumn Money;
-        private DataGridViewTextBoxColumn Or;
         private Sunny.UI.UIButton uiButton1;
+        private BindingSource paymentBindingSource;
+        private Sunny.UI.UIButton UI2Button;
+        private DataGridViewTextBoxColumn callerDormDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn Or;
     }
 }

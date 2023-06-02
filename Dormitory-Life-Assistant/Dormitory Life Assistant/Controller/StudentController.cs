@@ -8,18 +8,15 @@ namespace Dormitory_Life_Assistant
 {
     internal class StudentController
     {
-        public Student stu;
-        public MessageService mes;
-        public PaymentService pas;
-        public RepairServicce res;
-        public ComplaintService cos;
-        public ScheduleService scs;
-        public ClockInService cls;
+        Student stu;
+        MessageService mes;
+        PaymentService pas;
+        RepairServicce res;
+        ComplaintService cos;
+        ScheduleService scs;
+        ClockInService cls;
 
-        public StudentController()
-        {
-            stu = new Student();
-            res = new RepairServicce(stu, null, null);
-        }
+        List<Supervisor> supervisors;//可能要添加所有宿管的表，方便查找
+        public StudentController() { }
     }
 }
