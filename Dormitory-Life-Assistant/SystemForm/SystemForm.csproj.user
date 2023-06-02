@@ -89,6 +89,9 @@
     <Compile Update="SupForm\InformationChildForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="SupForm\MessageEdit2.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="SupForm\SendInformationForm.cs">
       <SubType>Form</SubType>
     </Compile>

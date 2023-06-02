@@ -12,6 +12,10 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 using Dormitory_Life_Assistant;
 
+/*
+    系统消息编辑窗口，用于添加信息和修改信息
+ */
+
 namespace SystemForm
 {
     public partial class MessageEdit : UIEditForm
@@ -34,7 +38,12 @@ namespace SystemForm
             return CheckEmpty(messageContent, "请输入公告内容");
         }
 
-       
+
+        private void messageContent_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
 
         public SystemMessage SystemMessage
         {

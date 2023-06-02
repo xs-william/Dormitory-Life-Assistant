@@ -68,6 +68,7 @@
             uiButton2.Size = new Size(93, 38);
             uiButton2.TabIndex = 11;
             uiButton2.Text = "提交";
+            uiButton2.Click += uiButton2_Click;
             // 
             // uiButton1
             // 
@@ -94,6 +95,7 @@
             uiTextBox1.TabIndex = 9;
             uiTextBox1.TextAlignment = ContentAlignment.MiddleLeft;
             uiTextBox1.Watermark = "";
+            uiTextBox1.TextChanged += uiTextBox1_TextChanged;
             // 
             // uiLabel1
             // 
