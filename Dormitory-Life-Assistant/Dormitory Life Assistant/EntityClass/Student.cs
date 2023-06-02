@@ -14,8 +14,8 @@ namespace Dormitory_Life_Assistant
     {
 
         [Key]
-        public String ID { get; set; }
-        public String Name { get; set; }
+        public String StudentId { get; set; }
+        public String StudentName { get; set; }
         public int Grade { get; set; }
         public String Department { get; set; }//所在系
         public String BuildingName//所在宿舍楼栋
@@ -46,7 +46,7 @@ namespace Dormitory_Life_Assistant
 
         public Student(string id, string dormNumber)
         {
-            ID = id;
+            StudentId = id;
             DormNumber = dormNumber;
 
         }

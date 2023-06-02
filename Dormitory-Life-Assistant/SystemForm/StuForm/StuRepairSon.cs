@@ -35,7 +35,7 @@ namespace SystemForm
 
         private void uiButton2_Click(object sender, EventArgs e)
         {
-            Repair r = new Repair(0, uiTextBox1.Text, stu.ID);
+            Repair r = new Repair(0, uiTextBox1.Text, stu.StudentId);
             if (r != null)
             {
                 RepairServicce repairServicce = new RepairServicce();

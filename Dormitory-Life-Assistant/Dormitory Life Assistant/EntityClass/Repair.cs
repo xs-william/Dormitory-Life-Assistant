@@ -33,7 +33,7 @@ namespace Dormitory_Life_Assistant
             this.RepairTime = DateTime.Now;
             using (var ctx = new SystemContext())
             {
-                this.CallerDorm = ctx.Students.FirstOrDefault(s => s.ID == callerID)?.DormNumber;
+                this.CallerDorm = ctx.Students.FirstOrDefault(s => s.StudentId == callerID)?.DormNumber;
 
             }
         }

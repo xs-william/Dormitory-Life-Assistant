@@ -12,9 +12,10 @@ namespace Dormitory_Life_Assistant
 {
     public class Supervisor
     {
-        public String SupervisorName { get; set; }
         [Key]
-        public String ID { get; set; }
+        public String SupervisorId { get; set; }
+        public String SupervisorName { get; set; }
+
         public String Tele { get; set; }
         public String Gender { get; set; }
         public Blob Profile { get; set; }//头像
@@ -35,7 +36,7 @@ namespace Dormitory_Life_Assistant
 
         public Supervisor(string id, List<Building> build)
         {
-            this.ID = id;
+            this.SupervisorId = id;
             ManageBuilding = build;
         }
 

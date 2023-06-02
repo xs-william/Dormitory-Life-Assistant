@@ -51,7 +51,7 @@ namespace Dormitory_Life_Assistant
         {
             using (var ctx = new SystemContext())
             {
-                var result = ctx.Payments.Where(p => p.CallerID == stu.ID);
+                var result = ctx.Payments.Where(p => p.CallerID == stu.StudentId);
                 return result.ToList<Payment>();
             }
         }
