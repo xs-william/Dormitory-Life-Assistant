@@ -62,5 +62,10 @@ namespace SystemForm
                 RemindLabel.Text = " ";
             }
         }
+
+        private void RegisterButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

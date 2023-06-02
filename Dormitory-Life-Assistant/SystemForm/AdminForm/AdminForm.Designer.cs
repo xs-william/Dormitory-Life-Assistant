@@ -35,6 +35,7 @@
             uiNavBar2 = new Sunny.UI.UINavBar();
             uiSmoothLabel2 = new Sunny.UI.UISmoothLabel();
             uiAvatar2 = new Sunny.UI.UIAvatar();
+            uiButton1 = new Sunny.UI.UIButton();
             MainContainer.SuspendLayout();
             uiNavBar2.SuspendLayout();
             SuspendLayout();
@@ -82,6 +83,7 @@
             // uiNavBar2
             // 
             uiNavBar2.BackColor = SystemColors.ActiveCaption;
+            uiNavBar2.Controls.Add(uiButton1);
             uiNavBar2.Controls.Add(uiSmoothLabel2);
             uiNavBar2.Controls.Add(uiAvatar2);
             uiNavBar2.Dock = DockStyle.Top;
@@ -120,6 +122,17 @@
             uiAvatar2.TabIndex = 0;
             uiAvatar2.Text = "uiAvatar2";
             // 
+            // uiButton1
+            // 
+            uiButton1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            uiButton1.Location = new Point(922, 29);
+            uiButton1.MinimumSize = new Size(1, 1);
+            uiButton1.Name = "uiButton1";
+            uiButton1.Size = new Size(150, 52);
+            uiButton1.TabIndex = 2;
+            uiButton1.Text = "返回";
+            uiButton1.Click += uiButton1_Click;
+            // 
             // AdminForm
             // 
             AutoScaleMode = AutoScaleMode.None;
@@ -143,5 +156,6 @@
         private Sunny.UI.UINavBar uiNavBar2;
         private Sunny.UI.UISmoothLabel uiSmoothLabel2;
         private Sunny.UI.UIAvatar uiAvatar2;
+        private Sunny.UI.UIButton uiButton1;
     }
 }

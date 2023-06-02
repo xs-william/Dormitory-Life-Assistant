@@ -35,5 +35,12 @@ namespace SystemForm
             //显示默认界面
             Choice.SelectFirst();
         }
+
+        private void uiButton1_Click(object sender, EventArgs e)
+        {
+            LogInForm logInForm = new LogInForm();
+            this.Hide();
+            logInForm.ShowDialog();
+        }
     }
 }

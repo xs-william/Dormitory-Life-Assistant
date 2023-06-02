@@ -35,6 +35,7 @@
             Choice = new Sunny.UI.UINavMenu();
             MainContainer = new Sunny.UI.UITabControl();
             tabPage1 = new TabPage();
+            uiButton1 = new Sunny.UI.UIButton();
             uiNavBar1.SuspendLayout();
             MainContainer.SuspendLayout();
             SuspendLayout();
@@ -42,6 +43,7 @@
             // uiNavBar1
             // 
             uiNavBar1.BackColor = SystemColors.ActiveCaption;
+            uiNavBar1.Controls.Add(uiButton1);
             uiNavBar1.Controls.Add(uiSmoothLabel1);
             uiNavBar1.Controls.Add(uiAvatar1);
             uiNavBar1.Dock = DockStyle.Top;
@@ -120,14 +122,25 @@
             tabPage1.Text = "tabPage1";
             tabPage1.UseVisualStyleBackColor = true;
             // 
-            // FCustomMain
+            // uiButton1
+            // 
+            uiButton1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            uiButton1.Location = new Point(921, 29);
+            uiButton1.MinimumSize = new Size(1, 1);
+            uiButton1.Name = "uiButton1";
+            uiButton1.Size = new Size(150, 52);
+            uiButton1.TabIndex = 2;
+            uiButton1.Text = "返回";
+            uiButton1.Click += uiButton1_Click;
+            // 
+            // TMainForm
             // 
             AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(1140, 627);
             Controls.Add(MainContainer);
             Controls.Add(Choice);
             Controls.Add(uiNavBar1);
-            Name = "FCustomMain";
+            Name = "TMainForm";
             Padding = new Padding(2, 36, 2, 2);
             ShowDragStretch = true;
             ShowRadius = false;
@@ -146,5 +159,6 @@
         private Sunny.UI.UINavMenu Choice;
         private Sunny.UI.UITabControl MainContainer;
         private TabPage tabPage1;
+        private Sunny.UI.UIButton uiButton1;
     }
 }

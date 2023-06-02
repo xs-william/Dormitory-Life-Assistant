@@ -38,6 +38,9 @@
             StudentRadioButton = new Sunny.UI.UIRadioButton();
             TeacherRadioButton = new Sunny.UI.UIRadioButton();
             ManagerRadioButton3 = new Sunny.UI.UIRadioButton();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
             uiGroupBox2 = new Sunny.UI.UIGroupBox();
             RemindLabel = new Sunny.UI.UILabel();
             RegisterButton = new Sunny.UI.UIButton();
@@ -48,20 +51,17 @@
             uiLabel2 = new Sunny.UI.UILabel();
             IDTextBox = new Sunny.UI.UITextBox();
             PasswordTextBox = new Sunny.UI.UITextBox();
-            pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            pictureBox3 = new PictureBox();
             uiNavBar1.SuspendLayout();
             MainContainer.SuspendLayout();
             tabPage1.SuspendLayout();
             panel1.SuspendLayout();
             uiGroupBox1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
-            uiGroupBox2.SuspendLayout();
-            tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            uiGroupBox2.SuspendLayout();
+            tableLayoutPanel2.SuspendLayout();
             SuspendLayout();
             // 
             // uiNavBar1
@@ -73,7 +73,7 @@
             uiNavBar1.Location = new Point(2, 36);
             uiNavBar1.MenuStyle = Sunny.UI.UIMenuStyle.Custom;
             uiNavBar1.Name = "uiNavBar1";
-            uiNavBar1.Size = new Size(1136, 99);
+            uiNavBar1.Size = new Size(1080, 99);
             uiNavBar1.TabIndex = 1;
             uiNavBar1.Text = "uiNavBar1";
             // 
@@ -101,7 +101,7 @@
             MainContainer.MainPage = "";
             MainContainer.Name = "MainContainer";
             MainContainer.SelectedIndex = 0;
-            MainContainer.Size = new Size(1136, 657);
+            MainContainer.Size = new Size(1080, 687);
             MainContainer.SizeMode = TabSizeMode.Fixed;
             MainContainer.TabIndex = 3;
             MainContainer.TabUnSelectedForeColor = Color.FromArgb(240, 240, 240);
@@ -112,7 +112,7 @@
             tabPage1.Controls.Add(panel1);
             tabPage1.Location = new Point(0, 0);
             tabPage1.Name = "tabPage1";
-            tabPage1.Size = new Size(1136, 657);
+            tabPage1.Size = new Size(1080, 687);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "tabPage1";
             tabPage1.UseVisualStyleBackColor = true;
@@ -196,6 +196,36 @@
             ManagerRadioButton3.TabIndex = 2;
             ManagerRadioButton3.Text = "管理员";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.student;
+            pictureBox1.Location = new Point(3, 43);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(125, 115);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.teacher;
+            pictureBox2.Location = new Point(134, 43);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(125, 115);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 4;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = Properties.Resources.manager;
+            pictureBox3.Location = new Point(266, 43);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(125, 115);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 5;
+            pictureBox3.TabStop = false;
+            // 
             // uiGroupBox2
             // 
             uiGroupBox2.Controls.Add(RemindLabel);
@@ -232,6 +262,7 @@
             RegisterButton.Size = new Size(133, 44);
             RegisterButton.TabIndex = 3;
             RegisterButton.Text = "注册";
+            RegisterButton.Click += RegisterButton_Click;
             // 
             // LogInButton
             // 
@@ -330,40 +361,10 @@
             PasswordTextBox.TextAlignment = ContentAlignment.MiddleLeft;
             PasswordTextBox.Watermark = "";
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.student;
-            pictureBox1.Location = new Point(3, 43);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(125, 115);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 3;
-            pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = Properties.Resources.teacher;
-            pictureBox2.Location = new Point(134, 43);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(125, 115);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 4;
-            pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = Properties.Resources.manager;
-            pictureBox3.Location = new Point(266, 43);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(125, 115);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 5;
-            pictureBox3.TabStop = false;
-            // 
             // LogInForm
             // 
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(1140, 794);
+            ClientSize = new Size(1084, 824);
             Controls.Add(MainContainer);
             Controls.Add(uiNavBar1);
             Name = "LogInForm";
@@ -379,11 +380,11 @@
             panel1.ResumeLayout(false);
             uiGroupBox1.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
-            uiGroupBox2.ResumeLayout(false);
-            tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            uiGroupBox2.ResumeLayout(false);
+            tableLayoutPanel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
