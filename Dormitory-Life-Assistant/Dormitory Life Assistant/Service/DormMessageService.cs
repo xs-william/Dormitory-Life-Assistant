@@ -10,21 +10,21 @@ namespace Dormitory_Life_Assistant
     public class DormMessageService
     {
         //测试代码，之后去掉
-        Supervisor supervisor = new Supervisor("1", "BBT的王子异");
+        //Supervisor supervisor = new Supervisor("1", "BBT的王子异");
         public DormMessageService()
         {
-            using (var ctx = new SystemContext())
-            {
-                if (ctx.Supervisors.Count() == 0)
-                {
-                    ctx.Supervisors.Add(supervisor);
-                    ctx.SaveChanges();
-                }
-                if(ctx.DormMessages.Count() == 0)
-                {
-                    ctx.DormMessages.Add(new DormMessage("8848钛金手机", supervisor));
-                }
-            }
+            //using (var ctx = new SystemContext())
+            //{
+            //    if (ctx.Supervisors.Count() == 0)
+            //    {
+            //        ctx.Supervisors.Add(supervisor);
+            //        ctx.SaveChanges();
+            //    }
+            //    if(ctx.DormMessages.Count() == 0)
+            //    {
+            //        ctx.DormMessages.Add(new DormMessage("8848钛金手机", supervisor));
+            //    }
+            //}
         }
         //查看所有消息
         public List<DormMessage> DormMessages

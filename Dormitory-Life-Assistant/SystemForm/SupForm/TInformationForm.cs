@@ -35,9 +35,13 @@ namespace SystemForm
         private void AddButton_Click(object sender, EventArgs e)
         {
             MessageEdit2 me = new MessageEdit2(supervisor);
+            me.Text = "添加通知";
             me.uiLabel1.Text = "通知内容";
             me.ShowDialog();
-            messageService.AddDormMessage(me.DormMessage);
+            if(me.DormMessage.Content != "")
+            {
+                messageService.AddDormMessage(me.DormMessage);
+            }
             QueryAll();
         }
         private void DetailButton_Click(object sender, EventArgs e)

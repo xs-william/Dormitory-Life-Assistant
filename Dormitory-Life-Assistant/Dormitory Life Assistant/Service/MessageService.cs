@@ -44,6 +44,7 @@ namespace Dormitory_Life_Assistant
                     .ToList<ExchangeMessage>();
             }
         }
+        // 发送系统消息
         public void SendExchangeMessage(ExchangeMessage m) 
         {
             FixExchangeMessage(m);
@@ -53,7 +54,7 @@ namespace Dormitory_Life_Assistant
                 ctx.SaveChanges();
             }
         }
-        //避免级联添加或修改Student和Supervisor
+        // 避免级联添加或修改Student和Supervisor
         private static void FixExchangeMessage(ExchangeMessage exchangeMessage)
         {
             exchangeMessage.StudentId = exchangeMessage.Student.StudentId;
@@ -61,7 +62,7 @@ namespace Dormitory_Life_Assistant
             exchangeMessage.SupervisorId = exchangeMessage.Supervisor.SupervisorId;
             exchangeMessage.Supervisor = null;
         }
-        //删除消息
+        // 删除消息
         public void deleteExchangeMessage(ExchangeMessage m) 
         {
             using (var ctx = new SystemContext())
@@ -70,7 +71,7 @@ namespace Dormitory_Life_Assistant
                 ctx.SaveChanges();
             }
         }
-        //根据内容寻找消息
+        // 根据内容寻找消息
         public List<ExchangeMessage> QueryExchangeMessagesByContent(string content)
         {
             using (var ctx = new SystemContext())
@@ -82,7 +83,7 @@ namespace Dormitory_Life_Assistant
                   .ToList();
             }
         }
-        //根据日期寻找消息
+        // 根据日期寻找消息
         public List<ExchangeMessage> QueryExchangeMessagesByDate(string date)
         {
             using (var ctx = new SystemContext())
@@ -94,7 +95,7 @@ namespace Dormitory_Life_Assistant
                   .ToList();
             }
         }
-        //根据发信人寻找消息
+        // 根据发信人寻找消息
         public List<ExchangeMessage> QueryExchangeMessagesBySupervisorName(string name)
         {
             using (var ctx = new SystemContext())

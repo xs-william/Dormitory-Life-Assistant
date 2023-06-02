@@ -11,7 +11,7 @@ namespace Dormitory_Life_Assistant
         public string DormMessageId { get; set; }
         public string Content { get; set; }
         public DateTime Time { get; set; }
-        public string SupervisorId { get; set; }
+        public string SupervisorId { get; set; }// 发送宿舍消息的宿管的id，外键
         public string SupervisorName
         {
             get

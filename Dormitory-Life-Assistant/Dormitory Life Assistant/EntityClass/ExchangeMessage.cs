@@ -9,9 +9,9 @@ namespace Dormitory_Life_Assistant
 {
     public class ExchangeMessage
     {
-        public string ExchangeMessageID { get; set; }//主键
-        public string Content { get; set; }
-        public DateTime Time { get; set; }
+        public string ExchangeMessageID { get; set; }// 主键
+        public string Content { get; set; }// 内容
+        public DateTime Time { get; set; }// 发送时间
         public string SupervisorId { get; set; }//发送信息的宿管ID，外键
         public string SupervisorName
         {
@@ -21,7 +21,7 @@ namespace Dormitory_Life_Assistant
             }
         }
         public Supervisor Supervisor { get; set; }
-        public string StudentId { get; set; }
+        public string StudentId { get; set; }//接受信息的学生的id，外键
         public string StudentName
         {
             get

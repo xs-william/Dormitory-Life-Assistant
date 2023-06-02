@@ -32,9 +32,6 @@
     <Compile Update="LogInForm\RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="SupForm\MessageEdit2.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="StuForm\Setting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +78,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="SupForm\InformationChildForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SupForm\MessageEdit2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="SupForm\SendInformationForm.cs">

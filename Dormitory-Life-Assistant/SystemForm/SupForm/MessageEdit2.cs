@@ -9,7 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/*
+ * 该窗口用于给学生发送消息与发送宿舍消息
+ */
 namespace SystemForm
 {
     public partial class MessageEdit2 : UIEditForm
@@ -24,10 +26,12 @@ namespace SystemForm
             this.supervisor = supervisor;
             this.student = student;
         }
+        // 判断内容是否为空
         protected override bool CheckData()
         {
             return CheckEmpty(messageContent, "请输入公告内容");
         }
+        // 只提供get，因为只需要得到不需要修改
         public ExchangeMessage ExchangeMessage
         {
             get

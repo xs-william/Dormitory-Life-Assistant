@@ -23,13 +23,13 @@ namespace SystemForm
             this.supervisor = supervisor;
             //绑定数据
         }
-
+        // 查看学生详细信息
         private void uiButton1_Click(object sender, EventArgs e)
         {
             StudentChildForm scf = new StudentChildForm();
             scf.ShowDialog();
         }
-
+        // 选择学生弹出提示框发送消息
         private void uiButton2_Click(object sender, EventArgs e)
         {
             Student student = studentBindingSource.Current as Student;
@@ -39,9 +39,13 @@ namespace SystemForm
                 return;
             }
             MessageEdit2 me = new MessageEdit2(supervisor, student);
+            me.Text = "发送消息";
             me.uiLabel1.Text = "信息内容";
             me.ShowDialog();
-            messageService.SendExchangeMessage(me.ExchangeMessage);
+            if(me.ExchangeMessage.Content != "")
+            {
+                messageService.SendExchangeMessage(me.ExchangeMessage);
+            }
         }
     }
 }
