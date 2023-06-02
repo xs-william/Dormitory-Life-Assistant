@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dormitory_Life_Assistant
 {
-    internal class Building
+    public class Building
     {
         public string BuildingName//楼栋名
         {

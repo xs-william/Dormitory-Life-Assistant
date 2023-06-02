@@ -1,4 +1,5 @@
 using Sunny.UI;
+using Dormitory_Life_Assistant;
 
 namespace SystemForm
 {
@@ -7,7 +8,9 @@ namespace SystemForm
         public StudentForm()
         {
             InitializeComponent();
-
+            //Student me应该是登陆界面传递下来的对象，表示用户
+            //该参数需要一直传递
+            Student me = new Student("1","蔡徐坤");
             Choice.TabControl = MainContainer;
             //增加页面到Main
             AddPage(new stuMain(), 1001);
@@ -15,7 +18,7 @@ namespace SystemForm
             AddPage(new stuRepair(), 1003);
             AddPage(new StuTreeHole(), 1004);
             AddPage(new StuPunch(), 1005);
-            AddPage(new StuMessage(), 1006);
+            AddPage(new StuMessage(me), 1006);
             AddPage(new StuComplaint(), 1008);
             AddPage(new Setting(), 1009);
 

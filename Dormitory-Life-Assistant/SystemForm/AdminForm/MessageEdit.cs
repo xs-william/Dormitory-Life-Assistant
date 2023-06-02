@@ -11,6 +11,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 using Dormitory_Life_Assistant;
+/*
+    系统消息编辑窗口，用于添加信息和修改信息
+ */
 
 namespace SystemForm
 {
@@ -24,7 +27,7 @@ namespace SystemForm
             TimeNow.Text = DateTime.Now.ToString();
             this.admin = admin;
             this.systemMessage = systemMessage;
-            if(systemMessage != null)
+            if (systemMessage != null)
             {
                 messageContent.Text = systemMessage.Content;
             }
@@ -33,6 +36,7 @@ namespace SystemForm
         {
             return CheckEmpty(messageContent, "请输入公告内容");
         }
+
         public SystemMessage SystemMessage
         {
             get

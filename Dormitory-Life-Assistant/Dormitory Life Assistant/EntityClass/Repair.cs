@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Dormitory_Life_Assistant
 {
-    internal class Repair
+    public class Repair
     {
         Blob Picture;//图片
         string Content;

@@ -34,13 +34,14 @@
             tabPage1 = new TabPage();
             uiGroupBox1 = new Sunny.UI.UIGroupBox();
             tableLayoutPanel2 = new TableLayoutPanel();
-            RemindButton = new Sunny.UI.UIButton();
             DeleteButton = new Sunny.UI.UIButton();
-            UpdateButton = new Sunny.UI.UIButton();
             tableLayoutPanel1 = new TableLayoutPanel();
+            contentLabel = new Sunny.UI.UILabel();
+            timeLabel = new Sunny.UI.UILabel();
             uiLabel1 = new Sunny.UI.UILabel();
             uiLabel2 = new Sunny.UI.UILabel();
             uiLabel3 = new Sunny.UI.UILabel();
+            nameLabel = new Sunny.UI.UILabel();
             uiNavBar1.SuspendLayout();
             MainContainer.SuspendLayout();
             tabPage1.SuspendLayout();
@@ -104,92 +105,92 @@
             // 
             // uiGroupBox1
             // 
-            uiGroupBox1.Controls.Add(tableLayoutPanel2);
             uiGroupBox1.Controls.Add(tableLayoutPanel1);
+            uiGroupBox1.Controls.Add(tableLayoutPanel2);
             uiGroupBox1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
             uiGroupBox1.Location = new Point(294, 28);
             uiGroupBox1.Margin = new Padding(4, 5, 4, 5);
             uiGroupBox1.MinimumSize = new Size(1, 1);
             uiGroupBox1.Name = "uiGroupBox1";
             uiGroupBox1.Padding = new Padding(0, 32, 0, 0);
-            uiGroupBox1.Size = new Size(457, 284);
+            uiGroupBox1.Size = new Size(457, 352);
             uiGroupBox1.TabIndex = 2;
             uiGroupBox1.Text = "通知详情：";
             uiGroupBox1.TextAlignment = ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel2
             // 
-            tableLayoutPanel2.ColumnCount = 3;
+            tableLayoutPanel2.ColumnCount = 1;
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel2.Controls.Add(RemindButton, 0, 0);
-            tableLayoutPanel2.Controls.Add(DeleteButton, 1, 0);
-            tableLayoutPanel2.Controls.Add(UpdateButton, 2, 0);
-            tableLayoutPanel2.Location = new Point(19, 203);
+            tableLayoutPanel2.Controls.Add(DeleteButton, 0, 0);
+            tableLayoutPanel2.Location = new Point(156, 284);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.Size = new Size(438, 56);
+            tableLayoutPanel2.Size = new Size(132, 56);
             tableLayoutPanel2.TabIndex = 1;
-            // 
-            // RemindButton
-            // 
-            RemindButton.Anchor = AnchorStyles.Left;
-            RemindButton.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            RemindButton.Location = new Point(3, 6);
-            RemindButton.MinimumSize = new Size(1, 1);
-            RemindButton.Name = "RemindButton";
-            RemindButton.Size = new Size(125, 44);
-            RemindButton.TabIndex = 0;
-            RemindButton.Text = "发送提醒";
             // 
             // DeleteButton
             // 
             DeleteButton.Anchor = AnchorStyles.Left;
             DeleteButton.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            DeleteButton.Location = new Point(148, 6);
+            DeleteButton.Location = new Point(3, 6);
             DeleteButton.MinimumSize = new Size(1, 1);
             DeleteButton.Name = "DeleteButton";
             DeleteButton.Size = new Size(125, 44);
             DeleteButton.TabIndex = 1;
             DeleteButton.Text = "删除通知";
-            // 
-            // UpdateButton
-            // 
-            UpdateButton.Anchor = AnchorStyles.Left;
-            UpdateButton.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            UpdateButton.Location = new Point(293, 6);
-            UpdateButton.MinimumSize = new Size(1, 1);
-            UpdateButton.Name = "UpdateButton";
-            UpdateButton.Size = new Size(125, 44);
-            UpdateButton.TabIndex = 2;
-            UpdateButton.Text = "更新通知";
+            DeleteButton.Click += DeleteButton_Click;
             // 
             // tableLayoutPanel1
             // 
+            tableLayoutPanel1.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
             tableLayoutPanel1.ColumnCount = 2;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 40F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 60F));
+            tableLayoutPanel1.Controls.Add(contentLabel, 1, 2);
+            tableLayoutPanel1.Controls.Add(timeLabel, 1, 1);
             tableLayoutPanel1.Controls.Add(uiLabel1, 0, 0);
             tableLayoutPanel1.Controls.Add(uiLabel2, 0, 1);
             tableLayoutPanel1.Controls.Add(uiLabel3, 0, 2);
+            tableLayoutPanel1.Controls.Add(nameLabel, 1, 0);
             tableLayoutPanel1.Location = new Point(44, 44);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 3;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.Size = new Size(371, 143);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Size = new Size(371, 225);
             tableLayoutPanel1.TabIndex = 0;
+            // 
+            // contentLabel
+            // 
+            contentLabel.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            contentLabel.ImageAlign = ContentAlignment.MiddleLeft;
+            contentLabel.Location = new Point(152, 113);
+            contentLabel.Name = "contentLabel";
+            contentLabel.Size = new Size(215, 111);
+            contentLabel.TabIndex = 5;
+            contentLabel.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // timeLabel
+            // 
+            timeLabel.Anchor = AnchorStyles.None;
+            timeLabel.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            timeLabel.ImageAlign = ContentAlignment.MiddleLeft;
+            timeLabel.Location = new Point(197, 70);
+            timeLabel.Name = "timeLabel";
+            timeLabel.Size = new Size(125, 29);
+            timeLabel.TabIndex = 4;
+            timeLabel.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // uiLabel1
             // 
             uiLabel1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             uiLabel1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiLabel1.Location = new Point(3, 9);
+            uiLabel1.Location = new Point(4, 14);
             uiLabel1.Name = "uiLabel1";
-            uiLabel1.Size = new Size(142, 29);
+            uiLabel1.Size = new Size(141, 29);
             uiLabel1.TabIndex = 0;
             uiLabel1.Text = "发布者：";
             uiLabel1.TextAlign = ContentAlignment.MiddleLeft;
@@ -198,9 +199,9 @@
             // 
             uiLabel2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             uiLabel2.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiLabel2.Location = new Point(3, 56);
+            uiLabel2.Location = new Point(4, 70);
             uiLabel2.Name = "uiLabel2";
-            uiLabel2.Size = new Size(142, 29);
+            uiLabel2.Size = new Size(141, 29);
             uiLabel2.TabIndex = 1;
             uiLabel2.Text = "发布时间：";
             uiLabel2.TextAlign = ContentAlignment.MiddleLeft;
@@ -209,12 +210,23 @@
             // 
             uiLabel3.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             uiLabel3.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiLabel3.Location = new Point(3, 104);
+            uiLabel3.Location = new Point(4, 154);
             uiLabel3.Name = "uiLabel3";
-            uiLabel3.Size = new Size(142, 29);
+            uiLabel3.Size = new Size(141, 29);
             uiLabel3.TabIndex = 2;
             uiLabel3.Text = "通知内容：";
             uiLabel3.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // nameLabel
+            // 
+            nameLabel.Anchor = AnchorStyles.None;
+            nameLabel.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            nameLabel.ImageAlign = ContentAlignment.MiddleLeft;
+            nameLabel.Location = new Point(197, 14);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new Size(125, 29);
+            nameLabel.TabIndex = 3;
+            nameLabel.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // InformationChildForm
             // 
@@ -245,12 +257,13 @@
         private TabPage tabPage1;
         private Sunny.UI.UIGroupBox uiGroupBox1;
         private TableLayoutPanel tableLayoutPanel2;
-        private Sunny.UI.UIButton RemindButton;
         private Sunny.UI.UIButton DeleteButton;
-        private Sunny.UI.UIButton UpdateButton;
         private TableLayoutPanel tableLayoutPanel1;
         private Sunny.UI.UILabel uiLabel1;
         private Sunny.UI.UILabel uiLabel2;
         private Sunny.UI.UILabel uiLabel3;
+        private Sunny.UI.UILabel contentLabel;
+        private Sunny.UI.UILabel timeLabel;
+        private Sunny.UI.UILabel nameLabel;
     }
 }

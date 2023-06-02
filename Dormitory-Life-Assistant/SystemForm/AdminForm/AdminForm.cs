@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dormitory_Life_Assistant;
 using Sunny.UI;
 
 namespace SystemForm
 {
     public partial class AdminForm : UIForm
     {
+        //登录界面传来的administrator，为用户
+        private Administrator administrator = new Administrator("2", "小达");
         public AdminForm()
         {
             InitializeComponent();
@@ -22,7 +25,7 @@ namespace SystemForm
             AddPage(new AdminStuManage(), 2002);
             AddPage(new AdminSuperManage(), 2003);
             AddPage(new AdminPunch(), 2004);
-            AddPage(new AdminNotice(), 2005);
+            AddPage(new AdminNotice(administrator), 2005);
             AddPage(new AdminDorm(), 2006);
 
 

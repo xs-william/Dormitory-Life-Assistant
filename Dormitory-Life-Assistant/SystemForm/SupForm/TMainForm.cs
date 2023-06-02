@@ -1,3 +1,4 @@
+using Dormitory_Life_Assistant;
 using Sunny.UI;
 
 namespace SystemForm
@@ -5,6 +6,8 @@ namespace SystemForm
 {
     public partial class TMainForm : UIForm
     {
+        // supervisor是登录进来的supervisor需要一直作为参数传给所有界面
+        private Supervisor supervisor = new Supervisor("1", "BBT的王子异");
         public TMainForm()
         {
             InitializeComponent();
@@ -12,11 +15,11 @@ namespace SystemForm
             Choice.TabControl = MainContainer;
             //增加页面到Main
             AddPage(new TMySelfForm(), 1001);
-            AddPage(new TStudentForm(), 1002);
+            AddPage(new TStudentForm(supervisor), 1002);
             AddPage(new TBreakdownForm(), 1003);
             AddPage(new TCostForm(), 1004);
             AddPage(new TComplaintForm(), 1005);
-            AddPage(new TInformationForm(), 1006);
+            AddPage(new TInformationForm(supervisor), 1006);
             AddPage(new Setting(), 1007);
 
 

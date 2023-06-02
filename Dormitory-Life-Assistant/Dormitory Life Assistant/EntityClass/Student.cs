@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 
 namespace Dormitory_Life_Assistant
 {
-    internal class Student
+    public class Student
     {
-        String Name;
-        String ID;
+        public string StudentId { get; set; }
+        public string StudentName { get; set; }
+
         int Grade;
         String Department;//所在系
         public String BuildingName//所在宿舍楼栋
@@ -20,7 +21,7 @@ namespace Dormitory_Life_Assistant
             get;
             set;
         }
-        String DormNumber;//所在宿舍号
+        public string DormNumber;//所在宿舍号
         String Class; //所在班级
         String Gender;
         List<Payment> bill;
@@ -30,10 +31,15 @@ namespace Dormitory_Life_Assistant
         List<Schedule> schedule;
         String Password;//密码
         Blob Profile;//头像
-        List<ExchangeMessage> myMessage;
+        public List<ExchangeMessage> myMessage;
 
         public void changePassword(string pass) { }//修改密码
         public void changeProfile() { }//修改头像
-
+        public Student() { }
+        public Student(string studentid, string name)
+        {
+            this.StudentId = studentid;
+            this.StudentName = name;
+        }
     }
 }
