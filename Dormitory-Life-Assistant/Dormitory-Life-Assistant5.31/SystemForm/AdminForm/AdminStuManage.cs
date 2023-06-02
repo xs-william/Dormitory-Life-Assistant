@@ -94,7 +94,6 @@ namespace SystemForm
             QueryAll();
         }
 
-        //修改操作
         private void modifyButton_Click(object sender, EventArgs e)
         {
             Student student = studentBindingSource.Current as Student;
