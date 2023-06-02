@@ -15,11 +15,12 @@ namespace SystemForm
     public partial class AdminForm : UIForm
     {
         //登录界面传来的administrator，为用户
-        private Administrator administrator = new Administrator("2", "小达");
-        public AdminForm()
+        private Administrator administrator;
+        public AdminForm(Administrator admin)
         {
             InitializeComponent();
             Choice.TabControl = MainContainer;
+            this.administrator = admin;
             //增加页面到Main
             AddPage(new AdminMain(), 2001);
             AddPage(new AdminStuManage(), 2002);

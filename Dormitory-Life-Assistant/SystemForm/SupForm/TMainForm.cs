@@ -7,11 +7,11 @@ namespace SystemForm
     public partial class TMainForm : UIForm
     {
         // supervisor是登录进来的supervisor需要一直作为参数传给所有界面
-        private Supervisor supervisor = new Supervisor("1", "BBT的王子异");
-        public TMainForm()
+        private Supervisor supervisor;
+        public TMainForm(Supervisor supervisor)
         {
             InitializeComponent();
-
+            this.supervisor = supervisor;
             Choice.TabControl = MainContainer;
             //增加页面到Main
             AddPage(new TMySelfForm(), 1001);

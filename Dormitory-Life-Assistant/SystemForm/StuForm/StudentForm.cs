@@ -5,13 +5,14 @@ namespace SystemForm
 {
     public partial class StudentForm : UIForm
     {
-        public StudentForm()
+        //Student me应该是登陆界面传递下来的对象，表示用户
+        //该参数需要一直传递
+        Student me;
+        public StudentForm(Student stu)
         {
             InitializeComponent();
-            //Student me应该是登陆界面传递下来的对象，表示用户
-            //该参数需要一直传递
-            Student me = new Student("1","蔡徐坤");
             Choice.TabControl = MainContainer;
+            me = stu;
             //增加页面到Main
             AddPage(new stuMain(), 1001);
             AddPage(new StuLifePay(), 1002);
