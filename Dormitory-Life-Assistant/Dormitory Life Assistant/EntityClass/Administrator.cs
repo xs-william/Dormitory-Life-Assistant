@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection.Metadata;
 using System.Text;
@@ -11,6 +12,7 @@ namespace Dormitory_Life_Assistant
 {
     public class Administrator
     {
+        [Key]
         public string AdministratorId { get; set; }
         public string AdministratorName { get; set; }
         //string Tele;

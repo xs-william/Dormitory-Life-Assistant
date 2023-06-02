@@ -146,6 +146,7 @@
             uiButton1.Size = new Size(119, 44);
             uiButton1.TabIndex = 0;
             uiButton1.Text = "添加学生";
+            uiButton1.Click += uiButton1_Click;
             // 
             // uiButton2
             // 

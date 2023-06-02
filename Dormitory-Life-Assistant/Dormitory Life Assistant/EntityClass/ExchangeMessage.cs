@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,15 @@ namespace Dormitory_Life_Assistant
         {
             get
             {
+
+                return Supervisor.SupervisorName;
+                //return "123";
+            }
+        }
+
+        public ExchangeMessage() { }
+
+
                 return Supervisor.SupervisorName;
             }
         }

@@ -29,11 +29,14 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+
+          //不确定删哪个
+            //DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            //DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            //DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            //DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            //DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
@@ -43,6 +46,10 @@
             uiAvatar1 = new Sunny.UI.UIAvatar();
             SystemMessage = new Sunny.UI.UIGroupBox();
             uiDataGridView1 = new Sunny.UI.UIDataGridView();
+
+            contentDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            administratorNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+
             systemMessageBindingSource = new BindingSource(components);
             uiCalendar1 = new Sunny.UI.UICalendar();
             MyDormitory = new Sunny.UI.UIGroupBox();
@@ -67,6 +74,7 @@
             uiLabel2 = new Sunny.UI.UILabel();
             uiLabel1 = new Sunny.UI.UILabel();
             Label1 = new Sunny.UI.UILabel();
+
             uiGroupBox1 = new Sunny.UI.UIGroupBox();
             uiDataGridView2 = new Sunny.UI.UIDataGridView();
             dormMessageBindingSource = new BindingSource(components);
@@ -74,15 +82,18 @@
             SupervisorName = new DataGridViewTextBoxColumn();
             contentDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             administratorNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+
             panel.SuspendLayout();
             SystemMessage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)uiDataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)systemMessageBindingSource).BeginInit();
             MyDormitory.SuspendLayout();
             MyMessage.SuspendLayout();
+
             uiGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)uiDataGridView2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dormMessageBindingSource).BeginInit();
+
             SuspendLayout();
             // 
             // panel
@@ -103,6 +114,7 @@
             panel.TabIndex = 0;
             panel.Text = null;
             panel.TextAlignment = ContentAlignment.MiddleCenter;
+            panel.Click += panel_Click;
             // 
             // uiAvatar1
             // 
@@ -123,13 +135,16 @@
             SystemMessage.MinimumSize = new Size(1, 1);
             SystemMessage.Name = "SystemMessage";
             SystemMessage.Padding = new Padding(0, 32, 0, 0);
+
             SystemMessage.Size = new Size(452, 212);
+
             SystemMessage.TabIndex = 4;
             SystemMessage.Text = "系统消息";
             SystemMessage.TextAlignment = ContentAlignment.MiddleCenter;
             // 
             // uiDataGridView1
             // 
+
             dataGridViewCellStyle6.BackColor = Color.FromArgb(243, 249, 255);
             uiDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             uiDataGridView1.AutoGenerateColumns = false;
@@ -143,11 +158,13 @@
             dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
             uiDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+
             uiDataGridView1.ColumnHeadersHeight = 32;
             uiDataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             uiDataGridView1.ColumnHeadersVisible = false;
             uiDataGridView1.Columns.AddRange(new DataGridViewColumn[] { contentDataGridViewTextBoxColumn, administratorNameDataGridViewTextBoxColumn });
             uiDataGridView1.DataSource = systemMessageBindingSource;
+
             dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = Color.White;
             dataGridViewCellStyle8.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -156,12 +173,14 @@
             dataGridViewCellStyle8.SelectionForeColor = Color.FromArgb(48, 48, 48);
             dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
             uiDataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
+
             uiDataGridView1.Dock = DockStyle.Fill;
             uiDataGridView1.EnableHeadersVisualStyles = false;
             uiDataGridView1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
             uiDataGridView1.GridColor = Color.FromArgb(104, 173, 255);
             uiDataGridView1.Location = new Point(0, 32);
             uiDataGridView1.Name = "uiDataGridView1";
+
             dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = Color.FromArgb(243, 249, 255);
             dataGridViewCellStyle9.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -189,10 +208,12 @@
             // 
             // uiCalendar1
             // 
+
             uiCalendar1.Date = new DateTime(2023, 5, 18, 0, 0, 0, 0);
             uiCalendar1.FillColor = Color.White;
             uiCalendar1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
             uiCalendar1.Location = new Point(690, 25);
+
             uiCalendar1.MinimumSize = new Size(240, 180);
             uiCalendar1.Name = "uiCalendar1";
             uiCalendar1.PrimaryColor = Color.FromArgb(80, 160, 255);
@@ -261,6 +282,9 @@
             dorm.TabIndex = 4;
             dorm.Text = "我的宿舍";
             dorm.TextAlign = ContentAlignment.MiddleLeft;
+
+            dorm.Click += dorm_Click;
+
             // 
             // uiLabel9
             // 
@@ -554,6 +578,7 @@
             administratorNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             administratorNameDataGridViewTextBoxColumn.Name = "administratorNameDataGridViewTextBoxColumn";
             administratorNameDataGridViewTextBoxColumn.ReadOnly = true;
+
             // 
             // stuMain
             // 
@@ -569,9 +594,11 @@
             ((System.ComponentModel.ISupportInitialize)systemMessageBindingSource).EndInit();
             MyDormitory.ResumeLayout(false);
             MyMessage.ResumeLayout(false);
+
             uiGroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)uiDataGridView2).EndInit();
             ((System.ComponentModel.ISupportInitialize)dormMessageBindingSource).EndInit();
+
             ResumeLayout(false);
         }
 
@@ -604,6 +631,7 @@
         private Sunny.UI.UILabel uiLabel7;
         private Sunny.UI.UILabel uiLabel6;
         private Sunny.UI.UIDataGridView uiDataGridView1;
+
         private BindingSource systemMessageBindingSource;
         private Sunny.UI.UIGroupBox uiGroupBox1;
         private Sunny.UI.UIDataGridView uiDataGridView2;

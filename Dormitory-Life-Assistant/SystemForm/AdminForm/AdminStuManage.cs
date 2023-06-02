@@ -17,5 +17,10 @@ namespace SystemForm
         {
             InitializeComponent();
         }
+
+        private void uiButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

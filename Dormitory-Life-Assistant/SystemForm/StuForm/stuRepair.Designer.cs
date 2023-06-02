@@ -28,97 +28,106 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            components = new System.ComponentModel.Container();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             uiDataGridView1 = new Sunny.UI.UIDataGridView();
-            RepairContent = new DataGridViewTextBoxColumn();
-            SubmitTime = new DataGridViewTextBoxColumn();
-            Status = new DataGridViewTextBoxColumn();
+            contentDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            repairTimeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            statusDataGridViewCheckBoxColumn = new DataGridViewTextBoxColumn();
             Confirm = new DataGridViewButtonColumn();
+            repairBindingSource = new BindingSource(components);
             uiTableLayoutPanel1 = new Sunny.UI.UITableLayoutPanel();
             uiButton1 = new Sunny.UI.UIButton();
+            uiButton2 = new Sunny.UI.UIButton();
             ((System.ComponentModel.ISupportInitialize)uiDataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)repairBindingSource).BeginInit();
             uiTableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // uiDataGridView1
             // 
-            dataGridViewCellStyle6.BackColor = Color.FromArgb(243, 249, 255);
-            uiDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(243, 249, 255);
+            uiDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            uiDataGridView1.AutoGenerateColumns = false;
             uiDataGridView1.BackgroundColor = Color.FromArgb(243, 249, 255);
             uiDataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = Color.FromArgb(80, 160, 255);
-            dataGridViewCellStyle7.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle7.ForeColor = Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = Color.FromArgb(80, 160, 255);
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
-            uiDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(80, 160, 255);
+            dataGridViewCellStyle2.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(80, 160, 255);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            uiDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             uiDataGridView1.ColumnHeadersHeight = 32;
             uiDataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            uiDataGridView1.Columns.AddRange(new DataGridViewColumn[] { RepairContent, SubmitTime, Status, Confirm });
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = Color.White;
-            dataGridViewCellStyle8.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle8.ForeColor = Color.FromArgb(48, 48, 48);
-            dataGridViewCellStyle8.SelectionBackColor = Color.FromArgb(220, 236, 255);
-            dataGridViewCellStyle8.SelectionForeColor = Color.FromArgb(48, 48, 48);
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
-            uiDataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
+            uiDataGridView1.Columns.AddRange(new DataGridViewColumn[] { contentDataGridViewTextBoxColumn, repairTimeDataGridViewTextBoxColumn, statusDataGridViewCheckBoxColumn, Confirm });
+            uiDataGridView1.DataSource = repairBindingSource;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(220, 236, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            uiDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             uiDataGridView1.Dock = DockStyle.Bottom;
             uiDataGridView1.EnableHeadersVisualStyles = false;
             uiDataGridView1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
             uiDataGridView1.GridColor = Color.FromArgb(104, 173, 255);
-            uiDataGridView1.Location = new Point(0, 41);
+            uiDataGridView1.Location = new Point(0, 44);
             uiDataGridView1.Name = "uiDataGridView1";
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = Color.FromArgb(243, 249, 255);
-            dataGridViewCellStyle9.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle9.ForeColor = Color.FromArgb(48, 48, 48);
-            dataGridViewCellStyle9.SelectionBackColor = Color.FromArgb(80, 160, 255);
-            dataGridViewCellStyle9.SelectionForeColor = Color.FromArgb(48, 48, 48);
-            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
-            uiDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(243, 249, 255);
+            dataGridViewCellStyle4.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(80, 160, 255);
+            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            uiDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             uiDataGridView1.RowHeadersWidth = 51;
-            dataGridViewCellStyle10.BackColor = Color.White;
-            dataGridViewCellStyle10.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle10.ForeColor = Color.FromArgb(48, 48, 48);
-            dataGridViewCellStyle10.SelectionBackColor = Color.FromArgb(220, 236, 255);
-            dataGridViewCellStyle10.SelectionForeColor = Color.FromArgb(48, 48, 48);
-            uiDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.BackColor = Color.White;
+            dataGridViewCellStyle5.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(220, 236, 255);
+            dataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(48, 48, 48);
+            uiDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
             uiDataGridView1.RowTemplate.Height = 29;
             uiDataGridView1.ScrollBarRectColor = Color.FromArgb(80, 160, 255);
             uiDataGridView1.SelectedIndex = -1;
-            uiDataGridView1.Size = new Size(975, 449);
+            uiDataGridView1.Size = new Size(975, 446);
             uiDataGridView1.TabIndex = 3;
+            uiDataGridView1.CellContentClick += uiDataGridView1_CellContentClick;
             // 
-            // RepairContent
+            // contentDataGridViewTextBoxColumn
             // 
-            RepairContent.HeaderText = "报修内容";
-            RepairContent.MinimumWidth = 10;
-            RepairContent.Name = "RepairContent";
-            RepairContent.ReadOnly = true;
-            RepairContent.Width = 600;
+            contentDataGridViewTextBoxColumn.DataPropertyName = "Content";
+            contentDataGridViewTextBoxColumn.HeaderText = "报修内容";
+            contentDataGridViewTextBoxColumn.MinimumWidth = 6;
+            contentDataGridViewTextBoxColumn.Name = "contentDataGridViewTextBoxColumn";
+            contentDataGridViewTextBoxColumn.Width = 125;
             // 
-            // SubmitTime
+            // repairTimeDataGridViewTextBoxColumn
             // 
-            SubmitTime.HeaderText = "提交时间";
-            SubmitTime.MinimumWidth = 6;
-            SubmitTime.Name = "SubmitTime";
-            SubmitTime.ReadOnly = true;
-            SubmitTime.Width = 125;
+            repairTimeDataGridViewTextBoxColumn.DataPropertyName = "RepairTime";
+            repairTimeDataGridViewTextBoxColumn.HeaderText = "提交时间";
+            repairTimeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            repairTimeDataGridViewTextBoxColumn.Name = "repairTimeDataGridViewTextBoxColumn";
+            repairTimeDataGridViewTextBoxColumn.Width = 125;
             // 
-            // Status
+            // statusDataGridViewCheckBoxColumn
             // 
-            Status.HeaderText = "状态";
-            Status.MinimumWidth = 6;
-            Status.Name = "Status";
-            Status.ReadOnly = true;
-            Status.Width = 75;
+            statusDataGridViewCheckBoxColumn.DataPropertyName = "Status";
+            statusDataGridViewCheckBoxColumn.HeaderText = "状态";
+            statusDataGridViewCheckBoxColumn.MinimumWidth = 6;
+            statusDataGridViewCheckBoxColumn.Name = "statusDataGridViewCheckBoxColumn";
+            statusDataGridViewCheckBoxColumn.Resizable = DataGridViewTriState.True;
+            statusDataGridViewCheckBoxColumn.SortMode = DataGridViewColumnSortMode.NotSortable;
+            statusDataGridViewCheckBoxColumn.Width = 125;
             // 
             // Confirm
             // 
@@ -128,6 +137,10 @@
             Confirm.Text = "完成";
             Confirm.UseColumnTextForButtonValue = true;
             Confirm.Width = 125;
+            // 
+            // repairBindingSource
+            // 
+            repairBindingSource.DataSource = typeof(Dormitory_Life_Assistant.Repair);
             // 
             // uiTableLayoutPanel1
             // 
@@ -139,7 +152,7 @@
             uiTableLayoutPanel1.Name = "uiTableLayoutPanel1";
             uiTableLayoutPanel1.RowCount = 1;
             uiTableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            uiTableLayoutPanel1.Size = new Size(975, 41);
+            uiTableLayoutPanel1.Size = new Size(975, 44);
             uiTableLayoutPanel1.TabIndex = 4;
             uiTableLayoutPanel1.TagString = null;
             // 
@@ -154,16 +167,29 @@
             uiButton1.Text = "提交报修";
             uiButton1.Click += uiButton1_Click;
             // 
+            // uiButton2
+            // 
+            uiButton2.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            uiButton2.Location = new Point(899, 451);
+            uiButton2.MinimumSize = new Size(1, 1);
+            uiButton2.Name = "uiButton2";
+            uiButton2.Size = new Size(76, 39);
+            uiButton2.TabIndex = 5;
+            uiButton2.Text = "刷新";
+            uiButton2.Click += uiButton2_Click;
+            // 
             // stuRepair
             // 
             AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(975, 490);
+            Controls.Add(uiButton2);
             Controls.Add(uiTableLayoutPanel1);
             Controls.Add(uiDataGridView1);
             Name = "stuRepair";
             PageIndex = 1003;
             Text = "Repair";
             ((System.ComponentModel.ISupportInitialize)uiDataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)repairBindingSource).EndInit();
             uiTableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -171,11 +197,13 @@
         #endregion
 
         private Sunny.UI.UIDataGridView uiDataGridView1;
-        private DataGridViewTextBoxColumn RepairContent;
-        private DataGridViewTextBoxColumn SubmitTime;
-        private DataGridViewTextBoxColumn Status;
-        private DataGridViewButtonColumn Confirm;
         private Sunny.UI.UITableLayoutPanel uiTableLayoutPanel1;
         private Sunny.UI.UIButton uiButton1;
+        private BindingSource repairBindingSource;
+        private DataGridViewTextBoxColumn contentDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn repairTimeDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn statusDataGridViewCheckBoxColumn;
+        private DataGridViewButtonColumn Confirm;
+        private Sunny.UI.UIButton uiButton2;
     }
 }

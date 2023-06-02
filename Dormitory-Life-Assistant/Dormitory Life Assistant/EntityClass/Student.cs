@@ -1,7 +1,9 @@
+
 ﻿using MySql.Data.MySqlClient;
 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection.Metadata;
 using System.Text;
@@ -11,35 +13,44 @@ namespace Dormitory_Life_Assistant
 {
     public class Student
     {
-        public string StudentId { get; set; }
-        public string StudentName { get; set; }
 
-        int Grade;
-        String Department;//所在系
+        [Key]
+        public String StudentId { get; set; }
+        public String StudentName { get; set; }
+        public int Grade { get; set; }
+        public String Department { get; set; }//所在系
         public String BuildingName//所在宿舍楼栋
         {
             get;
             set;
         }
-        public string DormNumber;//所在宿舍号
-        String Class; //所在班级
-        String Gender;
+        public String DormNumber { get; set; }//所在宿舍号
+        public String Class { get; set; } //所在班级
+        public String Gender { get; set; }
         List<Payment> bill;
         List<Repair> repair;
         public List<Complaint> complain;
         List<ClockIn> clockIn;//打卡信息及历史打卡信息
         List<Schedule> schedule;
-        String Password;//密码
-        Blob Profile;//头像
+        public String Password { get; set; }//密码
+        public Blob Profile { get; set; }//头像
         public List<ExchangeMessage> myMessage;
 
         public void changePassword(string pass) { }//修改密码
         public void changeProfile() { }//修改头像
-        public Student() { }
-        public Student(string studentid, string name)
+
+
+        public Student()
         {
-            this.StudentId = studentid;
-            this.StudentName = name;
+
+        }
+
+        public Student(string id, string dormNumber)
+        {
+            StudentId = id;
+            DormNumber = dormNumber;
+
         }
     }
 }
+  

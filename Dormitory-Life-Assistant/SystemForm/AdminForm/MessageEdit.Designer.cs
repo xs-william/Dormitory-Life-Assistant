@@ -61,6 +61,9 @@
             messageContent.TabIndex = 2;
             messageContent.TextAlignment = ContentAlignment.MiddleLeft;
             messageContent.Watermark = "";
+
+            messageContent.TextChanged += messageContent_TextChanged;
+
             // 
             // uiLabel1
             // 

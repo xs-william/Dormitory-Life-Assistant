@@ -17,6 +17,7 @@ namespace SystemForm
 {
     public partial class AdminNotice : UIPage
     {
+
         private Administrator administrator;
         SystemMessageService systemMessageService;
         public AdminNotice(Administrator administrator)
@@ -28,12 +29,14 @@ namespace SystemForm
             uiComboBox1.SelectedIndex = 0;
             uiDataGridView1.AllowUserToAddRows = false;
         }
+
         // 查询所有系统消息
         public void QueryAll()
         {
             systemMessageBindingSource.DataSource = systemMessageService.SystemMessages;
             systemMessageBindingSource.ResetBindings(false);
         }
+
         // 根据combobox里面的选项来进行查询
         private void queryButton_Click(object sender, EventArgs e)
         {
@@ -51,6 +54,7 @@ namespace SystemForm
             }
             systemMessageBindingSource.ResetBindings(false);
         }
+
         // 修改信息
         private void EditSystemMessage()
         {
@@ -87,17 +91,25 @@ namespace SystemForm
             me.Dispose();
             QueryAll();
         }
+
         // 修改信息
         private void ModifyButton_Click(object sender, EventArgs e)
         {
             EditSystemMessage();
         }
+
         // 删除信息
         private void deleteButton_Click(object sender, EventArgs e)
         {
             SystemMessage systemMessage = systemMessageBindingSource.Current as SystemMessage;
             systemMessageService.DeleteSystemMessage(systemMessage.SystemMessageId);
             QueryAll();
+        }
+
+        private void uiDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+
         }
     }
 }

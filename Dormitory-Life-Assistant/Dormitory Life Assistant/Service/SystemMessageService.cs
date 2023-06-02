@@ -44,6 +44,7 @@ namespace Dormitory_Life_Assistant.Service
                 }
             }
         }
+
         // 根据id得到系统消息
         public SystemMessage GetSystemMessage(string id)
         {
@@ -64,12 +65,15 @@ namespace Dormitory_Life_Assistant.Service
                 ctx.SaveChanges();
             }
         }
+
+        //避免级联添加或修改Customer和Goods
         //避免级联添加或修改Administrator
         private static void FixSystemMessage(SystemMessage newSystemMessage)
         {
             newSystemMessage.AdministratorId = newSystemMessage.Administrator.AdministratorId;
             newSystemMessage.Administrator = null;
         }
+
         // 删除系统消息
         public void DeleteSystemMessage(string systemMessageId)
         {
@@ -88,6 +92,7 @@ namespace Dormitory_Life_Assistant.Service
             DeleteSystemMessage(systemMessage.SystemMessageId);
             AddSystemMessage(systemMessage);
         }
+
         // 根据内容查询系统消息
         public List<SystemMessage> QuerySystemMessagesByContent(string content)
         {
@@ -99,6 +104,7 @@ namespace Dormitory_Life_Assistant.Service
                   .ToList();
             }
         }
+
         //根据日期查询系统消息
         public List<SystemMessage> QuerySystemMessagesByDate(string date)
         {
