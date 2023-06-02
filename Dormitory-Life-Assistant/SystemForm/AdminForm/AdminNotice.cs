@@ -17,27 +17,32 @@ namespace SystemForm
 {
     public partial class AdminNotice : UIPage
     {
-        Administrator administrator = new Administrator("2", "高珺");
+
+        private Administrator administrator;
         SystemMessageService systemMessageService;
-        public AdminNotice()
+        public AdminNotice(Administrator administrator)
         {
             InitializeComponent();
+            this.administrator = administrator;
             systemMessageService = new SystemMessageService();
             systemMessageBindingSource.DataSource = systemMessageService.SystemMessages;
             uiComboBox1.SelectedIndex = 0;
             uiDataGridView1.AllowUserToAddRows = false;
         }
+
+        // 查询所有系统消息
         public void QueryAll()
         {
             systemMessageBindingSource.DataSource = systemMessageService.SystemMessages;
             systemMessageBindingSource.ResetBindings(false);
         }
 
+        // 根据combobox里面的选项来进行查询
         private void queryButton_Click(object sender, EventArgs e)
         {
             switch (uiComboBox1.SelectedIndex)
             {
-                case 0://所有订单
+                case 0://所有消息
                     systemMessageBindingSource.DataSource = systemMessageService.SystemMessages;
                     break;
                 case 1://根据日期查询
@@ -49,6 +54,8 @@ namespace SystemForm
             }
             systemMessageBindingSource.ResetBindings(false);
         }
+
+        // 修改信息
         private void EditSystemMessage()
         {
             SystemMessage systemMessage = systemMessageBindingSource.Current as SystemMessage;
@@ -69,6 +76,7 @@ namespace SystemForm
             me.Dispose();
             QueryAll();
         }
+        // 添加信息
         private void addButton_Click(object sender, EventArgs e)
         {
             MessageEdit me = new MessageEdit(administrator);
@@ -84,11 +92,13 @@ namespace SystemForm
             QueryAll();
         }
 
+        // 修改信息
         private void ModifyButton_Click(object sender, EventArgs e)
         {
             EditSystemMessage();
         }
 
+        // 删除信息
         private void deleteButton_Click(object sender, EventArgs e)
         {
             SystemMessage systemMessage = systemMessageBindingSource.Current as SystemMessage;
@@ -98,6 +108,7 @@ namespace SystemForm
 
         private void uiDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
 
         }
     }

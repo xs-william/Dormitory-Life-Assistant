@@ -1,3 +1,4 @@
+
 ﻿using MySql.Data.MySqlClient;
 
 using System;
@@ -33,7 +34,7 @@ namespace Dormitory_Life_Assistant
         List<Schedule> schedule;
         public String Password { get; set; }//密码
         public Blob Profile { get; set; }//头像
-        List<ExchangeMessage> myMessage;
+        public List<ExchangeMessage> myMessage;
 
         public void changePassword(string pass) { }//修改密码
         public void changeProfile() { }//修改头像
@@ -52,3 +53,4 @@ namespace Dormitory_Life_Assistant
         }
     }
 }
+  

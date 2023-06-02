@@ -6,45 +6,36 @@ namespace SystemForm
 {
     public partial class TMainForm : UIForm
     {
-        public TMainForm()
+        // supervisoræ˜¯ç™»å½•è¿›æ¥çš„supervisoréœ€è¦ä¸€ç›´ä½œä¸ºå‚æ•°ä¼ ç»™æ‰€æœ‰ç•Œé¢
+        private Supervisor supervisor;
+        public TMainForm(Supervisor supervisor)
         {
             InitializeComponent();
-            //´´½¨Ò»¸öËŞÉá¹ÜÀíÔ±ÓÃÀ´²âÊÔ
-            List<Building> bud = new List<Building>();
-            bud.Add(new Building("C4"));
-            Supervisor sup = new Supervisor("01", bud);
-
-            /*//´æÒ»¸öÂ¥¶°ÓÃÀ´²âÊÔ
-            using (var ctx = new SystemContext())
-            {
-                ctx.Buildings.Add(new Building("C4"));
-                ctx.SaveChanges();
-            }*/
-
+            this.supervisor = supervisor;
             Choice.TabControl = MainContainer;
-            //Ôö¼ÓÒ³Ãæµ½Main
+            //å¢åŠ é¡µé¢åˆ°Main
             AddPage(new TMySelfForm(), 1001);
-            AddPage(new TStudentForm(), 1002);
-            AddPage(new TBreakdownForm(sup), 1003);
-            AddPage(new TCostForm(sup), 1004);
+            AddPage(new TStudentForm(supervisor), 1002);
+            AddPage(new TBreakdownForm(), 1003);
+            AddPage(new TCostForm(), 1004);
             AddPage(new TComplaintForm(), 1005);
-            AddPage(new TInformationForm(), 1006);
+            AddPage(new TInformationForm(supervisor), 1006);
             AddPage(new Setting(), 1007);
 
 
 
-            //ÉèÖÃHeader½ÚµãË÷Òı
-            Choice.CreateNode("ÎÒµÄĞÅÏ¢", 1001);
-            Choice.CreateNode("Ñ§ÉúĞÅÏ¢", 1002);
-            Choice.CreateNode("¹ÊÕÏĞÅÏ¢", 1003);
-            Choice.CreateNode("Ç··ÑĞÅÏ¢", 1004);
-            Choice.CreateNode("¾Ù±¨ĞÅÏ¢", 1005);
-            Choice.CreateNode("Í¨Öª¹ÜÀí", 1006);
-            Choice.CreateNode("ÓÃ»§ÉèÖÃ", 1007);
+            //è®¾ç½®HeaderèŠ‚ç‚¹ç´¢å¼•
+            Choice.CreateNode("æˆ‘çš„ä¿¡æ¯", 1001);
+            Choice.CreateNode("å­¦ç”Ÿä¿¡æ¯", 1002);
+            Choice.CreateNode("æ•…éšœä¿¡æ¯", 1003);
+            Choice.CreateNode("æ¬ è´¹ä¿¡æ¯", 1004);
+            Choice.CreateNode("ä¸¾æŠ¥ä¿¡æ¯", 1005);
+            Choice.CreateNode("é€šçŸ¥ç®¡ç†", 1006);
+            Choice.CreateNode("ç”¨æˆ·è®¾ç½®", 1007);
 
 
 
-            //ÏÔÊ¾Ä¬ÈÏ½çÃæ
+            //æ˜¾ç¤ºé»˜è®¤ç•Œé¢
             Choice.SelectFirst();
         }
     }

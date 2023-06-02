@@ -35,7 +35,7 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             uiTextBox1 = new Sunny.UI.UITextBox();
             uiLabel1 = new Sunny.UI.UILabel();
-            uiButton1 = new Sunny.UI.UIButton();
+            okbutton = new Sunny.UI.UIButton();
             uiNavBar1.SuspendLayout();
             MainContainer.SuspendLayout();
             tabPage1.SuspendLayout();
@@ -101,7 +101,7 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.Controls.Add(uiTextBox1, 0, 1);
             tableLayoutPanel1.Controls.Add(uiLabel1, 0, 0);
-            tableLayoutPanel1.Controls.Add(uiButton1, 0, 2);
+            tableLayoutPanel1.Controls.Add(okbutton, 0, 2);
             tableLayoutPanel1.Location = new Point(325, 37);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 3;
@@ -137,16 +137,17 @@
             uiLabel1.Text = "请输入通知内容：";
             uiLabel1.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // uiButton1
+            // okbutton
             // 
-            uiButton1.Anchor = AnchorStyles.None;
-            uiButton1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiButton1.Location = new Point(183, 291);
-            uiButton1.MinimumSize = new Size(1, 1);
-            uiButton1.Name = "uiButton1";
-            uiButton1.Size = new Size(125, 44);
-            uiButton1.TabIndex = 2;
-            uiButton1.Text = "发布通知";
+            okbutton.Anchor = AnchorStyles.None;
+            okbutton.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            okbutton.Location = new Point(183, 291);
+            okbutton.MinimumSize = new Size(1, 1);
+            okbutton.Name = "okbutton";
+            okbutton.Size = new Size(125, 44);
+            okbutton.TabIndex = 2;
+            okbutton.Text = "发布通知";
+            okbutton.Click += okbutton_Click;
             // 
             // SendInformationForm
             // 
@@ -175,7 +176,7 @@
         private TabPage tabPage1;
         private TableLayoutPanel tableLayoutPanel1;
         private Sunny.UI.UITextBox uiTextBox1;
-        private Sunny.UI.UILabel uiLabel1;
-        private Sunny.UI.UIButton uiButton1;
+        public Sunny.UI.UILabel uiLabel1;
+        public Sunny.UI.UIButton okbutton;
     }
 }

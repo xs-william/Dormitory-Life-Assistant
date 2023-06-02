@@ -33,5 +33,7 @@ namespace Dormitory_Life_Assistant
             base.OnModelCreating(modelBuilder);
         }*/
 
+        public DbSet<ExchangeMessage> ExchangeMessages { get; set; }
+        public DbSet<DormMessage> DormMessages { get; set; }
     }
 }

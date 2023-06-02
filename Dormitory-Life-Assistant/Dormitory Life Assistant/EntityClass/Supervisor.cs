@@ -7,6 +7,7 @@ using System.Linq;
 using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace Dormitory_Life_Assistant
 {
@@ -26,7 +27,7 @@ namespace Dormitory_Life_Assistant
         List<Schedule> schedule;
         public List<Building> ManageBuilding; //管理的楼栋
         //List<ExchangeMessage> myMessage;
-        List<ExchangeMessage> systemMessage;
+        public List<ExchangeMessage> ExchangeMessages { get; set; }
 
         public void changeTele() { }
         public void changePassword(string pass) { }//修改密码
@@ -34,11 +35,10 @@ namespace Dormitory_Life_Assistant
 
         public Supervisor() { }
 
-        public Supervisor(string id, List<Building> build)
+        public Supervisor(string supervisorId,string supervisorName)
         {
-            this.SupervisorId = id;
-            ManageBuilding = build;
+            SupervisorId = supervisorId;
+            SupervisorName = supervisorName;
         }
-
     }
 }

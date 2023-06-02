@@ -1,3 +1,4 @@
+
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,3 +21,4 @@ namespace Dormitory_Life_Assistant
         public StudentController() { }
     }
 }
+

@@ -10,19 +10,19 @@ namespace Dormitory_Life_Assistant
     public class SystemMessage
     {
         [Key]
-        public string SystemMessageId { get; set; }
-        public string Content { get; set; }
-        public DateTime Time { get; set; }
-        public string AdministratorId { get; set; }
-        public string AdministratorName
+        public string SystemMessageId { get; set; }// 主键
+        public string Content { get; set; }// 内容
+        public DateTime Time { get; set; }// 发送时间
+        public string AdministratorId { get; set; }// 系统管理员id，外键
+        public string AdministratorName // 系统管理员名字
         {
             get
             {
                 return Administrator.AdministratorName;
             }
         }
-        public Administrator Administrator { get; set; }
-        public SystemMessage()
+        public Administrator Administrator { get; set; }// 系统管理员，发送者
+        public SystemMessage() 
         {
             SystemMessageId = Guid.NewGuid().ToString();
         }
