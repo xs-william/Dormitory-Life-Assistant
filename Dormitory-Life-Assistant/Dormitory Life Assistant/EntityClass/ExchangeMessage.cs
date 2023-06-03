@@ -24,12 +24,9 @@ namespace Dormitory_Life_Assistant
             }
         }
 
-        public ExchangeMessage() { }
 
 
-                return Supervisor.SupervisorName;
-            }
-        }
+
         public Supervisor Supervisor { get; set; }
         public string StudentId { get; set; }//接受信息的学生的id，外键
         public string StudentName
@@ -40,12 +37,12 @@ namespace Dormitory_Life_Assistant
             }
         }
         public Student Student { get; set; }
-        public ExchangeMessage() 
+        public ExchangeMessage()
         {
             ExchangeMessageID = Guid.NewGuid().ToString();
             Time = DateTime.Now;
         }
-        public ExchangeMessage(string content,Student student,Supervisor supervisor)
+        public ExchangeMessage(string content, Student student, Supervisor supervisor)
         {
             ExchangeMessageID = Guid.NewGuid().ToString();
             Content = content;

@@ -30,12 +30,12 @@
         {
             components = new System.ComponentModel.Container();
 
-          //不确定删哪个
-            //DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            //DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            //DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            //DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            //DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
 
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();

@@ -16,8 +16,8 @@ namespace SystemForm
             //增加页面到Main
             AddPage(new TMySelfForm(), 1001);
             AddPage(new TStudentForm(supervisor), 1002);
-            AddPage(new TBreakdownForm(), 1003);
-            AddPage(new TCostForm(), 1004);
+            AddPage(new TBreakdownForm(supervisor), 1003);
+            AddPage(new TCostForm(supervisor), 1004);
             AddPage(new TComplaintForm(), 1005);
             AddPage(new TInformationForm(supervisor), 1006);
             AddPage(new Setting(), 1007);
