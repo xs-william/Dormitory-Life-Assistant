@@ -16,8 +16,9 @@ namespace Dormitory_Life_Assistant
     {
         [Key]
         public int ID { get; set; }//id用来查询报修信息
-        public string CallerID { get; set; }//创建维修账单者的ID
+        public string CallerId { get; set; }//创建维修账单者的ID
         public string CallerDorm { get; set; }//创建维修宿舍号
+        public string ImageId { get; set; }//对应报修图片的ID
         public Blob Picture { get; set; }//图片
         public string Content { get; set; }
         public DateTime RepairTime { get; set; }//报修时间
@@ -25,17 +26,18 @@ namespace Dormitory_Life_Assistant
 
         public Repair() { }
 
-        public Repair(int id, string content, string callerID)
+        public Repair(int id, string content, string callerId, string imageId)
         {
             Content = content;
             ID = id;
-            CallerID = callerID;
+            CallerId = callerId;
             this.RepairTime = DateTime.Now;
             using (var ctx = new SystemContext())
             {
-                this.CallerDorm = ctx.Students.FirstOrDefault(s => s.StudentId == callerID)?.DormNumber;
+                this.CallerDorm = ctx.Students.FirstOrDefault(s => s.StudentId == callerId)?.DormNumber;
 
             }
+            ImageId = imageId;
         }
 
     }

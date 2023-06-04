@@ -8,6 +8,7 @@ namespace SystemForm
         //Student me应该是登陆界面传递下来的对象，表示用户
         //该参数需要一直传递
         Student me;
+
         public StudentForm(Student stu)
         {
             InitializeComponent();
@@ -19,12 +20,15 @@ namespace SystemForm
                 ctx.SaveChanges();
             }*/
 
+            //创建一个student类用来测试
+            me = new Student("302", "C4-308");
+
             Choice.TabControl = MainContainer;
-            me = stu;
+            //this.me = stu;
             //增加页面到Main
             AddPage(new stuMain(), 1001);
-            AddPage(new StuLifePay(stu), 1002);
-            AddPage(new stuRepair(stu), 1003);
+            AddPage(new StuLifePay(me), 1002);
+            AddPage(new stuRepair(me), 1003);
             AddPage(new StuTreeHole(), 1004);
             AddPage(new StuPunch(), 1005);
             AddPage(new StuMessage(me), 1006);

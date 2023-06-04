@@ -41,7 +41,7 @@ namespace Dormitory_Life_Assistant
         {
             using (var ctx = new SystemContext())
             {
-                var result = ctx.Repairs.Where(s => s.CallerID == stu.StudentId);
+                var result = ctx.Repairs.Where(s => s.CallerId == stu.StudentId);
                 return result.ToList<Repair>();
             }
         }
@@ -55,6 +55,16 @@ namespace Dormitory_Life_Assistant
                     .SingleOrDefault(b => sup.ManageBuilding.Contains(b));
             }
         }*/
+
+        public List<Repair> getRepairListByRepairId(int repairId)
+        {
+            using (var ctx = new SystemContext())
+            {
+                List<Repair> repairs = new List<Repair>();
+                repairs = ctx.Repairs.Where(s => s.ID == repairId).ToList();
+                return repairs;
+            }
+        }
 
         public List<Repair> getRepairListByDormID(string dromID)
         {

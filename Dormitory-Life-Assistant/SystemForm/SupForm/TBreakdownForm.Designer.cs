@@ -39,12 +39,14 @@
             BreakdownButton = new Sunny.UI.UIButton();
             BreakdownIndex = new Sunny.UI.UITextBox();
             uiGroupBox2 = new Sunny.UI.UIGroupBox();
+            uiButton1 = new Sunny.UI.UIButton();
             BreakdownDataGridView = new Sunny.UI.UIDataGridView();
             repairBindingSource = new BindingSource(components);
             DormNum = new DataGridViewTextBoxColumn();
             Time = new DataGridViewTextBoxColumn();
             Style = new DataGridViewTextBoxColumn();
             Or = new DataGridViewTextBoxColumn();
+            iDDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             uiGroupBox1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             uiGroupBox2.SuspendLayout();
@@ -110,6 +112,7 @@
             // 
             // uiGroupBox2
             // 
+            uiGroupBox2.Controls.Add(uiButton1);
             uiGroupBox2.Controls.Add(BreakdownDataGridView);
             uiGroupBox2.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
             uiGroupBox2.Location = new Point(170, 170);
@@ -121,6 +124,17 @@
             uiGroupBox2.TabIndex = 5;
             uiGroupBox2.Text = "故障信息";
             uiGroupBox2.TextAlignment = ContentAlignment.MiddleCenter;
+            // 
+            // uiButton1
+            // 
+            uiButton1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            uiButton1.Location = new Point(237, 234);
+            uiButton1.MinimumSize = new Size(1, 1);
+            uiButton1.Name = "uiButton1";
+            uiButton1.Size = new Size(137, 39);
+            uiButton1.TabIndex = 6;
+            uiButton1.Text = "查看故障详情";
+            uiButton1.Click += uiButton1_Click;
             // 
             // BreakdownDataGridView
             // 
@@ -140,7 +154,7 @@
             BreakdownDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             BreakdownDataGridView.ColumnHeadersHeight = 32;
             BreakdownDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            BreakdownDataGridView.Columns.AddRange(new DataGridViewColumn[] { DormNum, Time, Style, Or });
+            BreakdownDataGridView.Columns.AddRange(new DataGridViewColumn[] { DormNum, Time, Style, Or, iDDataGridViewTextBoxColumn });
             BreakdownDataGridView.DataSource = repairBindingSource;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
@@ -213,6 +227,14 @@
             Or.Name = "Or";
             Or.Width = 125;
             // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            iDDataGridViewTextBoxColumn.HeaderText = "故障编号";
+            iDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            iDDataGridViewTextBoxColumn.Width = 125;
+            // 
             // TBreakdownForm
             // 
             AutoScaleMode = AutoScaleMode.None;
@@ -238,9 +260,11 @@
         private Sunny.UI.UITextBox BreakdownIndex;
         private Sunny.UI.UIButton BreakdownButton;
         private BindingSource repairBindingSource;
+        private Sunny.UI.UIButton uiButton1;
         private DataGridViewTextBoxColumn DormNum;
         private DataGridViewTextBoxColumn Time;
         private DataGridViewTextBoxColumn Style;
         private DataGridViewTextBoxColumn Or;
+        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
     }
 }

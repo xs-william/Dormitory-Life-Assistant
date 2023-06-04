@@ -27,8 +27,9 @@ namespace SystemForm
 
         private void CostDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            CostDataGridView.AutoGenerateColumns = false;
             // 检查是否点击的是行头
-            if (e.RowIndex >= 0)
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
                 DataGridViewRow selectedRow = CostDataGridView.Rows[e.RowIndex];
                 selectedData = selectedRow.Cells[0].Value.ToString();

@@ -12,11 +12,12 @@ namespace SystemForm
         {
             Administrator administrator = new Administrator("1", "ţ");
             Student student = new Student();
+            Supervisor supervisor = new Supervisor();
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            Application.Run(new AdminForm(administrator));
+            Application.Run(new TMainForm(supervisor));
         }
     }
 }

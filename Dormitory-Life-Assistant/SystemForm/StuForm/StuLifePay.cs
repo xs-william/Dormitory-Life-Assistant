@@ -32,6 +32,7 @@ namespace SystemForm
 
         private void uiDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            uiDataGridView1.AutoGenerateColumns = false;
             if (e.ColumnIndex == uiDataGridView1.Columns["Confirm"].Index && e.RowIndex >= 0)
             {
                 Payment payment = uiDataGridView1.Rows[e.RowIndex].DataBoundItem as Payment;

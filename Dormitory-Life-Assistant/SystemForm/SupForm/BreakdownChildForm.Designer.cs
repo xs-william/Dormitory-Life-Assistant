@@ -28,24 +28,88 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            uiDataGridView1 = new Sunny.UI.UIDataGridView();
+            repairBindingSource = new BindingSource(components);
             uiNavBar1 = new Sunny.UI.UINavBar();
             uiSmoothLabel1 = new Sunny.UI.UISmoothLabel();
             MainContainer = new Sunny.UI.UITabControl();
             tabPage1 = new TabPage();
             uiGroupBox1 = new Sunny.UI.UIGroupBox();
             pictureBox1 = new PictureBox();
-            uiTextBox1 = new Sunny.UI.UITextBox();
-            tableLayoutPanel1 = new TableLayoutPanel();
-            uiLabel1 = new Sunny.UI.UILabel();
-            uiLabel2 = new Sunny.UI.UILabel();
-            uiLabel3 = new Sunny.UI.UILabel();
+            故障寝室号 = new DataGridViewTextBoxColumn();
+            报修内容 = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)uiDataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)repairBindingSource).BeginInit();
             uiNavBar1.SuspendLayout();
             MainContainer.SuspendLayout();
             tabPage1.SuspendLayout();
             uiGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
+            // 
+            // uiDataGridView1
+            // 
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(243, 249, 255);
+            uiDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            uiDataGridView1.AutoGenerateColumns = false;
+            uiDataGridView1.BackgroundColor = Color.FromArgb(243, 249, 255);
+            uiDataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(80, 160, 255);
+            dataGridViewCellStyle2.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(80, 160, 255);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            uiDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            uiDataGridView1.ColumnHeadersHeight = 32;
+            uiDataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            uiDataGridView1.Columns.AddRange(new DataGridViewColumn[] { 故障寝室号, 报修内容 });
+            uiDataGridView1.DataSource = repairBindingSource;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(220, 236, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            uiDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            uiDataGridView1.EnableHeadersVisualStyles = false;
+            uiDataGridView1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            uiDataGridView1.GridColor = Color.FromArgb(104, 173, 255);
+            uiDataGridView1.Location = new Point(24, 49);
+            uiDataGridView1.Name = "uiDataGridView1";
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(243, 249, 255);
+            dataGridViewCellStyle4.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(80, 160, 255);
+            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            uiDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            uiDataGridView1.RowHeadersWidth = 51;
+            dataGridViewCellStyle5.BackColor = Color.White;
+            dataGridViewCellStyle5.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(220, 236, 255);
+            dataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(48, 48, 48);
+            uiDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            uiDataGridView1.RowTemplate.Height = 29;
+            uiDataGridView1.ScrollBarRectColor = Color.FromArgb(80, 160, 255);
+            uiDataGridView1.SelectedIndex = -1;
+            uiDataGridView1.Size = new Size(469, 91);
+            uiDataGridView1.TabIndex = 3;
+            uiDataGridView1.CellContentClick += uiDataGridView1_CellContentClick;
+            // 
+            // repairBindingSource
+            // 
+            repairBindingSource.DataSource = typeof(Dormitory_Life_Assistant.Repair);
             // 
             // uiNavBar1
             // 
@@ -102,9 +166,8 @@
             // 
             // uiGroupBox1
             // 
+            uiGroupBox1.Controls.Add(uiDataGridView1);
             uiGroupBox1.Controls.Add(pictureBox1);
-            uiGroupBox1.Controls.Add(uiTextBox1);
-            uiGroupBox1.Controls.Add(tableLayoutPanel1);
             uiGroupBox1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
             uiGroupBox1.Location = new Point(289, 24);
             uiGroupBox1.Margin = new Padding(4, 5, 4, 5);
@@ -119,77 +182,30 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.picture;
-            pictureBox1.Location = new Point(24, 220);
+            pictureBox1.Location = new Point(24, 165);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(469, 174);
+            pictureBox1.Size = new Size(469, 229);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
-            // uiTextBox1
+            // 故障寝室号
             // 
-            uiTextBox1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiTextBox1.Location = new Point(24, 129);
-            uiTextBox1.Margin = new Padding(4, 5, 4, 5);
-            uiTextBox1.MinimumSize = new Size(1, 16);
-            uiTextBox1.Multiline = true;
-            uiTextBox1.Name = "uiTextBox1";
-            uiTextBox1.ShowText = false;
-            uiTextBox1.Size = new Size(469, 83);
-            uiTextBox1.TabIndex = 1;
-            uiTextBox1.TextAlignment = ContentAlignment.MiddleLeft;
-            uiTextBox1.Watermark = "";
-            uiTextBox1.TextChanged += uiTextBox1_TextChanged;
+            故障寝室号.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            故障寝室号.DataPropertyName = "CallerDorm";
+            故障寝室号.HeaderText = "报修寝室号";
+            故障寝室号.MinimumWidth = 6;
+            故障寝室号.Name = "故障寝室号";
+            故障寝室号.Width = 208;
             // 
-            // tableLayoutPanel1
+            // 报修内容
             // 
-            tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70F));
-            tableLayoutPanel1.Controls.Add(uiLabel1, 0, 0);
-            tableLayoutPanel1.Controls.Add(uiLabel2, 0, 1);
-            tableLayoutPanel1.Controls.Add(uiLabel3, 1, 0);
-            tableLayoutPanel1.Location = new Point(24, 45);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 2;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(469, 76);
-            tableLayoutPanel1.TabIndex = 0;
-            // 
-            // uiLabel1
-            // 
-            uiLabel1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            uiLabel1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiLabel1.Location = new Point(3, 4);
-            uiLabel1.Name = "uiLabel1";
-            uiLabel1.Size = new Size(134, 29);
-            uiLabel1.TabIndex = 0;
-            uiLabel1.Text = "报修宿舍号：";
-            uiLabel1.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel2
-            // 
-            uiLabel2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            uiLabel2.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiLabel2.Location = new Point(3, 42);
-            uiLabel2.Name = "uiLabel2";
-            uiLabel2.Size = new Size(134, 29);
-            uiLabel2.TabIndex = 1;
-            uiLabel2.Text = "故障内容：";
-            uiLabel2.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel3
-            // 
-            uiLabel3.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            uiLabel3.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiLabel3.Location = new Point(143, 4);
-            uiLabel3.Name = "uiLabel3";
-            uiLabel3.Size = new Size(323, 29);
-            uiLabel3.TabIndex = 2;
-            uiLabel3.Text = "C4-101";
-            uiLabel3.TextAlign = ContentAlignment.MiddleLeft;
+            报修内容.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            报修内容.DataPropertyName = "Content";
+            报修内容.HeaderText = "报修内容";
+            报修内容.MinimumWidth = 6;
+            报修内容.Name = "报修内容";
             // 
             // BreakdownChildForm
             // 
@@ -204,12 +220,13 @@
             ShowTitleIcon = true;
             Text = "宿舍生活小助手";
             ZoomScaleRect = new Rectangle(19, 19, 800, 450);
+            ((System.ComponentModel.ISupportInitialize)uiDataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)repairBindingSource).EndInit();
             uiNavBar1.ResumeLayout(false);
             MainContainer.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             uiGroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            tableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -219,11 +236,10 @@
         private Sunny.UI.UITabControl MainContainer;
         private TabPage tabPage1;
         private Sunny.UI.UIGroupBox uiGroupBox1;
-        private Sunny.UI.UITextBox uiTextBox1;
-        private TableLayoutPanel tableLayoutPanel1;
-        private Sunny.UI.UILabel uiLabel1;
-        private Sunny.UI.UILabel uiLabel2;
-        private Sunny.UI.UILabel uiLabel3;
+        private Sunny.UI.UIDataGridView uiDataGridView1;
         private PictureBox pictureBox1;
+        private BindingSource repairBindingSource;
+        private DataGridViewTextBoxColumn 故障寝室号;
+        private DataGridViewTextBoxColumn 报修内容;
     }
 }

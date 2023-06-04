@@ -1,4 +1,5 @@
-﻿using MySql.Data.EntityFramework;
+﻿using Dormitory_Life_Assistant.EntityClass;
+using MySql.Data.EntityFramework;
 using System.Data.Entity;
 using System.Security.Cryptography.X509Certificates;
 using System.Security.Policy;
@@ -20,6 +21,7 @@ namespace Dormitory_Life_Assistant
         public DbSet<Supervisor> Supervisors { get; set; }
         public DbSet<Building> Buildings { get; set; }
         public DbSet<Dorm> Dorms { get; set; }
+        public DbSet<SaveImage> SaveImages { get; set; }
 
 
         /*protected override void OnModelCreating(DbModelBuilder modelBuilder)

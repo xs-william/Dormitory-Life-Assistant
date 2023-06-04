@@ -48,6 +48,7 @@
             uiAvatar1.SymbolSize = 80;
             uiAvatar1.TabIndex = 13;
             uiAvatar1.Text = "uiAvatar1";
+            uiAvatar1.Click += uiAvatar1_Click;
             // 
             // uiLabel2
             // 
