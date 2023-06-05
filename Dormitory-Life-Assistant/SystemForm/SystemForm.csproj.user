@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="AdminForm\AdminDorm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AdminForm\AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AdminForm\AdminMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AdminForm\AdminNotice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AdminForm\AdminPunch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AdminForm\AdminStuManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AdminForm\AdminSuperManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AdminForm\MessageEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LogInForm\LogInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LogInForm\RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="StuForm\Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="StuForm\StuComplaint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="StuForm\StuComplaintSon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="StuForm\StudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="StuForm\StuLifePay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="StuForm\StuMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="StuForm\StuMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="StuForm\StuPunch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="StuForm\StuPunchSon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="StuForm\StuRepair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="StuForm\StuRepairSon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="StuForm\StuTreeHole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SupForm\BreakdownChildForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SupForm\ComplaintChildForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SupForm\CostChildForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SupForm\InformationChildForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SupForm\MessageEdit2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SupForm\SendInformationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SupForm\StudentChildForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SupForm\TBreakdownForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SupForm\TComplaintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SupForm\TCostForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SupForm\TInformationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SupForm\TMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SupForm\TMySelfForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SupForm\TStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
