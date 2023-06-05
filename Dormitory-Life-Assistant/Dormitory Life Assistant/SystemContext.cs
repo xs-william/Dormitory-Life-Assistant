@@ -23,6 +23,8 @@ namespace Dormitory_Life_Assistant
         public DbSet<Dorm> Dorms { get; set; }
         public DbSet<SaveImage> SaveImages { get; set; }
 
+        public DbSet<Complaint> Complaints { get; set; }
+
 
         /*protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

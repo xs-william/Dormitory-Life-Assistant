@@ -32,7 +32,7 @@ namespace SystemForm
             AddPage(new StuTreeHole(), 1004);
             AddPage(new StuPunch(), 1005);
             AddPage(new StuMessage(me), 1006);
-            AddPage(new StuComplaint(), 1008);
+            AddPage(new StuComplaint(stu), 1008);
             AddPage(new Setting(), 1009);
 
 
