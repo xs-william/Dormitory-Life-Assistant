@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
@@ -37,13 +38,18 @@
             uiTableLayoutPanel1 = new Sunny.UI.UITableLayoutPanel();
             uiButton1 = new Sunny.UI.UIButton();
             uiDataGridView1 = new Sunny.UI.UIDataGridView();
+            administratorBindingSource = new BindingSource(components);
+            systemMessagesBindingSource = new BindingSource(components);
+            ID = new DataGridViewTextBoxColumn();
             ComplaintContent = new DataGridViewTextBoxColumn();
+            informer = new DataGridViewTextBoxColumn();
             SubmitTime = new DataGridViewTextBoxColumn();
             Status = new DataGridViewTextBoxColumn();
-            Confirm = new DataGridViewButtonColumn();
             uiPanel1.SuspendLayout();
             uiTableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)uiDataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)administratorBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)systemMessagesBindingSource).BeginInit();
             SuspendLayout();
             // 
             // uiPanel1
@@ -71,7 +77,7 @@
             uiTableLayoutPanel1.Name = "uiTableLayoutPanel1";
             uiTableLayoutPanel1.RowCount = 1;
             uiTableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            uiTableLayoutPanel1.Size = new Size(975, 41);
+            uiTableLayoutPanel1.Size = new Size(975, 44);
             uiTableLayoutPanel1.TabIndex = 3;
             uiTableLayoutPanel1.TagString = null;
             // 
@@ -102,7 +108,7 @@
             uiDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             uiDataGridView1.ColumnHeadersHeight = 32;
             uiDataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            uiDataGridView1.Columns.AddRange(new DataGridViewColumn[] { ComplaintContent, SubmitTime, Status, Confirm });
+            uiDataGridView1.Columns.AddRange(new DataGridViewColumn[] { ID, ComplaintContent, informer, SubmitTime, Status });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -115,7 +121,7 @@
             uiDataGridView1.EnableHeadersVisualStyles = false;
             uiDataGridView1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
             uiDataGridView1.GridColor = Color.FromArgb(104, 173, 255);
-            uiDataGridView1.Location = new Point(0, 41);
+            uiDataGridView1.Location = new Point(0, 44);
             uiDataGridView1.Name = "uiDataGridView1";
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = Color.FromArgb(243, 249, 255);
@@ -135,41 +141,61 @@
             uiDataGridView1.RowTemplate.Height = 29;
             uiDataGridView1.ScrollBarRectColor = Color.FromArgb(80, 160, 255);
             uiDataGridView1.SelectedIndex = -1;
-            uiDataGridView1.Size = new Size(975, 449);
+            uiDataGridView1.Size = new Size(975, 446);
             uiDataGridView1.TabIndex = 2;
+            uiDataGridView1.CellContentClick += uiDataGridView1_CellContentClick;
+            // 
+            // administratorBindingSource
+            // 
+            administratorBindingSource.DataSource = typeof(Dormitory_Life_Assistant.Administrator);
+            // 
+            // systemMessagesBindingSource
+            // 
+            systemMessagesBindingSource.DataMember = "SystemMessages";
+            systemMessagesBindingSource.DataSource = administratorBindingSource;
+            // 
+            // ID
+            // 
+            ID.DataPropertyName = "ComplaintID";
+            ID.HeaderText = "ID";
+            ID.MinimumWidth = 6;
+            ID.Name = "ID";
+            ID.Width = 50;
             // 
             // ComplaintContent
             // 
+            ComplaintContent.DataPropertyName = "Content";
             ComplaintContent.HeaderText = "投诉/举报内容";
             ComplaintContent.MinimumWidth = 10;
             ComplaintContent.Name = "ComplaintContent";
             ComplaintContent.ReadOnly = true;
-            ComplaintContent.Width = 600;
+            ComplaintContent.Width = 300;
+            // 
+            // informer
+            // 
+            informer.DataPropertyName = "informer";
+            informer.HeaderText = "举报人";
+            informer.MinimumWidth = 6;
+            informer.Name = "informer";
+            informer.Width = 125;
             // 
             // SubmitTime
             // 
+            SubmitTime.DataPropertyName = "ComplaintTime";
             SubmitTime.HeaderText = "提交时间";
             SubmitTime.MinimumWidth = 6;
             SubmitTime.Name = "SubmitTime";
             SubmitTime.ReadOnly = true;
-            SubmitTime.Width = 125;
+            SubmitTime.Width = 200;
             // 
             // Status
             // 
+            Status.DataPropertyName = "status";
             Status.HeaderText = "状态";
             Status.MinimumWidth = 6;
             Status.Name = "Status";
             Status.ReadOnly = true;
             Status.Width = 75;
-            // 
-            // Confirm
-            // 
-            Confirm.HeaderText = "确认完成";
-            Confirm.MinimumWidth = 6;
-            Confirm.Name = "Confirm";
-            Confirm.Text = "完成";
-            Confirm.UseColumnTextForButtonValue = true;
-            Confirm.Width = 125;
             // 
             // StuComplaint
             // 
@@ -182,6 +208,8 @@
             uiPanel1.ResumeLayout(false);
             uiTableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)uiDataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)administratorBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)systemMessagesBindingSource).EndInit();
             ResumeLayout(false);
         }
 
@@ -190,10 +218,13 @@
         private Sunny.UI.UIPanel uiPanel1;
         private Sunny.UI.UITableLayoutPanel uiTableLayoutPanel1;
         private Sunny.UI.UIButton uiButton1;
-        private Sunny.UI.UIDataGridView uiDataGridView1;
+        public Sunny.UI.UIDataGridView uiDataGridView1;
+        private BindingSource systemMessagesBindingSource;
+        private BindingSource administratorBindingSource;
+        private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn ComplaintContent;
+        private DataGridViewTextBoxColumn informer;
         private DataGridViewTextBoxColumn SubmitTime;
         private DataGridViewTextBoxColumn Status;
-        private DataGridViewButtonColumn Confirm;
     }
 }

@@ -59,14 +59,12 @@
             // 
             // uiAvatar1
             // 
-            uiAvatar1.FillColor = Color.Transparent;
             uiAvatar1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
             uiAvatar1.Location = new Point(244, 251);
             uiAvatar1.MinimumSize = new Size(1, 1);
             uiAvatar1.Name = "uiAvatar1";
             uiAvatar1.Shape = Sunny.UI.UIShape.Square;
             uiAvatar1.Size = new Size(75, 75);
-            uiAvatar1.Style = Sunny.UI.UIStyle.Custom;
             uiAvatar1.Symbol = 61846;
             uiAvatar1.SymbolSize = 80;
             uiAvatar1.TabIndex = 7;
@@ -91,6 +89,7 @@
             uiButton2.Size = new Size(93, 38);
             uiButton2.TabIndex = 5;
             uiButton2.Text = "提交";
+            uiButton2.Click += uiButton2_Click;
             // 
             // uiButton1
             // 
@@ -117,6 +116,7 @@
             uiTextBox1.TabIndex = 3;
             uiTextBox1.TextAlignment = ContentAlignment.MiddleLeft;
             uiTextBox1.Watermark = "";
+            uiTextBox1.TextChanged += uiTextBox1_TextChanged;
             // 
             // uiLabel1
             // 
