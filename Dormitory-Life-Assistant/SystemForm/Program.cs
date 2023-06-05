@@ -17,7 +17,9 @@ namespace SystemForm
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            Application.Run(new TMainForm(supervisor));
+            LogInForm login=new LogInForm();
+
+            Application.Run(new AdminForm(administrator));
         }
     }
 }

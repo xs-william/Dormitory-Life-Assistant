@@ -43,6 +43,7 @@
             uiButton2.Size = new Size(125, 44);
             uiButton2.TabIndex = 5;
             uiButton2.Text = "打卡";
+            uiButton2.Click += uiButton2_Click;
             // 
             // uiTextBox1
             // 
@@ -58,6 +59,7 @@
             uiTextBox1.TabIndex = 4;
             uiTextBox1.TextAlignment = ContentAlignment.MiddleLeft;
             uiTextBox1.Watermark = "";
+            uiTextBox1.TextChanged += uiTextBox1_TextChanged;
             // 
             // uiButton1
             // 
@@ -68,6 +70,7 @@
             uiButton1.Size = new Size(125, 44);
             uiButton1.TabIndex = 3;
             uiButton1.Text = "获取定位";
+            uiButton1.Click += uiButton1_Click;
             // 
             // uiButton3
             // 

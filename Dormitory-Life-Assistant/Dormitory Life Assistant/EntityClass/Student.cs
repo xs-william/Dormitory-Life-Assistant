@@ -51,6 +51,25 @@ namespace Dormitory_Life_Assistant
             DormNumber = dormNumber;
 
         }
+        public Student(String id, string name, int grade, string department, string dormnumber, string classes, string gender, string password, string buildingid)
+        {
+            StudentId = id;
+            StudentName = name;
+            Grade = grade;
+            Department = department;
+            DormNumber = dormnumber;
+            Gender = gender;
+            Password = password;
+            Class = classes;
+            Profile = new Blob();
+            myMessage = new List<ExchangeMessage>();
+            bill = new List<Payment>();
+            repair = new List<Repair>();
+            complain = new List<Complaint>();
+            clockIn = new List<ClockIn>();
+            schedule = new List<Schedule>();
+            BuildingName = buildingid;
+        }
     }
 }
   

@@ -18,7 +18,7 @@ namespace SystemForm
     {
         private SystemMessageService systemMessageService = new SystemMessageService();
         private DormMessageService dormMessageService = new DormMessageService();
-        
+
         public stuMain()
         {
             InitializeComponent();
@@ -39,6 +39,14 @@ namespace SystemForm
             uiDataGridView2.AllowUserToAddRows = false;
             uiCalendar1.Date = Convert.ToDateTime(DateTime.Now.ToString("D"));
 
+        }
+
+        private void uiButton1_Click(object sender, EventArgs e)
+        {
+            Application.EnableVisualStyles();
+            Schedule form = new Schedule();
+
+            form.ShowDialog();
         }
     }
 }
