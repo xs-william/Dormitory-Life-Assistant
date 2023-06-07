@@ -262,6 +262,7 @@
             RegisterButton.Size = new Size(133, 44);
             RegisterButton.TabIndex = 3;
             RegisterButton.Text = "注册";
+            RegisterButton.Click += RegisterButton_Click;
             // 
             // LogInButton
             // 
@@ -328,8 +329,6 @@
             // 
             // IDTextBox
             // 
-            IDTextBox.AcceptsTab = true;
-            IDTextBox.AccessibleRole = AccessibleRole.Clock;
             IDTextBox.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             IDTextBox.DoubleValue = 2021302111999D;
             IDTextBox.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);

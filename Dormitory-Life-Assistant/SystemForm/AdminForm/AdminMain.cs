@@ -1,4 +1,5 @@
-﻿using Sunny.UI;
+﻿using Dormitory_Life_Assistant;
+using Sunny.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,10 +14,14 @@ namespace SystemForm
 {
     public partial class AdminMain : UIPage
     {
-        public AdminMain()
+        public AdminMain(Administrator administrator)
         {
             InitializeComponent();
-
+            uiLabel1.Text = administrator.AdministratorName;
+            phone.Text = administrator.Administratorphone;
+            ID.Text = administrator.AdministratorId;
+            major.Text = administrator.Administratorpost;
+            sex.Text = administrator.Administratorgender;
         }
     }
 }

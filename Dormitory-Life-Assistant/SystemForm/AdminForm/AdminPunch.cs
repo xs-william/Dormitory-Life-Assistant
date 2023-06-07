@@ -21,24 +21,39 @@ namespace SystemForm
         public static ClockIn? clockIn;
         public static List<DateTime> dates = new List<DateTime>();
         public event Action<Blank> ShowEditForm;
-        public AdminPunch()
+        Administrator Administrator { get; set; }
+        public AdminPunch(Administrator administrator)
         {
             InitializeComponent();
             ShowEditForm += (f => { });
-
+            this.Administrator = administrator;
         }
-
+        public List<Student> Students
+        {
+            get
+            {
+                using (var ctx = new SystemContext())
+                {
+                    return ctx.Students
+                      .ToList<Student>();
+                }
+            }
+        }
         private void uiButton2_Click(object sender, EventArgs e)
         {
             DateTime localDate = DateTime.Now;
-            string publisher = "高珺"; // 姓名参数
+            string publisher = Administrator.AdministratorName; // 姓名参数
             string status = "否";
-
-            clockInService.pubilshClock(localDate, publisher, status); // 调用发布打卡信息的方法
+            List<Student> students = this.Students;
+            for(int i = 0; i < students.Count; i++)
+            {
+                clockInService.pubilshClock(students[i].StudentId, students[i].StudentName, localDate, publisher, status); // 调用发布打卡信息的方法
+            }
+            
             clockIn = clockInService.context.ClockIns.OrderByDescending(c => c.ClockInID).FirstOrDefault();
 
             Blank formEdit = new Blank();
-            ShowEditForm(formEdit);
+            
             formEdit.ShowDialog();
         }
 

@@ -8,6 +8,7 @@ namespace SystemForm
     {
         // supervisor是登录进来的supervisor需要一直作为参数传给所有界面
         private Supervisor supervisor;
+        public static Color userColor = System.Drawing.ColorTranslator.FromHtml("-2461550");
         public TMainForm(Supervisor supervisor)
         {
             InitializeComponent();
@@ -20,7 +21,7 @@ namespace SystemForm
             AddPage(new TCostForm(supervisor), 1004);
             AddPage(new TComplaintForm(), 1005);
             AddPage(new TInformationForm(supervisor), 1006);
-            AddPage(new Setting(), 1007);
+            AddPage(new Setting(supervisor, 2), 1007);
 
 
 
@@ -37,6 +38,29 @@ namespace SystemForm
 
             //显示默认界面
             Choice.SelectFirst();
+        }
+
+        private void TMainForm_Load(object sender, EventArgs e)
+        {
+            string id = supervisor.SupervisorId;
+            List<user> list = user.QuerySupervisorByusername(supervisor.SupervisorId);
+            string color_string;
+            if (list[0].usercolor == null) { color_string = null; }
+            else color_string = list[0].usercolor;
+            userColor = (color_string == null) ? (Color.FromArgb(80, 160, 255)) : System.Drawing.ColorTranslator.FromHtml(color_string);
+            UIStyles.InitColorful(TMainForm.userColor, Color.White);
+        }
+
+        private void uiHeaderButton1_Click(object sender, EventArgs e)
+        {
+            if (ShowAskDialog("提示！", $"是否确认退出程序？", UIStyle.Colorful))
+            {
+                Environment.Exit(0);
+            }
+            else
+            {
+                ShowSuccessTip("已取消");
+            }
         }
     }
 }

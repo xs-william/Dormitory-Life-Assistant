@@ -141,7 +141,7 @@
             // iDDataGridViewTextBoxColumn
             // 
             iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            iDDataGridViewTextBoxColumn.HeaderText = "学号";
             iDDataGridViewTextBoxColumn.MinimumWidth = 8;
             iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
             iDDataGridViewTextBoxColumn.Width = 150;
@@ -149,7 +149,7 @@
             // publishtimeDataGridViewTextBoxColumn
             // 
             publishtimeDataGridViewTextBoxColumn.DataPropertyName = "publishtime";
-            publishtimeDataGridViewTextBoxColumn.HeaderText = "publishtime";
+            publishtimeDataGridViewTextBoxColumn.HeaderText = "发布时间";
             publishtimeDataGridViewTextBoxColumn.MinimumWidth = 8;
             publishtimeDataGridViewTextBoxColumn.Name = "publishtimeDataGridViewTextBoxColumn";
             publishtimeDataGridViewTextBoxColumn.Width = 150;
@@ -157,7 +157,7 @@
             // publisherDataGridViewTextBoxColumn
             // 
             publisherDataGridViewTextBoxColumn.DataPropertyName = "publisher";
-            publisherDataGridViewTextBoxColumn.HeaderText = "publisher";
+            publisherDataGridViewTextBoxColumn.HeaderText = "发布人";
             publisherDataGridViewTextBoxColumn.MinimumWidth = 8;
             publisherDataGridViewTextBoxColumn.Name = "publisherDataGridViewTextBoxColumn";
             publisherDataGridViewTextBoxColumn.Width = 150;
@@ -165,7 +165,7 @@
             // nameDataGridViewTextBoxColumn
             // 
             nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            nameDataGridViewTextBoxColumn.HeaderText = "学生姓名";
             nameDataGridViewTextBoxColumn.MinimumWidth = 8;
             nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             nameDataGridViewTextBoxColumn.Width = 150;
@@ -173,7 +173,7 @@
             // dateDataGridViewTextBoxColumn
             // 
             dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            dateDataGridViewTextBoxColumn.HeaderText = "Date";
+            dateDataGridViewTextBoxColumn.HeaderText = "打卡时间";
             dateDataGridViewTextBoxColumn.MinimumWidth = 8;
             dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
             dateDataGridViewTextBoxColumn.Width = 150;
@@ -181,7 +181,7 @@
             // statusDataGridViewTextBoxColumn
             // 
             statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
-            statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            statusDataGridViewTextBoxColumn.HeaderText = "状态";
             statusDataGridViewTextBoxColumn.MinimumWidth = 8;
             statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
             statusDataGridViewTextBoxColumn.Width = 150;
