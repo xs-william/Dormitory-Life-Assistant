@@ -36,6 +36,14 @@
             uiButton2 = new Sunny.UI.UIButton();
             uiButton3 = new Sunny.UI.UIButton();
             uiPanel1 = new Sunny.UI.UIPanel();
+<<<<<<< HEAD
+            uiDataGridView1 = new Sunny.UI.UIDataGridView();
+            supervisorNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            genderDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            teleDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            supervisorBindingSource = new BindingSource(components);
+=======
+>>>>>>> 412f730d5833914260fa72274ff6d8c62f4fd9c8
             uiTableLayoutPanel3 = new Sunny.UI.UITableLayoutPanel();
             uiButton1 = new Sunny.UI.UIButton();
             uiTextBox2 = new Sunny.UI.UITextBox();
@@ -88,6 +96,7 @@
             uiTextBox1.Margin = new Padding(4, 5, 4, 5);
             uiTextBox1.MinimumSize = new Size(1, 16);
             uiTextBox1.Name = "uiTextBox1";
+            uiTextBox1.Padding = new Padding(5);
             uiTextBox1.ShowText = false;
             uiTextBox1.Size = new Size(229, 32);
             uiTextBox1.TabIndex = 1;
@@ -161,6 +170,91 @@
             uiPanel1.Text = null;
             uiPanel1.TextAlignment = ContentAlignment.MiddleCenter;
             // 
+<<<<<<< HEAD
+            // uiDataGridView1
+            // 
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(243, 249, 255);
+            uiDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            uiDataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            uiDataGridView1.AutoGenerateColumns = false;
+            uiDataGridView1.BackgroundColor = Color.FromArgb(243, 249, 255);
+            uiDataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(80, 160, 255);
+            dataGridViewCellStyle2.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(80, 160, 255);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            uiDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            uiDataGridView1.ColumnHeadersHeight = 32;
+            uiDataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            uiDataGridView1.Columns.AddRange(new DataGridViewColumn[] { supervisorNameDataGridViewTextBoxColumn, genderDataGridViewTextBoxColumn, teleDataGridViewTextBoxColumn });
+            uiDataGridView1.DataSource = supervisorBindingSource;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(220, 236, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            uiDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            uiDataGridView1.EnableHeadersVisualStyles = false;
+            uiDataGridView1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            uiDataGridView1.GridColor = Color.FromArgb(104, 173, 255);
+            uiDataGridView1.Location = new Point(0, 100);
+            uiDataGridView1.Name = "uiDataGridView1";
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(243, 249, 255);
+            dataGridViewCellStyle4.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(80, 160, 255);
+            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            uiDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            uiDataGridView1.RowHeadersWidth = 51;
+            dataGridViewCellStyle5.BackColor = Color.White;
+            dataGridViewCellStyle5.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(220, 236, 255);
+            dataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(48, 48, 48);
+            uiDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            uiDataGridView1.RowTemplate.Height = 29;
+            uiDataGridView1.ScrollBarRectColor = Color.FromArgb(80, 160, 255);
+            uiDataGridView1.SelectedIndex = -1;
+            uiDataGridView1.Size = new Size(975, 387);
+            uiDataGridView1.TabIndex = 6;
+            // 
+            // supervisorNameDataGridViewTextBoxColumn
+            // 
+            supervisorNameDataGridViewTextBoxColumn.DataPropertyName = "SupervisorName";
+            supervisorNameDataGridViewTextBoxColumn.HeaderText = "工号";
+            supervisorNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            supervisorNameDataGridViewTextBoxColumn.Name = "supervisorNameDataGridViewTextBoxColumn";
+            supervisorNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // genderDataGridViewTextBoxColumn
+            // 
+            genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
+            genderDataGridViewTextBoxColumn.HeaderText = "性别";
+            genderDataGridViewTextBoxColumn.MinimumWidth = 6;
+            genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
+            genderDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // teleDataGridViewTextBoxColumn
+            // 
+            teleDataGridViewTextBoxColumn.DataPropertyName = "Tele";
+            teleDataGridViewTextBoxColumn.HeaderText = "电话";
+            teleDataGridViewTextBoxColumn.MinimumWidth = 6;
+            teleDataGridViewTextBoxColumn.Name = "teleDataGridViewTextBoxColumn";
+            teleDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // supervisorBindingSource
+            // 
+            supervisorBindingSource.DataSource = typeof(Dormitory_Life_Assistant.Supervisor);
+            // 
+=======
+>>>>>>> 412f730d5833914260fa72274ff6d8c62f4fd9c8
             // uiTableLayoutPanel3
             // 
             uiTableLayoutPanel3.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
@@ -193,6 +287,19 @@
             // 
             // uiTextBox2
             // 
+<<<<<<< HEAD
+            supQueryBox.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            supQueryBox.Location = new Point(156, 6);
+            supQueryBox.Margin = new Padding(4, 5, 4, 5);
+            supQueryBox.MinimumSize = new Size(1, 16);
+            supQueryBox.Name = "supQueryBox";
+            supQueryBox.Padding = new Padding(5);
+            supQueryBox.ShowText = false;
+            supQueryBox.Size = new Size(229, 32);
+            supQueryBox.TabIndex = 1;
+            supQueryBox.TextAlignment = ContentAlignment.MiddleLeft;
+            supQueryBox.Watermark = "";
+=======
             uiTextBox2.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
             uiTextBox2.Location = new Point(156, 6);
             uiTextBox2.Margin = new Padding(4, 5, 4, 5);
@@ -203,6 +310,7 @@
             uiTextBox2.TabIndex = 1;
             uiTextBox2.TextAlignment = ContentAlignment.MiddleLeft;
             uiTextBox2.Watermark = "";
+>>>>>>> 412f730d5833914260fa72274ff6d8c62f4fd9c8
             // 
             // uiComboBox2
             // 

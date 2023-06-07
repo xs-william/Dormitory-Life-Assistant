@@ -29,6 +29,19 @@
         private void InitializeComponent()
         {
             uiPanel1 = new Sunny.UI.UIPanel();
+<<<<<<< HEAD
+            uiDataGridView1 = new Sunny.UI.UIDataGridView();
+            studentIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            StudentName = new DataGridViewTextBoxColumn();
+            genderDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            gradeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            departmentDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            Class = new DataGridViewTextBoxColumn();
+            buildingNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            dormNumberDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            studentBindingSource = new BindingSource(components);
+=======
+>>>>>>> 412f730d5833914260fa72274ff6d8c62f4fd9c8
             uiTableLayoutPanel2 = new Sunny.UI.UITableLayoutPanel();
             uiButton4 = new Sunny.UI.UIButton();
             uiTextBox1 = new Sunny.UI.UITextBox();
@@ -57,6 +70,131 @@
             uiPanel1.Text = null;
             uiPanel1.TextAlignment = ContentAlignment.MiddleCenter;
             // 
+<<<<<<< HEAD
+            // uiDataGridView1
+            // 
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(243, 249, 255);
+            uiDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            uiDataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            uiDataGridView1.AutoGenerateColumns = false;
+            uiDataGridView1.BackgroundColor = Color.FromArgb(243, 249, 255);
+            uiDataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(80, 160, 255);
+            dataGridViewCellStyle2.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(80, 160, 255);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            uiDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            uiDataGridView1.ColumnHeadersHeight = 32;
+            uiDataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            uiDataGridView1.Columns.AddRange(new DataGridViewColumn[] { studentIdDataGridViewTextBoxColumn, StudentName, genderDataGridViewTextBoxColumn, gradeDataGridViewTextBoxColumn, departmentDataGridViewTextBoxColumn, Class, buildingNameDataGridViewTextBoxColumn, dormNumberDataGridViewTextBoxColumn });
+            uiDataGridView1.DataSource = studentBindingSource;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(220, 236, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            uiDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            uiDataGridView1.EnableHeadersVisualStyles = false;
+            uiDataGridView1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            uiDataGridView1.GridColor = Color.FromArgb(104, 173, 255);
+            uiDataGridView1.Location = new Point(0, 98);
+            uiDataGridView1.Name = "uiDataGridView1";
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(243, 249, 255);
+            dataGridViewCellStyle4.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(80, 160, 255);
+            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            uiDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            uiDataGridView1.RowHeadersWidth = 51;
+            dataGridViewCellStyle5.BackColor = Color.White;
+            dataGridViewCellStyle5.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(220, 236, 255);
+            dataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(48, 48, 48);
+            uiDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            uiDataGridView1.RowTemplate.Height = 29;
+            uiDataGridView1.ScrollBarRectColor = Color.FromArgb(80, 160, 255);
+            uiDataGridView1.SelectedIndex = -1;
+            uiDataGridView1.Size = new Size(975, 392);
+            uiDataGridView1.TabIndex = 4;
+            // 
+            // studentIdDataGridViewTextBoxColumn
+            // 
+            studentIdDataGridViewTextBoxColumn.DataPropertyName = "StudentId";
+            studentIdDataGridViewTextBoxColumn.HeaderText = "学号";
+            studentIdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            studentIdDataGridViewTextBoxColumn.Name = "studentIdDataGridViewTextBoxColumn";
+            studentIdDataGridViewTextBoxColumn.Width = 175;
+            // 
+            // StudentName
+            // 
+            StudentName.DataPropertyName = "StudentName";
+            StudentName.HeaderText = "姓名";
+            StudentName.MinimumWidth = 8;
+            StudentName.Name = "StudentName";
+            StudentName.Width = 150;
+            // 
+            // genderDataGridViewTextBoxColumn
+            // 
+            genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
+            genderDataGridViewTextBoxColumn.HeaderText = "性别";
+            genderDataGridViewTextBoxColumn.MinimumWidth = 6;
+            genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
+            genderDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // gradeDataGridViewTextBoxColumn
+            // 
+            gradeDataGridViewTextBoxColumn.DataPropertyName = "Grade";
+            gradeDataGridViewTextBoxColumn.HeaderText = "年级";
+            gradeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            gradeDataGridViewTextBoxColumn.Name = "gradeDataGridViewTextBoxColumn";
+            gradeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // departmentDataGridViewTextBoxColumn
+            // 
+            departmentDataGridViewTextBoxColumn.DataPropertyName = "Department";
+            departmentDataGridViewTextBoxColumn.HeaderText = "专业";
+            departmentDataGridViewTextBoxColumn.MinimumWidth = 6;
+            departmentDataGridViewTextBoxColumn.Name = "departmentDataGridViewTextBoxColumn";
+            departmentDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // Class
+            // 
+            Class.DataPropertyName = "Class";
+            Class.HeaderText = "班级";
+            Class.MinimumWidth = 6;
+            Class.Name = "Class";
+            Class.Width = 125;
+            // 
+            // buildingNameDataGridViewTextBoxColumn
+            // 
+            buildingNameDataGridViewTextBoxColumn.DataPropertyName = "BuildingName";
+            buildingNameDataGridViewTextBoxColumn.HeaderText = "所在楼栋";
+            buildingNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            buildingNameDataGridViewTextBoxColumn.Name = "buildingNameDataGridViewTextBoxColumn";
+            buildingNameDataGridViewTextBoxColumn.Width = 175;
+            // 
+            // dormNumberDataGridViewTextBoxColumn
+            // 
+            dormNumberDataGridViewTextBoxColumn.DataPropertyName = "DormNumber";
+            dormNumberDataGridViewTextBoxColumn.HeaderText = "宿舍号";
+            dormNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
+            dormNumberDataGridViewTextBoxColumn.Name = "dormNumberDataGridViewTextBoxColumn";
+            dormNumberDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // studentBindingSource
+            // 
+            studentBindingSource.DataSource = typeof(Dormitory_Life_Assistant.Student);
+            // 
+=======
+>>>>>>> 412f730d5833914260fa72274ff6d8c62f4fd9c8
             // uiTableLayoutPanel2
             // 
             uiTableLayoutPanel2.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
@@ -90,6 +228,19 @@
             // 
             // uiTextBox1
             // 
+<<<<<<< HEAD
+            queryText.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            queryText.Location = new Point(165, 6);
+            queryText.Margin = new Padding(4, 5, 4, 5);
+            queryText.MinimumSize = new Size(1, 16);
+            queryText.Name = "queryText";
+            queryText.Padding = new Padding(5);
+            queryText.ShowText = false;
+            queryText.Size = new Size(219, 31);
+            queryText.TabIndex = 1;
+            queryText.TextAlignment = ContentAlignment.MiddleLeft;
+            queryText.Watermark = "";
+=======
             uiTextBox1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
             uiTextBox1.Location = new Point(165, 6);
             uiTextBox1.Margin = new Padding(4, 5, 4, 5);
@@ -100,6 +251,7 @@
             uiTextBox1.TabIndex = 1;
             uiTextBox1.TextAlignment = ContentAlignment.MiddleLeft;
             uiTextBox1.Watermark = "";
+>>>>>>> 412f730d5833914260fa72274ff6d8c62f4fd9c8
             // 
             // uiComboBox1
             // 
@@ -190,8 +342,25 @@
         private Sunny.UI.UITextBox uiTextBox1;
         private Sunny.UI.UIComboBox uiComboBox1;
         private Sunny.UI.UITableLayoutPanel uiTableLayoutPanel1;
+<<<<<<< HEAD
+        private Sunny.UI.UIButton modifyButton;
+        private Sunny.UI.UIButton deleteButton;
+        private Sunny.UI.UIButton addButton;
+        private Sunny.UI.UIDataGridView uiDataGridView1;
+        private BindingSource studentBindingSource;
+        private DataGridViewTextBoxColumn studentIdDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn gradeDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn departmentDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn Class;
+        private DataGridViewTextBoxColumn buildingNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn dormNumberDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn StudentName;
+=======
         private Sunny.UI.UIButton uiButton2;
         private Sunny.UI.UIButton uiButton3;
         private Sunny.UI.UIButton uiButton1;
+>>>>>>> 412f730d5833914260fa72274ff6d8c62f4fd9c8
     }
 }

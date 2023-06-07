@@ -18,7 +18,11 @@ namespace Dormitory_Life_Assistant
         public String StudentId { get; set; }
         public String StudentName { get; set; }
         public String Gender { get; set; }
+<<<<<<< HEAD
+        public int Grade { get; set; }
+=======
         public String Grade { get; set; }
+>>>>>>> 412f730d5833914260fa72274ff6d8c62f4fd9c8
         public String Class { get; set; } //所在班级
         public String Department { get; set; }//所在系
         public String BuildingName//所在宿舍楼栋
