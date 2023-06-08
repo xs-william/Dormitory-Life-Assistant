@@ -40,6 +40,7 @@ namespace SystemForm
             AddPage(new StuPunch(me), 1005);
             AddPage(new StuMessage(me), 1006);
             AddPage(new StuComplaint(me), 1008);
+
             AddPage(new Setting(me, 1), 1009);
 
 

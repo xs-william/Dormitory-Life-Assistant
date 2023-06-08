@@ -61,6 +61,7 @@ namespace Dormitory_Life_Assistant.Service
                     .SingleOrDefault(s => s.SupervisorId == sup.SupervisorId);
 
                 if (supervisor == null) return;
+
                 ctx.Supervisors.Remove(supervisor);
                 ctx.SaveChanges();
             }
@@ -98,6 +99,7 @@ namespace Dormitory_Life_Assistant.Service
             {
                 var result = ctx.Supervisors
                     .Where(s => s.SupervisorId == id)
+
                     .ToList<Supervisor>();
                 return result;
             }

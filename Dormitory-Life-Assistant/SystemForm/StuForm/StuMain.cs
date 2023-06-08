@@ -23,6 +23,7 @@ namespace SystemForm
         private DormMessageService dormMessageService = new DormMessageService();
         //SaveImage thisImage;//用来接收用户提交的图像
         string imageID;
+
         Student stu;
         public stuMain(Student student)
         {
@@ -31,6 +32,7 @@ namespace SystemForm
             systemMessageBindingSource.DataSource = systemMessageService.SystemMessages;
             uiDataGridView1.AllowUserToAddRows = false;
             uiDataGridView2.AllowUserToAddRows = false;
+
             uiLabel1.Text = student.StudentName;
             sex.Text = student.Gender;
             myclass.Text = student.Class;

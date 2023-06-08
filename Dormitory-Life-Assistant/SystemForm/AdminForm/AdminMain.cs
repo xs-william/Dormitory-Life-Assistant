@@ -1,4 +1,5 @@
 ﻿using Dormitory_Life_Assistant;
+
 using Dormitory_Life_Assistant.EntityClass;
 using Dormitory_Life_Assistant.Service;
 using MySql.Data.MySqlClient;
@@ -19,6 +20,7 @@ namespace SystemForm
     public partial class AdminMain : UIPage
     {
         Administrator administrator = new Administrator();
+
         public AdminMain(Administrator administrator)
         {
             InitializeComponent();
@@ -27,6 +29,7 @@ namespace SystemForm
             ID.Text = administrator.AdministratorId;
             major.Text = administrator.Administratorpost;
             sex.Text = administrator.Administratorgender;
+
             this.administrator = administrator;
             if (pictureBox1.Image != null)
             {

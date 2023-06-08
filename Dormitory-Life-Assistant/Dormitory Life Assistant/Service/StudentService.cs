@@ -99,6 +99,7 @@ namespace Dormitory_Life_Assistant.Service
             {
                 return ctx.Students
                     .Where(s => s.StudentName == name)
+
                     .ToList<Student>();
             }
         }
