@@ -90,7 +90,7 @@ namespace SystemForm
         {
             if (MessageBox.Show("确定注销？", "注销账户", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if(select == 1)
+                if (select == 1)
                 {
                     using (var ctx = new SystemContext())
                     {

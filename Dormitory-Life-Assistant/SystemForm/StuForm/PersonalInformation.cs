@@ -35,7 +35,7 @@ namespace SystemForm
                 stu.StudentName = uiTextBox1.Text;
 
                 stu.Gender = uiTextBox2.Text;
-                stu.Grade = uiTextBox3.Text;
+                stu.Grade = uiTextBox3.Text.ToInt();
                 stu.Class = uiTextBox4.Text;
                 stu.Department = uiTextBox5.Text;
                 stu.BuildingName = uiTextBox6.Text;

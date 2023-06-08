@@ -42,13 +42,13 @@ namespace SystemForm
             DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
             panel = new Sunny.UI.UIPanel();
+            pictureBox1 = new PictureBox();
             uiButton1 = new Sunny.UI.UIButton();
             uiGroupBox1 = new Sunny.UI.UIGroupBox();
             uiDataGridView2 = new Sunny.UI.UIDataGridView();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             SupervisorName = new DataGridViewTextBoxColumn();
             dormMessageBindingSource = new BindingSource(components);
-            uiAvatar1 = new Sunny.UI.UIAvatar();
             SystemMessage = new Sunny.UI.UIGroupBox();
             uiDataGridView1 = new Sunny.UI.UIDataGridView();
             contentDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
@@ -56,18 +56,16 @@ namespace SystemForm
             systemMessageBindingSource = new BindingSource(components);
             uiCalendar1 = new Sunny.UI.UICalendar();
             MyDormitory = new Sunny.UI.UIGroupBox();
-            dormLeader = new Sunny.UI.UILabel();
-            departName = new Sunny.UI.UILabel();
             buildingno = new Sunny.UI.UILabel();
             dorm = new Sunny.UI.UILabel();
-            uiLabel9 = new Sunny.UI.UILabel();
-            uiLabel8 = new Sunny.UI.UILabel();
             uiLabel7 = new Sunny.UI.UILabel();
             uiLabel6 = new Sunny.UI.UILabel();
             MyMessage = new Sunny.UI.UIGroupBox();
+            departName = new Sunny.UI.UILabel();
             myclass = new Sunny.UI.UILabel();
             label2 = new Sunny.UI.UILabel();
             grade = new Sunny.UI.UILabel();
+            uiLabel8 = new Sunny.UI.UILabel();
             uiLabel5 = new Sunny.UI.UILabel();
             sex = new Sunny.UI.UILabel();
             uiLabel3 = new Sunny.UI.UILabel();
@@ -76,6 +74,7 @@ namespace SystemForm
             uiLabel1 = new Sunny.UI.UILabel();
             Label1 = new Sunny.UI.UILabel();
             panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             uiGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)uiDataGridView2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dormMessageBindingSource).BeginInit();
@@ -88,9 +87,9 @@ namespace SystemForm
             // 
             // panel
             // 
+            panel.Controls.Add(pictureBox1);
             panel.Controls.Add(uiButton1);
             panel.Controls.Add(uiGroupBox1);
-            panel.Controls.Add(uiAvatar1);
             panel.Controls.Add(SystemMessage);
             panel.Controls.Add(uiCalendar1);
             panel.Controls.Add(MyDormitory);
@@ -106,6 +105,18 @@ namespace SystemForm
             panel.Text = null;
             panel.TextAlignment = ContentAlignment.MiddleCenter;
             panel.Click += panel_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.Cursor = Cursors.Cross;
+            pictureBox1.Location = new Point(34, 25);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(115, 113);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 7;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // uiButton1
             // 
@@ -208,17 +219,6 @@ namespace SystemForm
             // dormMessageBindingSource
             // 
             dormMessageBindingSource.DataSource = typeof(DormMessage);
-            // 
-            // uiAvatar1
-            // 
-            uiAvatar1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiAvatar1.Location = new Point(34, 39);
-            uiAvatar1.MinimumSize = new Size(1, 1);
-            uiAvatar1.Name = "uiAvatar1";
-            uiAvatar1.Size = new Size(105, 97);
-            uiAvatar1.TabIndex = 5;
-            uiAvatar1.Text = "123";
-            uiAvatar1.Click += uiAvatar1_Click;
             // 
             // SystemMessage
             // 
@@ -327,12 +327,8 @@ namespace SystemForm
             // 
             // MyDormitory
             // 
-            MyDormitory.Controls.Add(dormLeader);
-            MyDormitory.Controls.Add(departName);
             MyDormitory.Controls.Add(buildingno);
             MyDormitory.Controls.Add(dorm);
-            MyDormitory.Controls.Add(uiLabel9);
-            MyDormitory.Controls.Add(uiLabel8);
             MyDormitory.Controls.Add(uiLabel7);
             MyDormitory.Controls.Add(uiLabel6);
             MyDormitory.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -341,34 +337,15 @@ namespace SystemForm
             MyDormitory.MinimumSize = new Size(1, 1);
             MyDormitory.Name = "MyDormitory";
             MyDormitory.Padding = new Padding(0, 32, 0, 0);
-            MyDormitory.Size = new Size(471, 111);
+            MyDormitory.Size = new Size(471, 98);
             MyDormitory.TabIndex = 2;
             MyDormitory.Text = "我的宿舍";
             MyDormitory.TextAlignment = ContentAlignment.MiddleCenter;
             // 
-            // dormLeader
-            // 
-            dormLeader.Font = new Font("微软雅黑", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            dormLeader.Location = new Point(271, 72);
-            dormLeader.Name = "dormLeader";
-            dormLeader.Size = new Size(125, 29);
-            dormLeader.TabIndex = 7;
-            dormLeader.Text = "我的宿舍长";
-            dormLeader.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // departName
-            // 
-            departName.Font = new Font("微软雅黑", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            departName.Location = new Point(270, 45);
-            departName.Name = "departName";
-            departName.Size = new Size(125, 29);
-            departName.TabIndex = 6;
-            departName.TextAlign = ContentAlignment.MiddleLeft;
-            // 
             // buildingno
             // 
             buildingno.Font = new Font("微软雅黑", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            buildingno.Location = new Point(74, 73);
+            buildingno.Location = new Point(290, 47);
             buildingno.Name = "buildingno";
             buildingno.Size = new Size(125, 29);
             buildingno.TabIndex = 5;
@@ -383,30 +360,10 @@ namespace SystemForm
             dorm.TabIndex = 4;
             dorm.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // uiLabel9
-            // 
-            uiLabel9.Font = new Font("微软雅黑", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            uiLabel9.Location = new Point(205, 71);
-            uiLabel9.Name = "uiLabel9";
-            uiLabel9.Size = new Size(125, 29);
-            uiLabel9.TabIndex = 3;
-            uiLabel9.Text = "宿舍长";
-            uiLabel9.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel8
-            // 
-            uiLabel8.Font = new Font("微软雅黑", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            uiLabel8.Location = new Point(205, 44);
-            uiLabel8.Name = "uiLabel8";
-            uiLabel8.Size = new Size(125, 29);
-            uiLabel8.TabIndex = 2;
-            uiLabel8.Text = "学部";
-            uiLabel8.TextAlign = ContentAlignment.MiddleLeft;
-            // 
             // uiLabel7
             // 
             uiLabel7.Font = new Font("微软雅黑", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            uiLabel7.Location = new Point(15, 71);
+            uiLabel7.Location = new Point(214, 44);
             uiLabel7.Name = "uiLabel7";
             uiLabel7.Size = new Size(147, 32);
             uiLabel7.TabIndex = 1;
@@ -422,12 +379,15 @@ namespace SystemForm
             uiLabel6.TabIndex = 0;
             uiLabel6.Text = "宿舍名";
             uiLabel6.TextAlign = ContentAlignment.MiddleLeft;
+            uiLabel6.Click += uiLabel6_Click;
             // 
             // MyMessage
             // 
+            MyMessage.Controls.Add(departName);
             MyMessage.Controls.Add(myclass);
             MyMessage.Controls.Add(label2);
             MyMessage.Controls.Add(grade);
+            MyMessage.Controls.Add(uiLabel8);
             MyMessage.Controls.Add(uiLabel5);
             MyMessage.Controls.Add(sex);
             MyMessage.Controls.Add(uiLabel3);
@@ -445,6 +405,15 @@ namespace SystemForm
             MyMessage.TabIndex = 1;
             MyMessage.Text = "我的信息";
             MyMessage.TextAlignment = ContentAlignment.MiddleCenter;
+            // 
+            // departName
+            // 
+            departName.Font = new Font("微软雅黑", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            departName.Location = new Point(460, 73);
+            departName.Name = "departName";
+            departName.Size = new Size(125, 29);
+            departName.TabIndex = 6;
+            departName.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // myclass
             // 
@@ -473,6 +442,17 @@ namespace SystemForm
             grade.Size = new Size(125, 29);
             grade.TabIndex = 7;
             grade.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel8
+            // 
+            uiLabel8.Font = new Font("微软雅黑", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            uiLabel8.Location = new Point(392, 73);
+            uiLabel8.Name = "uiLabel8";
+            uiLabel8.Size = new Size(125, 29);
+            uiLabel8.TabIndex = 2;
+            uiLabel8.Text = "专业";
+            uiLabel8.TextAlign = ContentAlignment.MiddleLeft;
+            uiLabel8.Click += uiLabel8_Click;
             // 
             // uiLabel5
             // 
@@ -550,6 +530,7 @@ namespace SystemForm
             PageIndex = 1001;
             Text = "stuMain";
             panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             uiGroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)uiDataGridView2).EndInit();
             ((System.ComponentModel.ISupportInitialize)dormMessageBindingSource).EndInit();
@@ -564,7 +545,6 @@ namespace SystemForm
         #endregion
 
         private Sunny.UI.UIPanel panel;
-        private Sunny.UI.UIAvatar uiAvatar1;
         private Sunny.UI.UIGroupBox MyMessage;
         private Sunny.UI.UILabel grade;
         private Sunny.UI.UILabel uiLabel5;
@@ -579,11 +559,9 @@ namespace SystemForm
         private Sunny.UI.UILabel label2;
         private Sunny.UI.UICalendar uiCalendar1;
         private Sunny.UI.UIGroupBox MyDormitory;
-        private Sunny.UI.UILabel dormLeader;
         private Sunny.UI.UILabel departName;
         private Sunny.UI.UILabel buildingno;
         private Sunny.UI.UILabel dorm;
-        private Sunny.UI.UILabel uiLabel9;
         private Sunny.UI.UILabel uiLabel8;
         private Sunny.UI.UILabel uiLabel7;
         private Sunny.UI.UILabel uiLabel6;
@@ -598,5 +576,6 @@ namespace SystemForm
         private DataGridViewTextBoxColumn contentDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn administratorNameDataGridViewTextBoxColumn;
         private Sunny.UI.UIButton uiButton1;
+        private PictureBox pictureBox1;
     }
 }

@@ -17,7 +17,7 @@ namespace SystemForm
             {
                 IdBox.Text = student.StudentId;
                 nameBox.Text = student.StudentName;
-                gradeBox.Text = student.Grade;
+                gradeBox.Text = "";
                 genderBox.Text = student.Gender;
                 dormBox.Text = student.DormNumber;
                 departmentBox.Text = student.Department;
@@ -36,7 +36,7 @@ namespace SystemForm
 
         private void confirmButton_Click(object sender, EventArgs e)
         {
-            Student newStudent = new Student(IdBox.Text, nameBox.Text, gradeBox.Text, departmentBox.Text, dormBox.Text, classBox.Text, genderBox.Text, passwordBox.Text, buildingNameBox.Text);
+            Student newStudent = new Student(IdBox.Text, nameBox.Text, gradeBox.Text.ToInt(), departmentBox.Text, dormBox.Text, classBox.Text, genderBox.Text, passwordBox.Text, buildingNameBox.Text);
             UIMessageBox.Show("是否确认您的操作");
             int count = 0;
             using (var ctx = new SystemContext())

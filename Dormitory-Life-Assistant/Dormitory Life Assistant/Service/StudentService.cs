@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Sunny.UI;
 
 namespace Dormitory_Life_Assistant.Service
 {
@@ -13,12 +14,12 @@ namespace Dormitory_Life_Assistant.Service
         }
         public List<Student> getall()
         {
-                using (var ctx = new SystemContext())
-                {
-                    return ctx.Students
+            using (var ctx = new SystemContext())
+            {
+                return ctx.Students
 
-                      .ToList<Student>();
-                }
+                  .ToList<Student>();
+            }
 
         }
 
@@ -29,6 +30,33 @@ namespace Dormitory_Life_Assistant.Service
                 if (student == null) { return; }
                 ctx.Students.Add(student);
                 ctx.SaveChanges();
+            }
+        }
+
+        //查询是否存在该用户的头像
+        public bool IsExistImage(string uploderId)
+        {
+            using (var ctx = new SystemContext())
+            {
+                var image = ctx.SaveImages
+                    .SingleOrDefault(s => s.Uploader == uploderId);
+                if (image == null) { return false; }
+                return true;
+            }
+        }
+
+        //删除学生的旧头像
+        public void DeleteStuImage(string uploderId)
+        {
+            using (var ctx = new SystemContext())
+            {
+                var image = ctx.SaveImages
+                    .SingleOrDefault(s => s.Uploader == uploderId);
+                if (image != null)
+                {
+                    ctx.SaveImages.Remove(image);
+                    ctx.SaveChanges();
+                }
             }
         }
 
@@ -55,12 +83,24 @@ namespace Dormitory_Life_Assistant.Service
             AddStudent(student);
         }
 
+        //通过宿舍号找所有学生
+        public List<Student> QueryStudentByDormId(string dormId)
+        {
+            using (var ctx = new SystemContext())
+            {
+                return ctx.Students
+                    .Where(s => s.DormNumber == dormId)
+                    .ToList();
+            }
+        }
+
         public List<Student> QueryStudentByName(string name)
         {
             using (var ctx = new SystemContext())
             {
                 return ctx.Students
-                    .Where(s => s.StudentName==name)
+                    .Where(s => s.StudentName == name)
+
                     .ToList<Student>();
             }
         }
@@ -86,29 +126,29 @@ namespace Dormitory_Life_Assistant.Service
         {
             using (var ctx = new SystemContext())
             {
-                var result= ctx.Students
+                var result = ctx.Students
                     .Where(s => s.StudentId == id)
                     .ToList<Student>();
                 return result;
             }
         }
-
         public List<Student> QueryStudentByDorm(string dorm)
         {
             using (var ctx = new SystemContext())
             {
                 var result = ctx.Students
-                    .Where(s => s.DormNumber==dorm)
+                    .Where(s => s.DormNumber == dorm)
                     .ToList<Student>();
                 return result;
             }
         }
         public List<Student> QueryStudentByGrade(string grade)
         {
+            int gra=grade.ToInt();
             using (var ctx = new SystemContext())
             {
                 var result = ctx.Students
-                    .Where(s => s.Grade==grade)
+                    .Where(s => s.Grade == gra)
                     .ToList<Student>();
                 return result;
             }

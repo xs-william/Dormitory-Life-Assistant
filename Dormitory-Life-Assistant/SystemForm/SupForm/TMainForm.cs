@@ -15,7 +15,7 @@ namespace SystemForm
             this.supervisor = supervisor;
             Choice.TabControl = MainContainer;
             //增加页面到Main
-            AddPage(new TMySelfForm(), 1001);
+            AddPage(new TMySelfForm(supervisor), 1001);
             AddPage(new TStudentForm(supervisor), 1002);
             AddPage(new TBreakdownForm(supervisor), 1003);
             AddPage(new TCostForm(supervisor), 1004);

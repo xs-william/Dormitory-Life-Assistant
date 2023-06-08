@@ -201,7 +201,6 @@
             classBox.ShowText = false;
             classBox.Size = new Size(243, 44);
             classBox.TabIndex = 3;
-            classBox.Text = "uiTextBox1";
             classBox.TextAlignment = ContentAlignment.MiddleLeft;
             classBox.Watermark = "";
             // 
@@ -216,7 +215,6 @@
             buildingBox.ShowText = false;
             buildingBox.Size = new Size(243, 44);
             buildingBox.TabIndex = 4;
-            buildingBox.Text = "uiTextBox1";
             buildingBox.TextAlignment = ContentAlignment.MiddleLeft;
             buildingBox.Watermark = "";
             // 
@@ -231,7 +229,6 @@
             dormNumberBox.ShowText = false;
             dormNumberBox.Size = new Size(243, 44);
             dormNumberBox.TabIndex = 5;
-            dormNumberBox.Text = "uiTextBox1";
             dormNumberBox.TextAlignment = ContentAlignment.MiddleLeft;
             dormNumberBox.Watermark = "";
             // 
@@ -314,7 +311,6 @@
             idBox.ShowText = false;
             idBox.Size = new Size(161, 60);
             idBox.TabIndex = 6;
-            idBox.Text = "uiTextBox1";
             idBox.TextAlignment = ContentAlignment.MiddleLeft;
             idBox.Watermark = "";
             // 
@@ -329,7 +325,6 @@
             nameBox.ShowText = false;
             nameBox.Size = new Size(74, 60);
             nameBox.TabIndex = 7;
-            nameBox.Text = "uiTextBox1";
             nameBox.TextAlignment = ContentAlignment.MiddleLeft;
             nameBox.Watermark = "";
             // 
@@ -344,7 +339,6 @@
             genderBox.ShowText = false;
             genderBox.Size = new Size(74, 60);
             genderBox.TabIndex = 8;
-            genderBox.Text = "uiTextBox1";
             genderBox.TextAlignment = ContentAlignment.MiddleLeft;
             genderBox.Watermark = "";
             // 
@@ -359,7 +353,6 @@
             departmentBox.ShowText = false;
             departmentBox.Size = new Size(161, 60);
             departmentBox.TabIndex = 9;
-            departmentBox.Text = "uiTextBox1";
             departmentBox.TextAlignment = ContentAlignment.MiddleLeft;
             departmentBox.Watermark = "";
             // 

@@ -39,8 +39,9 @@
             uiLabel4 = new Sunny.UI.UILabel();
             major = new Sunny.UI.UILabel();
             MyMessage = new Sunny.UI.UIGroupBox();
-            uiAvatar1 = new Sunny.UI.UIAvatar();
+            pictureBox1 = new PictureBox();
             MyMessage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // Label1
@@ -161,26 +162,28 @@
             MyMessage.Text = "我的信息";
             MyMessage.TextAlignment = ContentAlignment.MiddleCenter;
             // 
-            // uiAvatar1
+            // pictureBox1
             // 
-            uiAvatar1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiAvatar1.Location = new Point(115, 127);
-            uiAvatar1.MinimumSize = new Size(1, 1);
-            uiAvatar1.Name = "uiAvatar1";
-            uiAvatar1.Size = new Size(105, 97);
-            uiAvatar1.TabIndex = 8;
-            uiAvatar1.Text = "uiAvatar1";
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.Location = new Point(70, 114);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(143, 140);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 9;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // AdminMain
             // 
             AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(975, 490);
-            Controls.Add(uiAvatar1);
+            Controls.Add(pictureBox1);
             Controls.Add(MyMessage);
             Name = "AdminMain";
             PageIndex = 2001;
             Text = "AdminMain";
             MyMessage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -197,6 +200,6 @@
         private Sunny.UI.UILabel uiLabel4;
         private Sunny.UI.UILabel major;
         private Sunny.UI.UIGroupBox MyMessage;
-        private Sunny.UI.UIAvatar uiAvatar1;
+        private PictureBox pictureBox1;
     }
 }
