@@ -11,6 +11,7 @@ using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Intrinsics.Arm;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,6 +25,7 @@ namespace SystemForm
         public AdminMain(Administrator administrator)
         {
             InitializeComponent();
+            AdministratorService adm = new AdministratorService();
             uiLabel1.Text = administrator.AdministratorName;
             phone.Text = administrator.Administratorphone;
             ID.Text = administrator.AdministratorId;
@@ -31,7 +33,7 @@ namespace SystemForm
             sex.Text = administrator.Administratorgender;
 
             this.administrator = administrator;
-            if (pictureBox1.Image != null)
+            if (adm.IsExistImage('u' + administrator.AdministratorId))
             {
                 DisPlayImage('u' + administrator.AdministratorId);
             }
@@ -126,7 +128,7 @@ namespace SystemForm
         {
             AdministratorService adm = new AdministratorService();
 
-            if (adm.IsExistImage(administrator.AdministratorId))
+            if (adm.IsExistImage('u' + administrator.AdministratorId))
             {
                 adm.DeleteAdmImage('u' + administrator.AdministratorId);
             }

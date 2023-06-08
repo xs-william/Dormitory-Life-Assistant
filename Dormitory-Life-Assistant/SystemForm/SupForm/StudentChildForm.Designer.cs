@@ -38,11 +38,18 @@
             uiLabel1 = new Sunny.UI.UILabel();
             uiLabel6 = new Sunny.UI.UILabel();
             uiLabel7 = new Sunny.UI.UILabel();
+            classBox = new Sunny.UI.UITextBox();
+            buildingBox = new Sunny.UI.UITextBox();
+            dormNumberBox = new Sunny.UI.UITextBox();
             tableLayoutPanel1 = new TableLayoutPanel();
             uiLabel3 = new Sunny.UI.UILabel();
             uiLabel4 = new Sunny.UI.UILabel();
             uiLabel2 = new Sunny.UI.UILabel();
             uiLabel5 = new Sunny.UI.UILabel();
+            idBox = new Sunny.UI.UITextBox();
+            nameBox = new Sunny.UI.UITextBox();
+            genderBox = new Sunny.UI.UITextBox();
+            departmentBox = new Sunny.UI.UITextBox();
             uiNavBar1.SuspendLayout();
             MainContainer.SuspendLayout();
             tabPage1.SuspendLayout();
@@ -115,7 +122,7 @@
             myself.MinimumSize = new Size(1, 1);
             myself.Name = "myself";
             myself.Padding = new Padding(0, 32, 0, 0);
-            myself.Size = new Size(591, 303);
+            myself.Size = new Size(637, 359);
             myself.TabIndex = 2;
             myself.Text = "学生个人信息：";
             myself.TextAlignment = ContentAlignment.MiddleCenter;
@@ -123,7 +130,7 @@
             // uiAvatar2
             // 
             uiAvatar2.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiAvatar2.Location = new Point(444, 35);
+            uiAvatar2.Location = new Point(496, 47);
             uiAvatar2.MinimumSize = new Size(1, 1);
             uiAvatar2.Name = "uiAvatar2";
             uiAvatar2.Size = new Size(128, 133);
@@ -138,22 +145,25 @@
             tableLayoutPanel2.Controls.Add(uiLabel1, 0, 0);
             tableLayoutPanel2.Controls.Add(uiLabel6, 0, 1);
             tableLayoutPanel2.Controls.Add(uiLabel7, 0, 2);
-            tableLayoutPanel2.Location = new Point(26, 138);
+            tableLayoutPanel2.Controls.Add(classBox, 1, 0);
+            tableLayoutPanel2.Controls.Add(buildingBox, 1, 1);
+            tableLayoutPanel2.Controls.Add(dormNumberBox, 1, 2);
+            tableLayoutPanel2.Location = new Point(26, 193);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 3;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 33.33333F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel2.Size = new Size(397, 125);
+            tableLayoutPanel2.Size = new Size(455, 163);
             tableLayoutPanel2.TabIndex = 1;
             // 
             // uiLabel1
             // 
             uiLabel1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             uiLabel1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiLabel1.Location = new Point(3, 6);
+            uiLabel1.Location = new Point(3, 12);
             uiLabel1.Name = "uiLabel1";
-            uiLabel1.Size = new Size(172, 29);
+            uiLabel1.Size = new Size(198, 29);
             uiLabel1.TabIndex = 0;
             uiLabel1.Text = "所在班级：";
             uiLabel1.TextAlign = ContentAlignment.MiddleLeft;
@@ -162,9 +172,9 @@
             // 
             uiLabel6.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             uiLabel6.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiLabel6.Location = new Point(3, 47);
+            uiLabel6.Location = new Point(3, 66);
             uiLabel6.Name = "uiLabel6";
-            uiLabel6.Size = new Size(172, 29);
+            uiLabel6.Size = new Size(198, 29);
             uiLabel6.TabIndex = 1;
             uiLabel6.Text = "所在宿舍楼栋：";
             uiLabel6.TextAlign = ContentAlignment.MiddleLeft;
@@ -173,30 +183,76 @@
             // 
             uiLabel7.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             uiLabel7.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiLabel7.Location = new Point(3, 89);
+            uiLabel7.Location = new Point(3, 121);
             uiLabel7.Name = "uiLabel7";
-            uiLabel7.Size = new Size(172, 29);
+            uiLabel7.Size = new Size(198, 29);
             uiLabel7.TabIndex = 2;
             uiLabel7.Text = "所在宿舍号：";
             uiLabel7.TextAlign = ContentAlignment.MiddleLeft;
             // 
+            // classBox
+            // 
+            classBox.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            classBox.Location = new Point(208, 5);
+            classBox.Margin = new Padding(4, 5, 4, 5);
+            classBox.MinimumSize = new Size(1, 16);
+            classBox.Name = "classBox";
+            classBox.Padding = new Padding(5);
+            classBox.ShowText = false;
+            classBox.Size = new Size(243, 44);
+            classBox.TabIndex = 3;
+            classBox.TextAlignment = ContentAlignment.MiddleLeft;
+            classBox.Watermark = "";
+            // 
+            // buildingBox
+            // 
+            buildingBox.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            buildingBox.Location = new Point(208, 59);
+            buildingBox.Margin = new Padding(4, 5, 4, 5);
+            buildingBox.MinimumSize = new Size(1, 16);
+            buildingBox.Name = "buildingBox";
+            buildingBox.Padding = new Padding(5);
+            buildingBox.ShowText = false;
+            buildingBox.Size = new Size(243, 44);
+            buildingBox.TabIndex = 4;
+            buildingBox.TextAlignment = ContentAlignment.MiddleLeft;
+            buildingBox.Watermark = "";
+            // 
+            // dormNumberBox
+            // 
+            dormNumberBox.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dormNumberBox.Location = new Point(208, 113);
+            dormNumberBox.Margin = new Padding(4, 5, 4, 5);
+            dormNumberBox.MinimumSize = new Size(1, 16);
+            dormNumberBox.Name = "dormNumberBox";
+            dormNumberBox.Padding = new Padding(5);
+            dormNumberBox.ShowText = false;
+            dormNumberBox.Size = new Size(243, 44);
+            dormNumberBox.TabIndex = 5;
+            dormNumberBox.TextAlignment = ContentAlignment.MiddleLeft;
+            dormNumberBox.Watermark = "";
+            // 
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 4;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 40F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 21.9780216F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 18.0219784F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 22.8571434F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 37.1428566F));
             tableLayoutPanel1.Controls.Add(uiLabel3, 2, 0);
             tableLayoutPanel1.Controls.Add(uiLabel4, 0, 1);
             tableLayoutPanel1.Controls.Add(uiLabel2, 0, 0);
             tableLayoutPanel1.Controls.Add(uiLabel5, 2, 1);
+            tableLayoutPanel1.Controls.Add(idBox, 3, 0);
+            tableLayoutPanel1.Controls.Add(nameBox, 1, 0);
+            tableLayoutPanel1.Controls.Add(genderBox, 1, 1);
+            tableLayoutPanel1.Controls.Add(departmentBox, 3, 1);
             tableLayoutPanel1.Location = new Point(26, 35);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(397, 76);
+            tableLayoutPanel1.Size = new Size(455, 152);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // uiLabel3
@@ -204,9 +260,9 @@
             uiLabel3.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             uiLabel3.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
             uiLabel3.ImageAlign = ContentAlignment.MiddleLeft;
-            uiLabel3.Location = new Point(161, 4);
+            uiLabel3.Location = new Point(185, 23);
             uiLabel3.Name = "uiLabel3";
-            uiLabel3.Size = new Size(73, 29);
+            uiLabel3.Size = new Size(98, 29);
             uiLabel3.TabIndex = 1;
             uiLabel3.Text = "学号：";
             uiLabel3.TextAlign = ContentAlignment.MiddleLeft;
@@ -215,9 +271,9 @@
             // 
             uiLabel4.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             uiLabel4.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiLabel4.Location = new Point(3, 42);
+            uiLabel4.Location = new Point(3, 99);
             uiLabel4.Name = "uiLabel4";
-            uiLabel4.Size = new Size(73, 29);
+            uiLabel4.Size = new Size(94, 29);
             uiLabel4.TabIndex = 2;
             uiLabel4.Text = "性别：";
             uiLabel4.TextAlign = ContentAlignment.MiddleLeft;
@@ -226,9 +282,9 @@
             // 
             uiLabel2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             uiLabel2.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiLabel2.Location = new Point(3, 4);
+            uiLabel2.Location = new Point(3, 23);
             uiLabel2.Name = "uiLabel2";
-            uiLabel2.Size = new Size(73, 29);
+            uiLabel2.Size = new Size(94, 29);
             uiLabel2.TabIndex = 3;
             uiLabel2.Text = "姓名：";
             uiLabel2.TextAlign = ContentAlignment.MiddleLeft;
@@ -237,12 +293,68 @@
             // 
             uiLabel5.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             uiLabel5.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiLabel5.Location = new Point(161, 42);
+            uiLabel5.Location = new Point(185, 99);
             uiLabel5.Name = "uiLabel5";
-            uiLabel5.Size = new Size(73, 29);
+            uiLabel5.Size = new Size(98, 29);
             uiLabel5.TabIndex = 4;
             uiLabel5.Text = "院系：";
             uiLabel5.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // idBox
+            // 
+            idBox.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            idBox.Location = new Point(290, 5);
+            idBox.Margin = new Padding(4, 5, 4, 5);
+            idBox.MinimumSize = new Size(1, 16);
+            idBox.Name = "idBox";
+            idBox.Padding = new Padding(5);
+            idBox.ShowText = false;
+            idBox.Size = new Size(161, 60);
+            idBox.TabIndex = 6;
+            idBox.TextAlignment = ContentAlignment.MiddleLeft;
+            idBox.Watermark = "";
+            // 
+            // nameBox
+            // 
+            nameBox.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            nameBox.Location = new Point(104, 5);
+            nameBox.Margin = new Padding(4, 5, 4, 5);
+            nameBox.MinimumSize = new Size(1, 16);
+            nameBox.Name = "nameBox";
+            nameBox.Padding = new Padding(5);
+            nameBox.ShowText = false;
+            nameBox.Size = new Size(74, 60);
+            nameBox.TabIndex = 7;
+            nameBox.TextAlignment = ContentAlignment.MiddleLeft;
+            nameBox.Watermark = "";
+            // 
+            // genderBox
+            // 
+            genderBox.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            genderBox.Location = new Point(104, 81);
+            genderBox.Margin = new Padding(4, 5, 4, 5);
+            genderBox.MinimumSize = new Size(1, 16);
+            genderBox.Name = "genderBox";
+            genderBox.Padding = new Padding(5);
+            genderBox.ShowText = false;
+            genderBox.Size = new Size(74, 60);
+            genderBox.TabIndex = 8;
+            genderBox.TextAlignment = ContentAlignment.MiddleLeft;
+            genderBox.Watermark = "";
+            // 
+            // departmentBox
+            // 
+            departmentBox.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            departmentBox.Location = new Point(290, 81);
+            departmentBox.Margin = new Padding(4, 5, 4, 5);
+            departmentBox.MinimumSize = new Size(1, 16);
+            departmentBox.Name = "departmentBox";
+            departmentBox.Padding = new Padding(5);
+            departmentBox.ShowText = false;
+            departmentBox.Size = new Size(161, 60);
+            departmentBox.TabIndex = 9;
+            departmentBox.TextAlignment = ContentAlignment.MiddleLeft;
+            departmentBox.Watermark = "";
             // 
             // StudentChildForm
             // 
@@ -282,5 +394,12 @@
         private Sunny.UI.UILabel uiLabel2;
         private Sunny.UI.UILabel uiLabel5;
         private Sunny.UI.UIAvatar uiAvatar2;
+        private Sunny.UI.UITextBox classBox;
+        private Sunny.UI.UITextBox buildingBox;
+        private Sunny.UI.UITextBox dormNumberBox;
+        private Sunny.UI.UITextBox idBox;
+        private Sunny.UI.UITextBox nameBox;
+        private Sunny.UI.UITextBox genderBox;
+        private Sunny.UI.UITextBox departmentBox;
     }
 }

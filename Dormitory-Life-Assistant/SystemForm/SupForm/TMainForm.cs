@@ -62,5 +62,12 @@ namespace SystemForm
                 ShowSuccessTip("已取消");
             }
         }
+
+        private void uiHeaderButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            LogInForm log = new LogInForm();
+            log.ShowDialog();
+        }
     }
 }

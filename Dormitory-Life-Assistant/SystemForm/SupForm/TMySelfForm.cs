@@ -25,13 +25,20 @@ namespace SystemForm
         public TMySelfForm(Supervisor supervisor)
         {
             InitializeComponent();
+            SupervisorService supervisorService = new SupervisorService();
             systemMessageBindingSource.DataSource = systemMessageService.SystemMessages;
             dormMessageBindingSource.DataSource = dormMessageService.DormMessages;
             uiDataGridView1.AllowUserToAddRows = false;
             uiDataGridView2.AllowUserToAddRows = false;
             uiCalendar1.Date = Convert.ToDateTime(DateTime.Now.ToString("D"));
             this.sup = supervisor;
-            if (pictureBox1.Image != null)
+            TName.Text = sup.SupervisorName;
+            TID.Text = sup.SupervisorId;
+            TSex.Text = sup.Gender;
+            TNumber.Text = sup.Tele;
+            TDorID.Text = sup.SupBuildingName;
+
+            if (supervisorService.IsExistImage('u' + sup.SupervisorId))
             {
                 DisPlayImage('u' + sup.SupervisorId);
             }
@@ -144,6 +151,36 @@ namespace SystemForm
                 SaveImageToDatabase(imagePath, "null", sup.SupervisorId);
             }
             this.Invalidate();
+
+        }
+
+        private void TName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void uiLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TID_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TSex_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TNumber_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TDorID_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -24,7 +24,7 @@ namespace SystemForm
         public StuComplaintSon(Student student, StuComplaint stuComplaint)
         {
             InitializeComponent();
-            uiAvatar1.FillColor = Color.Transparent;
+            //uiAvatar1.FillColor = Color.Transparent;
             this.student = student;
             this.stuComplaint = stuComplaint;
         }

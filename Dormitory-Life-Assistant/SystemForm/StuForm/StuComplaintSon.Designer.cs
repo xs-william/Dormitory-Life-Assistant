@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             uiPanel1 = new Sunny.UI.UIPanel();
-            uiAvatar1 = new Sunny.UI.UIAvatar();
-            uiLabel2 = new Sunny.UI.UILabel();
             uiButton2 = new Sunny.UI.UIButton();
             uiButton1 = new Sunny.UI.UIButton();
             uiTextBox1 = new Sunny.UI.UITextBox();
@@ -40,8 +38,6 @@
             // 
             // uiPanel1
             // 
-            uiPanel1.Controls.Add(uiAvatar1);
-            uiPanel1.Controls.Add(uiLabel2);
             uiPanel1.Controls.Add(uiButton2);
             uiPanel1.Controls.Add(uiButton1);
             uiPanel1.Controls.Add(uiTextBox1);
@@ -56,29 +52,6 @@
             uiPanel1.TabIndex = 0;
             uiPanel1.Text = null;
             uiPanel1.TextAlignment = ContentAlignment.MiddleCenter;
-            // 
-            // uiAvatar1
-            // 
-            uiAvatar1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiAvatar1.Location = new Point(244, 251);
-            uiAvatar1.MinimumSize = new Size(1, 1);
-            uiAvatar1.Name = "uiAvatar1";
-            uiAvatar1.Shape = Sunny.UI.UIShape.Square;
-            uiAvatar1.Size = new Size(75, 75);
-            uiAvatar1.Symbol = 61846;
-            uiAvatar1.SymbolSize = 80;
-            uiAvatar1.TabIndex = 7;
-            uiAvatar1.Text = "uiAvatar1";
-            // 
-            // uiLabel2
-            // 
-            uiLabel2.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiLabel2.Location = new Point(145, 269);
-            uiLabel2.Name = "uiLabel2";
-            uiLabel2.Size = new Size(125, 29);
-            uiLabel2.TabIndex = 6;
-            uiLabel2.Text = "添加图片";
-            uiLabel2.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // uiButton2
             // 
@@ -106,11 +79,12 @@
             // uiTextBox1
             // 
             uiTextBox1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiTextBox1.Location = new Point(244, 42);
+            uiTextBox1.Location = new Point(243, 42);
             uiTextBox1.Margin = new Padding(4, 5, 4, 5);
             uiTextBox1.MinimumSize = new Size(1, 16);
             uiTextBox1.Multiline = true;
             uiTextBox1.Name = "uiTextBox1";
+            uiTextBox1.Padding = new Padding(5);
             uiTextBox1.ShowText = false;
             uiTextBox1.Size = new Size(339, 181);
             uiTextBox1.TabIndex = 3;
@@ -145,8 +119,6 @@
         private Sunny.UI.UIPanel uiPanel1;
         private Sunny.UI.UITextBox uiTextBox1;
         private Sunny.UI.UILabel uiLabel1;
-        private Sunny.UI.UIAvatar uiAvatar1;
-        private Sunny.UI.UILabel uiLabel2;
         private Sunny.UI.UIButton uiButton2;
         private Sunny.UI.UIButton uiButton1;
     }

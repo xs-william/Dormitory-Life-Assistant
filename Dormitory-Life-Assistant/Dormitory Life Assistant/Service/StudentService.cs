@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Sunny.UI;
 
 namespace Dormitory_Life_Assistant.Service
 {
@@ -127,6 +128,27 @@ namespace Dormitory_Life_Assistant.Service
             {
                 var result = ctx.Students
                     .Where(s => s.StudentId == id)
+                    .ToList<Student>();
+                return result;
+            }
+        }
+        public List<Student> QueryStudentByDorm(string dorm)
+        {
+            using (var ctx = new SystemContext())
+            {
+                var result = ctx.Students
+                    .Where(s => s.DormNumber == dorm)
+                    .ToList<Student>();
+                return result;
+            }
+        }
+        public List<Student> QueryStudentByGrade(string grade)
+        {
+            int gra=grade.ToInt();
+            using (var ctx = new SystemContext())
+            {
+                var result = ctx.Students
+                    .Where(s => s.Grade == gra)
                     .ToList<Student>();
                 return result;
             }
