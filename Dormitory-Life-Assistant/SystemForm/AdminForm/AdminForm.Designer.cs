@@ -33,8 +33,11 @@
             tabPage1 = new TabPage();
             Choice = new Sunny.UI.UINavMenu();
             uiNavBar2 = new Sunny.UI.UINavBar();
+            uiButton2 = new Sunny.UI.UIButton();
+            uiButton1 = new Sunny.UI.UIButton();
             uiSmoothLabel2 = new Sunny.UI.UISmoothLabel();
             uiAvatar2 = new Sunny.UI.UIAvatar();
+            uiHeaderButton1 = new Sunny.UI.UIHeaderButton();
             MainContainer.SuspendLayout();
             uiNavBar2.SuspendLayout();
             SuspendLayout();
@@ -82,6 +85,9 @@
             // uiNavBar2
             // 
             uiNavBar2.BackColor = SystemColors.ActiveCaption;
+            uiNavBar2.Controls.Add(uiHeaderButton1);
+            uiNavBar2.Controls.Add(uiButton2);
+            uiNavBar2.Controls.Add(uiButton1);
             uiNavBar2.Controls.Add(uiSmoothLabel2);
             uiNavBar2.Controls.Add(uiAvatar2);
             uiNavBar2.Dock = DockStyle.Top;
@@ -93,12 +99,39 @@
             uiNavBar2.TabIndex = 4;
             uiNavBar2.Text = "uiNavBar2";
             // 
+            // uiButton2
+            // 
+            uiButton2.BackColor = Color.Transparent;
+            uiButton2.FillColor = Color.Transparent;
+            uiButton2.Font = new Font("微软雅黑", 22F, FontStyle.Regular, GraphicsUnit.Point);
+            uiButton2.ForeColor = Color.FromArgb(255, 128, 0);
+            uiButton2.Location = new Point(902, 16);
+            uiButton2.MinimumSize = new Size(1, 1);
+            uiButton2.Name = "uiButton2";
+            uiButton2.RectColor = Color.Transparent;
+            uiButton2.Size = new Size(100, 77);
+            uiButton2.Style = Sunny.UI.UIStyle.Custom;
+            uiButton2.TabIndex = 3;
+            uiButton2.Text = "返回";
+            uiButton2.Click += uiButton2_Click;
+            // 
+            // uiButton1
+            // 
+            uiButton1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            uiButton1.Location = new Point(134, 28);
+            uiButton1.MinimumSize = new Size(1, 1);
+            uiButton1.Name = "uiButton1";
+            uiButton1.Size = new Size(163, 54);
+            uiButton1.TabIndex = 2;
+            uiButton1.Text = "完善个人信息";
+            uiButton1.Click += uiButton1_Click;
+            // 
             // uiSmoothLabel2
             // 
             uiSmoothLabel2.AccessibleRole = AccessibleRole.TitleBar;
             uiSmoothLabel2.BackColor = SystemColors.ActiveCaption;
             uiSmoothLabel2.Font = new Font("新宋体", 36F, FontStyle.Regular, GraphicsUnit.Point);
-            uiSmoothLabel2.Location = new Point(341, 15);
+            uiSmoothLabel2.Location = new Point(431, 16);
             uiSmoothLabel2.Name = "uiSmoothLabel2";
             uiSmoothLabel2.RectColor = Color.White;
             uiSmoothLabel2.Size = new Size(441, 80);
@@ -116,9 +149,39 @@
             uiAvatar2.Location = new Point(0, 0);
             uiAvatar2.MinimumSize = new Size(1, 1);
             uiAvatar2.Name = "uiAvatar2";
-            uiAvatar2.Size = new Size(195, 99);
+            uiAvatar2.Size = new Size(128, 99);
             uiAvatar2.TabIndex = 0;
             uiAvatar2.Text = "uiAvatar2";
+            // 
+            // uiHeaderButton1
+            // 
+            uiHeaderButton1.BackColor = Color.Transparent;
+            uiHeaderButton1.CircleColor = Color.Red;
+            uiHeaderButton1.FillColor = Color.Transparent;
+            uiHeaderButton1.FillDisableColor = Color.Transparent;
+            uiHeaderButton1.FillHoverColor = SystemColors.ButtonFace;
+            uiHeaderButton1.FillPressColor = SystemColors.ButtonShadow;
+            uiHeaderButton1.FillSelectedColor = Color.Transparent;
+            uiHeaderButton1.Font = new Font("华文中宋", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            uiHeaderButton1.ForeColor = Color.Black;
+            uiHeaderButton1.ForeDisableColor = Color.Black;
+            uiHeaderButton1.ForeHoverColor = Color.Gray;
+            uiHeaderButton1.ForePressColor = Color.Silver;
+            uiHeaderButton1.ForeSelectedColor = Color.Black;
+            uiHeaderButton1.Location = new Point(1008, 2);
+            uiHeaderButton1.MinimumSize = new Size(1, 1);
+            uiHeaderButton1.Name = "uiHeaderButton1";
+            uiHeaderButton1.Padding = new Padding(0, 8, 0, 3);
+            uiHeaderButton1.Radius = 0;
+            uiHeaderButton1.RadiusSides = Sunny.UI.UICornerRadiusSides.None;
+            uiHeaderButton1.RectSides = ToolStripStatusLabelBorderSides.None;
+            uiHeaderButton1.Size = new Size(107, 91);
+            uiHeaderButton1.Style = Sunny.UI.UIStyle.Custom;
+            uiHeaderButton1.StyleCustomMode = true;
+            uiHeaderButton1.Symbol = 61457;
+            uiHeaderButton1.TabIndex = 4;
+            uiHeaderButton1.Text = "退出程序";
+            uiHeaderButton1.Click += uiHeaderButton1_Click;
             // 
             // AdminForm
             // 
@@ -143,5 +206,8 @@
         private Sunny.UI.UINavBar uiNavBar2;
         private Sunny.UI.UISmoothLabel uiSmoothLabel2;
         private Sunny.UI.UIAvatar uiAvatar2;
+        private Sunny.UI.UIButton uiButton1;
+        private Sunny.UI.UIButton uiButton2;
+        private Sunny.UI.UIHeaderButton uiHeaderButton1;
     }
 }

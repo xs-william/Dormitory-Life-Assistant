@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
             myself = new Sunny.UI.UIGroupBox();
             tableLayoutPanel2 = new TableLayoutPanel();
             uiLabel6 = new Sunny.UI.UILabel();
@@ -53,26 +53,27 @@
             TSex = new Sunny.UI.UILabel();
             TNumber = new Sunny.UI.UILabel();
             uiCalendar1 = new Sunny.UI.UICalendar();
-            uiAvatar1 = new Sunny.UI.UIAvatar();
             uiGroupBox1 = new Sunny.UI.UIGroupBox();
+            uiDataGridView2 = new Sunny.UI.UIDataGridView();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            SupervisorName = new DataGridViewTextBoxColumn();
+            dormMessageBindingSource = new BindingSource(components);
             uiGroupBox2 = new Sunny.UI.UIGroupBox();
             uiDataGridView1 = new Sunny.UI.UIDataGridView();
             contentDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             administratorNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             systemMessageBindingSource = new BindingSource(components);
-            uiDataGridView2 = new Sunny.UI.UIDataGridView();
-            dormMessageBindingSource = new BindingSource(components);
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            SupervisorName = new DataGridViewTextBoxColumn();
+            pictureBox1 = new PictureBox();
             myself.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             uiGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)uiDataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dormMessageBindingSource).BeginInit();
             uiGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)uiDataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)systemMessageBindingSource).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)uiDataGridView2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dormMessageBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // myself
@@ -252,16 +253,6 @@
             uiCalendar1.Text = "uiCalendar1";
             uiCalendar1.TextAlignment = ContentAlignment.MiddleCenter;
             // 
-            // uiAvatar1
-            // 
-            uiAvatar1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiAvatar1.Location = new Point(469, 28);
-            uiAvatar1.MinimumSize = new Size(1, 1);
-            uiAvatar1.Name = "uiAvatar1";
-            uiAvatar1.Size = new Size(147, 155);
-            uiAvatar1.TabIndex = 3;
-            uiAvatar1.Text = "uiAvatar1";
-            // 
             // uiGroupBox1
             // 
             uiGroupBox1.Controls.Add(uiDataGridView2);
@@ -275,6 +266,83 @@
             uiGroupBox1.TabIndex = 4;
             uiGroupBox1.Text = "宿舍通知";
             uiGroupBox1.TextAlignment = ContentAlignment.MiddleCenter;
+            // 
+            // uiDataGridView2
+            // 
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(243, 249, 255);
+            uiDataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            uiDataGridView2.AutoGenerateColumns = false;
+            uiDataGridView2.BackgroundColor = Color.FromArgb(243, 249, 255);
+            uiDataGridView2.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(80, 160, 255);
+            dataGridViewCellStyle2.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(80, 160, 255);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            uiDataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            uiDataGridView2.ColumnHeadersHeight = 32;
+            uiDataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            uiDataGridView2.ColumnHeadersVisible = false;
+            uiDataGridView2.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, SupervisorName });
+            uiDataGridView2.DataSource = dormMessageBindingSource;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(220, 236, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            uiDataGridView2.DefaultCellStyle = dataGridViewCellStyle3;
+            uiDataGridView2.Dock = DockStyle.Fill;
+            uiDataGridView2.EnableHeadersVisualStyles = false;
+            uiDataGridView2.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            uiDataGridView2.GridColor = Color.FromArgb(104, 173, 255);
+            uiDataGridView2.Location = new Point(0, 32);
+            uiDataGridView2.Name = "uiDataGridView2";
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(243, 249, 255);
+            dataGridViewCellStyle4.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(80, 160, 255);
+            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            uiDataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            uiDataGridView2.RowHeadersWidth = 51;
+            dataGridViewCellStyle5.BackColor = Color.White;
+            dataGridViewCellStyle5.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(48, 48, 48);
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(220, 236, 255);
+            dataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(48, 48, 48);
+            uiDataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            uiDataGridView2.RowTemplate.Height = 29;
+            uiDataGridView2.ScrollBarRectColor = Color.FromArgb(80, 160, 255);
+            uiDataGridView2.SelectedIndex = -1;
+            uiDataGridView2.Size = new Size(580, 98);
+            uiDataGridView2.TabIndex = 2;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.DataPropertyName = "Content";
+            dataGridViewTextBoxColumn1.HeaderText = "Content";
+            dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.ReadOnly = true;
+            dataGridViewTextBoxColumn1.Width = 400;
+            // 
+            // SupervisorName
+            // 
+            SupervisorName.DataPropertyName = "SupervisorName";
+            SupervisorName.HeaderText = "SupervisorName";
+            SupervisorName.MinimumWidth = 6;
+            SupervisorName.Name = "SupervisorName";
+            SupervisorName.ReadOnly = true;
+            SupervisorName.Width = 125;
+            // 
+            // dormMessageBindingSource
+            // 
+            dormMessageBindingSource.DataSource = typeof(Dormitory_Life_Assistant.DormMessage);
             // 
             // uiGroupBox2
             // 
@@ -366,90 +434,24 @@
             // 
             systemMessageBindingSource.DataSource = typeof(Dormitory_Life_Assistant.SystemMessage);
             // 
-            // uiDataGridView2
+            // pictureBox1
             // 
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(243, 249, 255);
-            uiDataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            uiDataGridView2.AutoGenerateColumns = false;
-            uiDataGridView2.BackgroundColor = Color.FromArgb(243, 249, 255);
-            uiDataGridView2.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(80, 160, 255);
-            dataGridViewCellStyle2.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(80, 160, 255);
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            uiDataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            uiDataGridView2.ColumnHeadersHeight = 32;
-            uiDataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            uiDataGridView2.ColumnHeadersVisible = false;
-            uiDataGridView2.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, SupervisorName });
-            uiDataGridView2.DataSource = dormMessageBindingSource;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(48, 48, 48);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(220, 236, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(48, 48, 48);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            uiDataGridView2.DefaultCellStyle = dataGridViewCellStyle3;
-            uiDataGridView2.Dock = DockStyle.Fill;
-            uiDataGridView2.EnableHeadersVisualStyles = false;
-            uiDataGridView2.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiDataGridView2.GridColor = Color.FromArgb(104, 173, 255);
-            uiDataGridView2.Location = new Point(0, 32);
-            uiDataGridView2.Name = "uiDataGridView2";
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(243, 249, 255);
-            dataGridViewCellStyle4.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = Color.FromArgb(48, 48, 48);
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(80, 160, 255);
-            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(48, 48, 48);
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            uiDataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            uiDataGridView2.RowHeadersWidth = 51;
-            dataGridViewCellStyle5.BackColor = Color.White;
-            dataGridViewCellStyle5.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = Color.FromArgb(48, 48, 48);
-            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(220, 236, 255);
-            dataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(48, 48, 48);
-            uiDataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            uiDataGridView2.RowTemplate.Height = 29;
-            uiDataGridView2.ScrollBarRectColor = Color.FromArgb(80, 160, 255);
-            uiDataGridView2.SelectedIndex = -1;
-            uiDataGridView2.Size = new Size(580, 98);
-            uiDataGridView2.TabIndex = 2;
-            // 
-            // dormMessageBindingSource
-            // 
-            dormMessageBindingSource.DataSource = typeof(Dormitory_Life_Assistant.DormMessage);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            dataGridViewTextBoxColumn1.DataPropertyName = "Content";
-            dataGridViewTextBoxColumn1.HeaderText = "Content";
-            dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.ReadOnly = true;
-            dataGridViewTextBoxColumn1.Width = 400;
-            // 
-            // SupervisorName
-            // 
-            SupervisorName.DataPropertyName = "SupervisorName";
-            SupervisorName.HeaderText = "SupervisorName";
-            SupervisorName.MinimumWidth = 6;
-            SupervisorName.Name = "SupervisorName";
-            SupervisorName.ReadOnly = true;
-            SupervisorName.Width = 125;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.Location = new Point(480, 49);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(136, 129);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 6;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // TMySelfForm
             // 
             AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(947, 490);
+            Controls.Add(pictureBox1);
             Controls.Add(uiGroupBox2);
             Controls.Add(uiGroupBox1);
-            Controls.Add(uiAvatar1);
             Controls.Add(uiCalendar1);
             Controls.Add(myself);
             Name = "TMySelfForm";
@@ -459,11 +461,12 @@
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             uiGroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)uiDataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dormMessageBindingSource).EndInit();
             uiGroupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)uiDataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)systemMessageBindingSource).EndInit();
-            ((System.ComponentModel.ISupportInitialize)uiDataGridView2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dormMessageBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -482,7 +485,6 @@
         private Sunny.UI.UILabel TSex;
         private Sunny.UI.UILabel TNumber;
         private Sunny.UI.UICalendar uiCalendar1;
-        private Sunny.UI.UIAvatar uiAvatar1;
         private Sunny.UI.UIGroupBox uiGroupBox1;
         private Sunny.UI.UIGroupBox uiGroupBox2;
         private Sunny.UI.UIDataGridView uiDataGridView1;
@@ -493,5 +495,6 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn SupervisorName;
         private BindingSource dormMessageBindingSource;
+        private PictureBox pictureBox1;
     }
 }
