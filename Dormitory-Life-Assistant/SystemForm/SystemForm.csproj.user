@@ -8,6 +8,9 @@
     <Compile Update="AdminForm\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="AdminForm\AdminInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="AdminForm\AdminMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -23,13 +26,31 @@
     <Compile Update="AdminForm\AdminSuperManage.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="AdminForm\Blank.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="AdminForm\MessageEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AdminForm\StudentEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AdminForm\SupervisorEdit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="LogInForm\LogInForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="LogInForm\RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="StuForm\Blank2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="StuForm\PersonalInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="StuForm\ScheduleForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="StuForm\Setting.cs">
@@ -87,6 +108,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="SupForm\StudentChildForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SupForm\SubmitCostForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="SupForm\TBreakdownForm.cs">

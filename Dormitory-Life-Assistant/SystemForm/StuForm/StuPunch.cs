@@ -1,4 +1,7 @@
-﻿using Sunny.UI;
+﻿using Dormitory_Life_Assistant;
+using Dormitory_Life_Assistant.Service;
+using Microsoft.VisualBasic.Devices;
+using Sunny.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,13 +16,21 @@ namespace SystemForm
 {
     public partial class StuPunch : UIPage
     {
-        public StuPunch()
+        Student stu = new Student();
+        public ClockInService clockInService = new ClockInService();
+        public StuPunch(Student stu)
         {
             InitializeComponent();
+            clockInBindingSource.DataSource = clockInService.QueryClockInsByID(stu.StudentId);
+            uiDataGridView1.AllowUserToAddRows = false;
+            this.stu = stu;
         }
 
         private void uiDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            //uiDataGridView1.Rows.Add(AdminPunch.clockIn.publishtime, AdminPunch.clockIn.publisher, "是", null, null);
+
+
             //点击button按钮事件
             if (uiDataGridView1.Columns[e.ColumnIndex].Name == "Punch" && e.RowIndex >= 0)
             {
@@ -35,6 +46,19 @@ namespace SystemForm
                 {
                     MessageBox.Show(e2.Message);
                 }
+
+                ClockIn clockIn = clockInBindingSource.Current as ClockIn;
+                if (clockIn == null)
+                {
+                    MessageBox.Show("请选择一个系统消息进行修改");
+                    return;
+                }
+                clockInService.ModifyClockIn(clockInService.submitClock(clockIn, StuPunchSon.nowtime,stu.StudentId,stu.StudentName));
+                clockInBindingSource.DataSource = clockInService.QueryClockInsByID(stu.StudentId);
+                clockInBindingSource.ResetBindings(true);
+
+                //uiDataGridView1.Rows[0].Cells[3].Value = StuPunchSon.nowtime.ToString();
+                //uiDataGridView1.Rows[0].Cells[2].Value = "是".ToString();
             }
         }
     }

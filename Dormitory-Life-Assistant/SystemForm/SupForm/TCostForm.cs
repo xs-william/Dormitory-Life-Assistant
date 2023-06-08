@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dormitory_Life_Assistant;
+using SystemForm.SupForm;
 
 namespace SystemForm
 {
@@ -74,6 +75,22 @@ namespace SystemForm
         {
             CostDataGridView.DataSource = paymentService.getAll();
             CostDataGridView.Refresh();
+        }
+
+        private void uiButton2_Click_1(object sender, EventArgs e)
+        {
+            SubmitCostForm submitCostForm = new SubmitCostForm(sup);
+            try
+            {
+                if (submitCostForm.ShowDialog() == DialogResult.OK)
+                {
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

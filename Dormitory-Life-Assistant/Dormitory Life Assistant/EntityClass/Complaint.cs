@@ -1,9 +1,7 @@
-
 ﻿using MySql.Data.MySqlClient;
 
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection.Metadata;
 using System.Text;
@@ -13,16 +11,29 @@ namespace Dormitory_Life_Assistant
 {
     public class Complaint
     {
-        [Key]
-        public string ID { get; set; }
-        public Blob Picture { get; set; }
-        public bool status { get; set; }
+        public int ComplaintID { get; set; }
+        Blob Picture;
+        public string status { get; set; }
         public string Content { get; set; }
+        public string informer { get; set; }
         public DateTime ComplaintTime { get; set; }
+        
         public override bool Equals(object obj)//重写equals，利用ID判断对象是否相等
         {
             Complaint c = obj as Complaint;
-            return c.ID == ID;
+            return c.ComplaintID == ComplaintID;
+        }
+        public Complaint()
+        {
+
+        }
+        public Complaint(int ID,string Content,string informer,DateTime ComplaintTime,string status)
+        {
+            this.ComplaintID = ID;
+            this.Content = Content;
+            this.informer = informer;
+            this.ComplaintTime = ComplaintTime;
+            this.status = status;
         }
     }
 

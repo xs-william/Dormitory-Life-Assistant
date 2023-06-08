@@ -1,5 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
-
+using Org.BouncyCastle.Asn1.Mozilla;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -15,6 +15,9 @@ namespace Dormitory_Life_Assistant
         [Key]
         public string AdministratorId { get; set; }
         public string AdministratorName { get; set; }
+        public string Administratorgender { get; set; }
+        public string Administratorphone { get; set; }
+        public string Administratorpost { get; set; }
         //string Tele;
         //string Gender;
         //Blob Profile;//头像
@@ -29,10 +32,10 @@ namespace Dormitory_Life_Assistant
         public void changePassword(string pass) { }//修改密码
         public void changeProfile() { }//修改头像
         public Administrator() { }
-        public Administrator(string administratorId, string name)
+        public Administrator(string administratorId/*, string name*/)
         {
             AdministratorId = administratorId;
-            AdministratorName = name;
+            //AdministratorName = name;
         }
     }
 }

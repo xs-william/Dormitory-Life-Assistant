@@ -15,6 +15,9 @@ namespace Dormitory_Life_Assistant
         }
         public DbSet<SystemMessage> SystemMessages { get; set; }
         public DbSet<Administrator> Administrators { get; set; }
+        public DbSet<ClockIn> ClockIns { get; set; }
+        public DbSet<user> Users { get; set; }
+        public DbSet<Schedule> Schedules { get; set; }
         public DbSet<Repair> Repairs { get; set; }
         public DbSet<Payment> Payments { get; set; }
         public DbSet<Student> Students { get; set; }
@@ -22,6 +25,8 @@ namespace Dormitory_Life_Assistant
         public DbSet<Building> Buildings { get; set; }
         public DbSet<Dorm> Dorms { get; set; }
         public DbSet<SaveImage> SaveImages { get; set; }
+
+        public DbSet<Complaint> Complaints { get; set; }
 
 
         /*protected override void OnModelCreating(DbModelBuilder modelBuilder)
