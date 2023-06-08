@@ -35,7 +35,7 @@
             uiLabel3 = new Sunny.UI.UILabel();
             sex = new Sunny.UI.UILabel();
             uiLabel5 = new Sunny.UI.UILabel();
-            grade = new Sunny.UI.UILabel();
+            phone = new Sunny.UI.UILabel();
             uiLabel4 = new Sunny.UI.UILabel();
             major = new Sunny.UI.UILabel();
             MyMessage = new Sunny.UI.UIGroupBox();
@@ -60,7 +60,6 @@
             uiLabel1.Name = "uiLabel1";
             uiLabel1.Size = new Size(125, 29);
             uiLabel1.TabIndex = 1;
-            uiLabel1.Text = "我的姓名";
             uiLabel1.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // uiLabel2
@@ -80,7 +79,6 @@
             ID.Name = "ID";
             ID.Size = new Size(125, 29);
             ID.TabIndex = 3;
-            ID.Text = "我的工号";
             ID.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // uiLabel3
@@ -100,7 +98,6 @@
             sex.Name = "sex";
             sex.Size = new Size(125, 29);
             sex.TabIndex = 5;
-            sex.Text = "我的性别";
             sex.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // uiLabel5
@@ -113,15 +110,14 @@
             uiLabel5.Text = "电话";
             uiLabel5.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // grade
+            // phone
             // 
-            grade.Font = new Font("微软雅黑", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            grade.Location = new Point(332, 41);
-            grade.Name = "grade";
-            grade.Size = new Size(125, 29);
-            grade.TabIndex = 7;
-            grade.Text = "我的电话";
-            grade.TextAlign = ContentAlignment.MiddleLeft;
+            phone.Font = new Font("微软雅黑", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            phone.Location = new Point(332, 41);
+            phone.Name = "phone";
+            phone.Size = new Size(125, 29);
+            phone.TabIndex = 7;
+            phone.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // uiLabel4
             // 
@@ -140,14 +136,13 @@
             major.Name = "major";
             major.Size = new Size(121, 29);
             major.TabIndex = 9;
-            major.Text = "我的职务";
             major.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // MyMessage
             // 
             MyMessage.Controls.Add(major);
             MyMessage.Controls.Add(uiLabel4);
-            MyMessage.Controls.Add(grade);
+            MyMessage.Controls.Add(phone);
             MyMessage.Controls.Add(uiLabel5);
             MyMessage.Controls.Add(sex);
             MyMessage.Controls.Add(uiLabel3);
@@ -198,7 +193,7 @@
         private Sunny.UI.UILabel uiLabel3;
         private Sunny.UI.UILabel sex;
         private Sunny.UI.UILabel uiLabel5;
-        private Sunny.UI.UILabel grade;
+        private Sunny.UI.UILabel phone;
         private Sunny.UI.UILabel uiLabel4;
         private Sunny.UI.UILabel major;
         private Sunny.UI.UIGroupBox MyMessage;

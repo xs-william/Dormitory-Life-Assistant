@@ -17,7 +17,9 @@ namespace Dormitory_Life_Assistant
         [Key]
         public String StudentId { get; set; }
         public String StudentName { get; set; }
-        public int Grade { get; set; }
+        public String Gender { get; set; }
+        public string Grade { get; set; }
+        public String Class { get; set; } //所在班级
         public String Department { get; set; }//所在系
         public String BuildingName//所在宿舍楼栋
         {
@@ -25,8 +27,6 @@ namespace Dormitory_Life_Assistant
             set;
         }
         public String DormNumber { get; set; }//所在宿舍号
-        public String Class { get; set; } //所在班级
-        public String Gender { get; set; }
         List<Payment> bill;
         List<Repair> repair;
         public List<Complaint> complain;
@@ -45,13 +45,13 @@ namespace Dormitory_Life_Assistant
 
         }
 
-        public Student(string id, string dormNumber)
+        public Student(string id/*, string dormNumber*/)
         {
             StudentId = id;
-            DormNumber = dormNumber;
+            //DormNumber = dormNumber;
 
         }
-        public Student(String id, string name, int grade, string department, string dormnumber, string classes, string gender, string password, string buildingid)
+        public Student(String id, string name, string grade, string department, string dormnumber, string classes, string gender, string password, string buildingid)
         {
             StudentId = id;
             StudentName = name;

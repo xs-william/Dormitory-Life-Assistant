@@ -16,12 +16,14 @@ namespace SystemForm
 {
     public partial class StuPunch : UIPage
     {
+        Student stu = new Student();
         public ClockInService clockInService = new ClockInService();
-        public StuPunch()
+        public StuPunch(Student stu)
         {
             InitializeComponent();
-            clockInBindingSource.DataSource = clockInService.clockIns;
+            clockInBindingSource.DataSource = clockInService.QueryClockInsByID(stu.StudentId);
             uiDataGridView1.AllowUserToAddRows = false;
+            this.stu = stu;
         }
 
         private void uiDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -51,8 +53,8 @@ namespace SystemForm
                     MessageBox.Show("请选择一个系统消息进行修改");
                     return;
                 }
-                clockInService.ModifyClockIn(clockInService.submitClock(clockIn, StuPunchSon.nowtime));
-                clockInBindingSource.DataSource = clockInService.clockIns;
+                clockInService.ModifyClockIn(clockInService.submitClock(clockIn, StuPunchSon.nowtime,stu.StudentId,stu.StudentName));
+                clockInBindingSource.DataSource = clockInService.QueryClockInsByID(stu.StudentId);
                 clockInBindingSource.ResetBindings(true);
 
                 //uiDataGridView1.Rows[0].Cells[3].Value = StuPunchSon.nowtime.ToString();

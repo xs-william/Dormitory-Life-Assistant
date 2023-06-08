@@ -92,5 +92,26 @@ namespace Dormitory_Life_Assistant.Service
                 return result;
             }
         }
+
+        public List<Student> QueryStudentByDorm(string dorm)
+        {
+            using (var ctx = new SystemContext())
+            {
+                var result = ctx.Students
+                    .Where(s => s.DormNumber==dorm)
+                    .ToList<Student>();
+                return result;
+            }
+        }
+        public List<Student> QueryStudentByGrade(string grade)
+        {
+            using (var ctx = new SystemContext())
+            {
+                var result = ctx.Students
+                    .Where(s => s.Grade==grade)
+                    .ToList<Student>();
+                return result;
+            }
+        }
     }
 }

@@ -1,3 +1,4 @@
+using Dormitory_Life_Assistant;
 using Sunny.UI;
 
 namespace SystemForm
@@ -61,6 +62,40 @@ namespace SystemForm
             {
                 RemindLabel.Text = " ";
             }
+        }
+
+        private void RegisterButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                user auser = new user();    
+                if(StudentRadioButton.Checked) { auser = new user(1,IDTextBox.Text, PasswordTextBox.Text); }
+                else if (TeacherRadioButton.Checked) { auser = new user(2, IDTextBox.Text, PasswordTextBox.Text); }
+                else if(ManagerRadioButton3.Checked) { auser = new user(3, IDTextBox.Text, PasswordTextBox.Text); }
+                else
+                {
+                    RemindLabel.Text = "请选择你的身份";
+                    RemindLabel.ForeColor = Color.Red;
+                    return;
+                }
+                using (var ctx = new SystemContext())
+                {
+                    ctx.Entry(auser).State = System.Data.Entity.EntityState.Added;
+                    ctx.SaveChanges();
+                }
+                RemindLabel.Text = "注册成功";
+                RemindLabel.ForeColor = Color.Green;
+            }
+            catch
+            {
+                RemindLabel.Text = "用户已存在";
+                RemindLabel.ForeColor = Color.Red;
+            }
+        }
+
+        private void uiButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

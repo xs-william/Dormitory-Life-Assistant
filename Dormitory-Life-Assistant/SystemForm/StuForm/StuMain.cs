@@ -18,18 +18,21 @@ namespace SystemForm
     {
         private SystemMessageService systemMessageService = new SystemMessageService();
         private DormMessageService dormMessageService = new DormMessageService();
-
-        public stuMain()
+        Student stu;
+        public stuMain(Student student)
         {
             InitializeComponent();
+            this.stu = student;
             systemMessageBindingSource.DataSource = systemMessageService.SystemMessages;
             uiDataGridView1.AllowUserToAddRows = false;
+            uiLabel1.Text = student.StudentName;
+            sex.Text = student.Gender;
+            myclass.Text = student.Class;
+            ID.Text = student.StudentId;
+            grade.Text = student.Grade.ToString();
         }
 
-        private void dorm_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void panel_Click(object sender, EventArgs e)
         {
@@ -44,9 +47,14 @@ namespace SystemForm
         private void uiButton1_Click(object sender, EventArgs e)
         {
             Application.EnableVisualStyles();
-            Schedule form = new Schedule();
+            ScheduleForm form = new ScheduleForm(stu);
 
             form.ShowDialog();
+        }
+
+        private void uiAvatar1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

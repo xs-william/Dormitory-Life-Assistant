@@ -18,14 +18,19 @@ namespace SystemForm
         private Administrator administrator;
         public AdminForm(Administrator admin)
         {
+            if (admin.AdministratorName == null)
+            {
+                AdminInformation adminInformation = new AdminInformation(admin);
+                adminInformation.ShowDialog();
+            }
             InitializeComponent();
             Choice.TabControl = MainContainer;
             this.administrator = admin;
             //增加页面到Main
-            AddPage(new AdminMain(), 2001);
+            AddPage(new AdminMain(administrator), 2001);
             AddPage(new AdminStuManage(), 2002);
             AddPage(new AdminSuperManage(), 2003);
-            AddPage(new AdminPunch(), 2004);
+            AddPage(new AdminPunch(administrator), 2004);
             AddPage(new AdminNotice(administrator), 2005);
             AddPage(new AdminDorm(), 2006);
 
@@ -41,6 +46,31 @@ namespace SystemForm
 
             //显示默认界面
             Choice.SelectFirst();
+        }
+
+        private void uiButton1_Click(object sender, EventArgs e)
+        {
+            AdminInformation adminInformation = new AdminInformation(administrator);
+            adminInformation.ShowDialog();
+        }
+
+        private void uiButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            LogInForm loginForm = new LogInForm();
+            loginForm.Show();
+        }
+
+        private void uiHeaderButton1_Click(object sender, EventArgs e)
+        {
+            if (ShowAskDialog("提示！", $"是否确认退出程序？", UIStyle.Colorful))
+            {
+                Environment.Exit(0);
+            }
+            else
+            {
+                ShowSuccessTip("已取消");
+            }
         }
     }
 }

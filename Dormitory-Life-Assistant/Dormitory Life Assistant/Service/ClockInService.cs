@@ -57,21 +57,21 @@ namespace Dormitory_Life_Assistant
             DeleteClockIn(clockIn.ClockInID);
             AddClockIn(clockIn);
         }
-        public ClockIn submitClock(ClockIn clockin, DateTime date)
+        public ClockIn submitClock(ClockIn clockin, DateTime date,string id,string name)
         {
             clockin.ClockInID = clockin.ClockInID;
             clockin.publishtime = clockin.publishtime;
             clockin.publisher = clockin.publisher;
             clockin.Status = "是";
             clockin.Date = date;
-            clockin.ID = "2021302111145";
-            clockin.Name = "周树东";
+            clockin.ID = id;
+            clockin.Name = name;
             return clockin;
         }//添加、提交打卡信息
         public void searchClock(List<ClockIn> c) { }
-        public void pubilshClock(DateTime publishtime, string publisher, string status)
+        public void pubilshClock(string ID,string name,DateTime publishtime, string publisher, string status)
         {
-            ClockIn clock = new ClockIn() { publishtime = publishtime, publisher = publisher, Status = status };
+            ClockIn clock = new ClockIn() { publishtime = publishtime, publisher = publisher, Status = status ,ID=ID,Name=name};
 
             using (var ctx = new SystemContext())
             {
@@ -88,6 +88,7 @@ namespace Dormitory_Life_Assistant
             {
                 return ctx.ClockIns
                  .Where(message => message.publishtime.ToString().Contains(date))
+                 .OrderByDescending(clockIn => clockIn.publishtime)
                  .ToList();
             }
         }
@@ -98,6 +99,7 @@ namespace Dormitory_Life_Assistant
             {
                 return ctx.ClockIns
                   .Where(message => message.Name.Contains(name))
+                  .OrderByDescending(clockIn => clockIn.publishtime)
                   .ToList();
             }
         }
@@ -107,6 +109,7 @@ namespace Dormitory_Life_Assistant
             {
                 return ctx.ClockIns
                   .Where(message => message.ID.Contains(id))
+                  .OrderByDescending(clockIn => clockIn.publishtime)
                   .ToList();
             }
         }

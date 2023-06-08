@@ -81,7 +81,7 @@ namespace SystemForm
 
         private void modifySupButton_Click(object sender, EventArgs e)
         {
-            Supervisor supervisor=supervisorBindingSource.Current as Supervisor;
+            Supervisor supervisor = supervisorBindingSource.Current as Supervisor;
 
             if (supervisor == null)
             {

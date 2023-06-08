@@ -110,6 +110,7 @@
             StudentIndex.Margin = new Padding(4, 5, 4, 5);
             StudentIndex.MinimumSize = new Size(1, 16);
             StudentIndex.Name = "StudentIndex";
+            StudentIndex.Padding = new Padding(5);
             StudentIndex.ShowText = false;
             StudentIndex.Size = new Size(197, 36);
             StudentIndex.TabIndex = 1;
@@ -126,6 +127,7 @@
             StudentButton.Size = new Size(97, 41);
             StudentButton.TabIndex = 2;
             StudentButton.Text = "查询";
+            StudentButton.Click += StudentButton_Click;
             // 
             // uiGroupBox2
             // 
@@ -218,6 +220,7 @@
             StudentDataGridView.SelectedIndex = -1;
             StudentDataGridView.Size = new Size(559, 188);
             StudentDataGridView.TabIndex = 0;
+            StudentDataGridView.CellContentClick += StudentDataGridView_CellContentClick;
             // 
             // studentBindingSource
             // 
@@ -225,6 +228,7 @@
             // 
             // DormNum
             // 
+            DormNum.DataPropertyName = "DormNumber";
             DormNum.HeaderText = "宿舍号";
             DormNum.MinimumWidth = 6;
             DormNum.Name = "DormNum";
@@ -232,6 +236,7 @@
             // 
             // Grade
             // 
+            Grade.DataPropertyName = "Grade";
             Grade.HeaderText = "年级";
             Grade.MinimumWidth = 6;
             Grade.Name = "Grade";

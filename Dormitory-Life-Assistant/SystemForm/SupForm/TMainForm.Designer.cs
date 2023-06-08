@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TMainForm));
             uiNavBar1 = new Sunny.UI.UINavBar();
+            uiHeaderButton2 = new Sunny.UI.UIHeaderButton();
+            uiHeaderButton1 = new Sunny.UI.UIHeaderButton();
             uiSmoothLabel1 = new Sunny.UI.UISmoothLabel();
             uiAvatar1 = new Sunny.UI.UIAvatar();
             Choice = new Sunny.UI.UINavMenu();
@@ -42,6 +44,8 @@
             // uiNavBar1
             // 
             uiNavBar1.BackColor = SystemColors.ActiveCaption;
+            uiNavBar1.Controls.Add(uiHeaderButton2);
+            uiNavBar1.Controls.Add(uiHeaderButton1);
             uiNavBar1.Controls.Add(uiSmoothLabel1);
             uiNavBar1.Controls.Add(uiAvatar1);
             uiNavBar1.Dock = DockStyle.Top;
@@ -52,6 +56,62 @@
             uiNavBar1.Size = new Size(1136, 99);
             uiNavBar1.TabIndex = 1;
             uiNavBar1.Text = "uiNavBar1";
+            // 
+            // uiHeaderButton2
+            // 
+            uiHeaderButton2.BackColor = Color.Transparent;
+            uiHeaderButton2.FillColor = Color.Transparent;
+            uiHeaderButton2.FillDisableColor = Color.Transparent;
+            uiHeaderButton2.FillHoverColor = Color.Transparent;
+            uiHeaderButton2.FillPressColor = Color.Transparent;
+            uiHeaderButton2.FillSelectedColor = Color.Transparent;
+            uiHeaderButton2.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            uiHeaderButton2.ForeColor = Color.Black;
+            uiHeaderButton2.ForeDisableColor = Color.WhiteSmoke;
+            uiHeaderButton2.Location = new Point(846, 0);
+            uiHeaderButton2.MinimumSize = new Size(1, 1);
+            uiHeaderButton2.Name = "uiHeaderButton2";
+            uiHeaderButton2.Padding = new Padding(0, 8, 0, 3);
+            uiHeaderButton2.Radius = 0;
+            uiHeaderButton2.RadiusSides = Sunny.UI.UICornerRadiusSides.None;
+            uiHeaderButton2.RectSides = ToolStripStatusLabelBorderSides.None;
+            uiHeaderButton2.Size = new Size(126, 99);
+            uiHeaderButton2.Style = Sunny.UI.UIStyle.Custom;
+            uiHeaderButton2.Symbol = 61461;
+            uiHeaderButton2.SymbolColor = Color.Gray;
+            uiHeaderButton2.TabIndex = 5;
+            uiHeaderButton2.Text = "返回";
+            uiHeaderButton2.Click += uiHeaderButton2_Click;
+            // 
+            // uiHeaderButton1
+            // 
+            uiHeaderButton1.BackColor = Color.Transparent;
+            uiHeaderButton1.CircleColor = Color.Red;
+            uiHeaderButton1.FillColor = Color.Transparent;
+            uiHeaderButton1.FillDisableColor = Color.Transparent;
+            uiHeaderButton1.FillHoverColor = SystemColors.ButtonFace;
+            uiHeaderButton1.FillPressColor = SystemColors.ButtonShadow;
+            uiHeaderButton1.FillSelectedColor = Color.Transparent;
+            uiHeaderButton1.Font = new Font("华文中宋", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            uiHeaderButton1.ForeColor = Color.Black;
+            uiHeaderButton1.ForeDisableColor = Color.Black;
+            uiHeaderButton1.ForeHoverColor = Color.Gray;
+            uiHeaderButton1.ForePressColor = Color.Silver;
+            uiHeaderButton1.ForeSelectedColor = Color.Black;
+            uiHeaderButton1.Location = new Point(1008, 2);
+            uiHeaderButton1.MinimumSize = new Size(1, 1);
+            uiHeaderButton1.Name = "uiHeaderButton1";
+            uiHeaderButton1.Padding = new Padding(0, 8, 0, 3);
+            uiHeaderButton1.Radius = 0;
+            uiHeaderButton1.RadiusSides = Sunny.UI.UICornerRadiusSides.None;
+            uiHeaderButton1.RectSides = ToolStripStatusLabelBorderSides.None;
+            uiHeaderButton1.Size = new Size(107, 91);
+            uiHeaderButton1.Style = Sunny.UI.UIStyle.Custom;
+            uiHeaderButton1.StyleCustomMode = true;
+            uiHeaderButton1.Symbol = 61457;
+            uiHeaderButton1.TabIndex = 4;
+            uiHeaderButton1.Text = "退出程序";
+            uiHeaderButton1.Click += uiHeaderButton1_Click;
             // 
             // uiSmoothLabel1
             // 
@@ -120,20 +180,21 @@
             tabPage1.Text = "tabPage1";
             tabPage1.UseVisualStyleBackColor = true;
             // 
-            // FCustomMain
+            // TMainForm
             // 
             AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(1140, 627);
             Controls.Add(MainContainer);
             Controls.Add(Choice);
             Controls.Add(uiNavBar1);
-            Name = "FCustomMain";
+            Name = "TMainForm";
             Padding = new Padding(2, 36, 2, 2);
             ShowDragStretch = true;
             ShowRadius = false;
             ShowTitleIcon = true;
             Text = "宿舍生活小助手";
             ZoomScaleRect = new Rectangle(19, 19, 800, 450);
+            Load += TMainForm_Load;
             uiNavBar1.ResumeLayout(false);
             MainContainer.ResumeLayout(false);
             ResumeLayout(false);
@@ -146,5 +207,7 @@
         private Sunny.UI.UINavMenu Choice;
         private Sunny.UI.UITabControl MainContainer;
         private TabPage tabPage1;
+        private Sunny.UI.UIHeaderButton uiHeaderButton1;
+        private Sunny.UI.UIHeaderButton uiHeaderButton2;
     }
 }

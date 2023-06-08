@@ -44,7 +44,6 @@
             uiPanel1 = new Sunny.UI.UIPanel();
             uiDataGridView1 = new Sunny.UI.UIDataGridView();
             supervisorNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            supervisorIDDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             genderDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             teleDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             supervisorBindingSource = new BindingSource(components);
@@ -108,6 +107,7 @@
             uiTextBox1.Margin = new Padding(4, 5, 4, 5);
             uiTextBox1.MinimumSize = new Size(1, 16);
             uiTextBox1.Name = "uiTextBox1";
+            uiTextBox1.Padding = new Padding(5);
             uiTextBox1.ShowText = false;
             uiTextBox1.Size = new Size(229, 32);
             uiTextBox1.TabIndex = 1;
@@ -186,6 +186,7 @@
             // 
             dataGridViewCellStyle1.BackColor = Color.FromArgb(243, 249, 255);
             uiDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            uiDataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             uiDataGridView1.AutoGenerateColumns = false;
             uiDataGridView1.BackgroundColor = Color.FromArgb(243, 249, 255);
             uiDataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -199,7 +200,7 @@
             uiDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             uiDataGridView1.ColumnHeadersHeight = 32;
             uiDataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            uiDataGridView1.Columns.AddRange(new DataGridViewColumn[] { supervisorNameDataGridViewTextBoxColumn, supervisorIDDataGridViewTextBoxColumn, genderDataGridViewTextBoxColumn, teleDataGridViewTextBoxColumn });
+            uiDataGridView1.Columns.AddRange(new DataGridViewColumn[] { supervisorNameDataGridViewTextBoxColumn, genderDataGridViewTextBoxColumn, teleDataGridViewTextBoxColumn });
             uiDataGridView1.DataSource = supervisorBindingSource;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
@@ -242,14 +243,6 @@
             supervisorNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             supervisorNameDataGridViewTextBoxColumn.Name = "supervisorNameDataGridViewTextBoxColumn";
             supervisorNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // supervisorIDDataGridViewTextBoxColumn
-            // 
-            supervisorIDDataGridViewTextBoxColumn.DataPropertyName = "SupervisorID";
-            supervisorIDDataGridViewTextBoxColumn.HeaderText = "宿管名";
-            supervisorIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            supervisorIDDataGridViewTextBoxColumn.Name = "supervisorIDDataGridViewTextBoxColumn";
-            supervisorIDDataGridViewTextBoxColumn.Width = 200;
             // 
             // genderDataGridViewTextBoxColumn
             // 
@@ -309,6 +302,7 @@
             supQueryBox.Margin = new Padding(4, 5, 4, 5);
             supQueryBox.MinimumSize = new Size(1, 16);
             supQueryBox.Name = "supQueryBox";
+            supQueryBox.Padding = new Padding(5);
             supQueryBox.ShowText = false;
             supQueryBox.Size = new Size(229, 32);
             supQueryBox.TabIndex = 1;

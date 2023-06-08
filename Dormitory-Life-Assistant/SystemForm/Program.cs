@@ -10,16 +10,17 @@ namespace SystemForm
         [STAThread]
         static void Main()
         {
-            Administrator administrator = new Administrator("1", "ţ");
+            //Administrator administrator = new Administrator("1", "ţ");
             Student student = new Student();
             Supervisor supervisor = new Supervisor();
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
-
-            LogInForm login=new LogInForm();
-
-            Application.Run(new AdminForm(administrator));
+            //ApplicationConfiguration.Initialize();
+            //Application.Run(new StudentForm(student));
+            //Application.Run(new AdminForm(administrator));
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new LogInForm());
         }
     }
 }
