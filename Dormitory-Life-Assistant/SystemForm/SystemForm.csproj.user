@@ -32,6 +32,12 @@
     <Compile Update="AdminForm\MessageEdit.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="AdminForm\StudentEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AdminForm\SupervisorEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="LogInForm\LogInForm.cs">
       <SubType>Form</SubType>
     </Compile>

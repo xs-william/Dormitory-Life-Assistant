@@ -1,4 +1,6 @@
-﻿using Sunny.UI;
+﻿using Dormitory_Life_Assistant;
+using Dormitory_Life_Assistant.Service;
+using Sunny.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,10 +15,10 @@ namespace SystemForm
 {
     public partial class AdminSuperManage : UIPage
     {
+        SupervisorService supervisorService;
         public AdminSuperManage()
         {
             InitializeComponent();
-<<<<<<< HEAD
             supervisorService = new SupervisorService();
 
             supervisorBindingSource.DataSource = supervisorService.getall();
@@ -91,8 +93,6 @@ namespace SystemForm
             supervisorService.DeleteSupervisor(supervisor);
             supervisorEdit.ShowDialog();
             supervisorBindingSource.DataSource = supervisorService.getall();
-=======
->>>>>>> 412f730d5833914260fa72274ff6d8c62f4fd9c8
         }
     }
 }

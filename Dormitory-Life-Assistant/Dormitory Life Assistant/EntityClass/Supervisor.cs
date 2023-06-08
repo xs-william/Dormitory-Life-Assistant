@@ -32,18 +32,13 @@ namespace Dormitory_Life_Assistant
         public void changeTele() { }
         public void changePassword(string pass) { }//修改密码
         public void changeProfile() { }//修改头像
-<<<<<<< HEAD
         public String SupBuildingName { get; set; }
-=======
-
->>>>>>> 412f730d5833914260fa72274ff6d8c62f4fd9c8
         public Supervisor() { }
 
         public Supervisor(string supervisorId/*,string supervisorName*/)
         {
             SupervisorId = supervisorId;
             //SupervisorName = supervisorName;
-<<<<<<< HEAD
         }
         public Supervisor(string supervisorName, string supervisorID, string tele, string gender, string password, string buildingName)
         {
@@ -55,8 +50,6 @@ namespace Dormitory_Life_Assistant
             Profile = new Blob();
             SupBuildingName = buildingName;
 
-=======
->>>>>>> 412f730d5833914260fa72274ff6d8c62f4fd9c8
         }
     }
 }

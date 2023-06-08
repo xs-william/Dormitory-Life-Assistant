@@ -29,11 +29,7 @@ namespace SystemForm
             sex.Text = student.Gender;
             myclass.Text = student.Class;
             ID.Text = student.StudentId;
-<<<<<<< HEAD
             grade.Text = student.Grade.ToString();
-=======
-            grade.Text = student.Grade;
->>>>>>> 412f730d5833914260fa72274ff6d8c62f4fd9c8
         }
 
        

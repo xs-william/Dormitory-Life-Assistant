@@ -28,8 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             uiPanel1 = new Sunny.UI.UIPanel();
-<<<<<<< HEAD
             uiDataGridView1 = new Sunny.UI.UIDataGridView();
             studentIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             StudentName = new DataGridViewTextBoxColumn();
@@ -40,23 +45,24 @@
             buildingNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             dormNumberDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             studentBindingSource = new BindingSource(components);
-=======
->>>>>>> 412f730d5833914260fa72274ff6d8c62f4fd9c8
             uiTableLayoutPanel2 = new Sunny.UI.UITableLayoutPanel();
             uiButton4 = new Sunny.UI.UIButton();
-            uiTextBox1 = new Sunny.UI.UITextBox();
+            queryText = new Sunny.UI.UITextBox();
             uiComboBox1 = new Sunny.UI.UIComboBox();
             uiTableLayoutPanel1 = new Sunny.UI.UITableLayoutPanel();
-            uiButton1 = new Sunny.UI.UIButton();
-            uiButton2 = new Sunny.UI.UIButton();
-            uiButton3 = new Sunny.UI.UIButton();
+            addButton = new Sunny.UI.UIButton();
+            modifyButton = new Sunny.UI.UIButton();
+            deleteButton = new Sunny.UI.UIButton();
             uiPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)uiDataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)studentBindingSource).BeginInit();
             uiTableLayoutPanel2.SuspendLayout();
             uiTableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // uiPanel1
             // 
+            uiPanel1.Controls.Add(uiDataGridView1);
             uiPanel1.Controls.Add(uiTableLayoutPanel2);
             uiPanel1.Controls.Add(uiTableLayoutPanel1);
             uiPanel1.Dock = DockStyle.Fill;
@@ -70,7 +76,6 @@
             uiPanel1.Text = null;
             uiPanel1.TextAlignment = ContentAlignment.MiddleCenter;
             // 
-<<<<<<< HEAD
             // uiDataGridView1
             // 
             dataGridViewCellStyle1.BackColor = Color.FromArgb(243, 249, 255);
@@ -193,8 +198,6 @@
             // 
             studentBindingSource.DataSource = typeof(Dormitory_Life_Assistant.Student);
             // 
-=======
->>>>>>> 412f730d5833914260fa72274ff6d8c62f4fd9c8
             // uiTableLayoutPanel2
             // 
             uiTableLayoutPanel2.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
@@ -204,7 +207,7 @@
             uiTableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 112F));
             uiTableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 471F));
             uiTableLayoutPanel2.Controls.Add(uiButton4, 2, 0);
-            uiTableLayoutPanel2.Controls.Add(uiTextBox1, 1, 0);
+            uiTableLayoutPanel2.Controls.Add(queryText, 1, 0);
             uiTableLayoutPanel2.Controls.Add(uiComboBox1, 0, 0);
             uiTableLayoutPanel2.Dock = DockStyle.Top;
             uiTableLayoutPanel2.Location = new Point(0, 0);
@@ -225,10 +228,10 @@
             uiButton4.Size = new Size(105, 34);
             uiButton4.TabIndex = 0;
             uiButton4.Text = "查询";
+            uiButton4.Click += uiButton4_Click;
             // 
-            // uiTextBox1
+            // queryText
             // 
-<<<<<<< HEAD
             queryText.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
             queryText.Location = new Point(165, 6);
             queryText.Margin = new Padding(4, 5, 4, 5);
@@ -240,18 +243,6 @@
             queryText.TabIndex = 1;
             queryText.TextAlignment = ContentAlignment.MiddleLeft;
             queryText.Watermark = "";
-=======
-            uiTextBox1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiTextBox1.Location = new Point(165, 6);
-            uiTextBox1.Margin = new Padding(4, 5, 4, 5);
-            uiTextBox1.MinimumSize = new Size(1, 16);
-            uiTextBox1.Name = "uiTextBox1";
-            uiTextBox1.ShowText = false;
-            uiTextBox1.Size = new Size(219, 31);
-            uiTextBox1.TabIndex = 1;
-            uiTextBox1.TextAlignment = ContentAlignment.MiddleLeft;
-            uiTextBox1.Watermark = "";
->>>>>>> 412f730d5833914260fa72274ff6d8c62f4fd9c8
             // 
             // uiComboBox1
             // 
@@ -278,9 +269,9 @@
             uiTableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             uiTableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 129F));
             uiTableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 590F));
-            uiTableLayoutPanel1.Controls.Add(uiButton1, 0, 0);
-            uiTableLayoutPanel1.Controls.Add(uiButton2, 1, 0);
-            uiTableLayoutPanel1.Controls.Add(uiButton3, 2, 0);
+            uiTableLayoutPanel1.Controls.Add(addButton, 0, 0);
+            uiTableLayoutPanel1.Controls.Add(modifyButton, 1, 0);
+            uiTableLayoutPanel1.Controls.Add(deleteButton, 2, 0);
             uiTableLayoutPanel1.Location = new Point(0, 44);
             uiTableLayoutPanel1.Name = "uiTableLayoutPanel1";
             uiTableLayoutPanel1.RowCount = 1;
@@ -289,36 +280,38 @@
             uiTableLayoutPanel1.TabIndex = 2;
             uiTableLayoutPanel1.TagString = null;
             // 
-            // uiButton1
+            // addButton
             // 
-            uiButton1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiButton1.Location = new Point(4, 4);
-            uiButton1.MinimumSize = new Size(1, 1);
-            uiButton1.Name = "uiButton1";
-            uiButton1.Size = new Size(119, 44);
-            uiButton1.TabIndex = 0;
-            uiButton1.Text = "添加学生";
-            uiButton1.Click += uiButton1_Click;
+            addButton.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            addButton.Location = new Point(4, 4);
+            addButton.MinimumSize = new Size(1, 1);
+            addButton.Name = "addButton";
+            addButton.Size = new Size(119, 44);
+            addButton.TabIndex = 0;
+            addButton.Text = "添加学生";
+            addButton.Click += addButton_Click;
             // 
-            // uiButton2
+            // modifyButton
             // 
-            uiButton2.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiButton2.Location = new Point(136, 4);
-            uiButton2.MinimumSize = new Size(1, 1);
-            uiButton2.Name = "uiButton2";
-            uiButton2.Size = new Size(119, 44);
-            uiButton2.TabIndex = 1;
-            uiButton2.Text = "修改学生";
+            modifyButton.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            modifyButton.Location = new Point(136, 4);
+            modifyButton.MinimumSize = new Size(1, 1);
+            modifyButton.Name = "modifyButton";
+            modifyButton.Size = new Size(119, 44);
+            modifyButton.TabIndex = 1;
+            modifyButton.Text = "修改学生";
+            modifyButton.Click += modifyButton_Click;
             // 
-            // uiButton3
+            // deleteButton
             // 
-            uiButton3.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiButton3.Location = new Point(268, 4);
-            uiButton3.MinimumSize = new Size(1, 1);
-            uiButton3.Name = "uiButton3";
-            uiButton3.Size = new Size(115, 44);
-            uiButton3.TabIndex = 2;
-            uiButton3.Text = "删除学生";
+            deleteButton.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            deleteButton.Location = new Point(268, 4);
+            deleteButton.MinimumSize = new Size(1, 1);
+            deleteButton.Name = "deleteButton";
+            deleteButton.Size = new Size(115, 44);
+            deleteButton.TabIndex = 2;
+            deleteButton.Text = "删除学生";
+            deleteButton.Click += deleteButton_Click_1;
             // 
             // AdminStuManage
             // 
@@ -329,6 +322,8 @@
             PageIndex = 2002;
             Text = "AdminStuManage";
             uiPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)uiDataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)studentBindingSource).EndInit();
             uiTableLayoutPanel2.ResumeLayout(false);
             uiTableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
@@ -339,10 +334,9 @@
         private Sunny.UI.UIPanel uiPanel1;
         private Sunny.UI.UITableLayoutPanel uiTableLayoutPanel2;
         private Sunny.UI.UIButton uiButton4;
-        private Sunny.UI.UITextBox uiTextBox1;
+        private Sunny.UI.UITextBox queryText;
         private Sunny.UI.UIComboBox uiComboBox1;
         private Sunny.UI.UITableLayoutPanel uiTableLayoutPanel1;
-<<<<<<< HEAD
         private Sunny.UI.UIButton modifyButton;
         private Sunny.UI.UIButton deleteButton;
         private Sunny.UI.UIButton addButton;
@@ -357,10 +351,5 @@
         private DataGridViewTextBoxColumn buildingNameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn dormNumberDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn StudentName;
-=======
-        private Sunny.UI.UIButton uiButton2;
-        private Sunny.UI.UIButton uiButton3;
-        private Sunny.UI.UIButton uiButton1;
->>>>>>> 412f730d5833914260fa72274ff6d8c62f4fd9c8
     }
 }
