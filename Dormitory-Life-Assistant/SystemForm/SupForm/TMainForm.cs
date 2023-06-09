@@ -11,6 +11,11 @@ namespace SystemForm
         public static Color userColor = System.Drawing.ColorTranslator.FromHtml("-2461550");
         public TMainForm(Supervisor supervisor)
         {
+            if (supervisor.SupervisorName == null)
+            {
+                Supinformation supinformation = new Supinformation(supervisor);
+                supinformation.ShowDialog();
+            }
             InitializeComponent();
             this.supervisor = supervisor;
             Choice.TabControl = MainContainer;
@@ -68,6 +73,12 @@ namespace SystemForm
             this.Close();
             LogInForm log = new LogInForm();
             log.ShowDialog();
+        }
+
+        private void uiButton1_Click(object sender, EventArgs e)
+        {
+            Supinformation supPersonForm = new Supinformation(supervisor);
+            supPersonForm.ShowDialog();
         }
     }
 }

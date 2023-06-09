@@ -37,6 +37,7 @@
             Choice = new Sunny.UI.UINavMenu();
             MainContainer = new Sunny.UI.UITabControl();
             tabPage1 = new TabPage();
+            uiButton1 = new Sunny.UI.UIButton();
             uiNavBar1.SuspendLayout();
             MainContainer.SuspendLayout();
             SuspendLayout();
@@ -44,6 +45,7 @@
             // uiNavBar1
             // 
             uiNavBar1.BackColor = SystemColors.ActiveCaption;
+            uiNavBar1.Controls.Add(uiButton1);
             uiNavBar1.Controls.Add(uiHeaderButton2);
             uiNavBar1.Controls.Add(uiHeaderButton1);
             uiNavBar1.Controls.Add(uiSmoothLabel1);
@@ -68,7 +70,7 @@
             uiHeaderButton2.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
             uiHeaderButton2.ForeColor = Color.Black;
             uiHeaderButton2.ForeDisableColor = Color.WhiteSmoke;
-            uiHeaderButton2.Location = new Point(846, 0);
+            uiHeaderButton2.Location = new Point(876, 0);
             uiHeaderButton2.MinimumSize = new Size(1, 1);
             uiHeaderButton2.Name = "uiHeaderButton2";
             uiHeaderButton2.Padding = new Padding(0, 8, 0, 3);
@@ -118,7 +120,7 @@
             uiSmoothLabel1.AccessibleRole = AccessibleRole.TitleBar;
             uiSmoothLabel1.BackColor = SystemColors.ActiveCaption;
             uiSmoothLabel1.Font = new Font("新宋体", 36F, FontStyle.Regular, GraphicsUnit.Point);
-            uiSmoothLabel1.Location = new Point(341, 15);
+            uiSmoothLabel1.Location = new Point(413, 16);
             uiSmoothLabel1.Name = "uiSmoothLabel1";
             uiSmoothLabel1.RectColor = Color.White;
             uiSmoothLabel1.Size = new Size(441, 80);
@@ -136,7 +138,7 @@
             uiAvatar1.Location = new Point(0, 0);
             uiAvatar1.MinimumSize = new Size(1, 1);
             uiAvatar1.Name = "uiAvatar1";
-            uiAvatar1.Size = new Size(195, 99);
+            uiAvatar1.Size = new Size(161, 99);
             uiAvatar1.TabIndex = 0;
             uiAvatar1.Text = "uiAvatar1";
             // 
@@ -180,6 +182,17 @@
             tabPage1.Text = "tabPage1";
             tabPage1.UseVisualStyleBackColor = true;
             // 
+            // uiButton1
+            // 
+            uiButton1.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            uiButton1.Location = new Point(167, 27);
+            uiButton1.MinimumSize = new Size(1, 1);
+            uiButton1.Name = "uiButton1";
+            uiButton1.Size = new Size(208, 52);
+            uiButton1.TabIndex = 6;
+            uiButton1.Text = "完善个人信息";
+            uiButton1.Click += uiButton1_Click;
+            // 
             // TMainForm
             // 
             AutoScaleMode = AutoScaleMode.None;
@@ -209,5 +222,6 @@
         private TabPage tabPage1;
         private Sunny.UI.UIHeaderButton uiHeaderButton1;
         private Sunny.UI.UIHeaderButton uiHeaderButton2;
+        private Sunny.UI.UIButton uiButton1;
     }
 }

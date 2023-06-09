@@ -36,9 +36,10 @@ namespace SystemForm
             AddPage(new stuMain(me), 1001);
             AddPage(new StuLifePay(me), 1002);
             AddPage(new stuRepair(me), 1003);
-            AddPage(new StuTreeHole(), 1004);
+            AddPage(new StuTreeHole(me), 1004);
             AddPage(new StuPunch(me), 1005);
             AddPage(new StuMessage(me), 1006);
+           
             AddPage(new StuComplaint(me), 1008);
 
             AddPage(new Setting(me, 1), 1009);
@@ -48,7 +49,7 @@ namespace SystemForm
             Choice.CreateNode("我的主页", 1001);
             Choice.CreateNode("生活缴费", 1002);
             Choice.CreateNode("故障报修", 1003);
-            //Choice.CreateNode("树洞", 1004);
+            Choice.CreateNode("树洞", 1004);
             Choice.CreateNode("打卡", 1005);
             Choice.CreateNode("消息", 1006);
             Choice.CreateNode("投诉举报", 1008);

@@ -32,7 +32,7 @@ namespace SystemForm
             AddPage(new AdminSuperManage(), 2003);
             AddPage(new AdminPunch(administrator), 2004);
             AddPage(new AdminNotice(administrator), 2005);
-            AddPage(new AdminDorm(), 2006);
+            //AddPage(new AdminDorm(), 2006);
 
 
             //设置Header节点索引
@@ -41,7 +41,7 @@ namespace SystemForm
             Choice.CreateNode("宿管管理", 2003);
             Choice.CreateNode("打卡管理", 2004);
             Choice.CreateNode("公告管理", 2005);
-            Choice.CreateNode("宿舍楼管理", 2006);
+            //Choice.CreateNode("宿舍楼管理", 2006);
 
 
             //显示默认界面
