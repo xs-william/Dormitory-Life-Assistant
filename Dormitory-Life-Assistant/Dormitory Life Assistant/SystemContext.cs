@@ -21,6 +21,7 @@ namespace Dormitory_Life_Assistant
         public DbSet<Repair> Repairs { get; set; }
         public DbSet<Payment> Payments { get; set; }
         public DbSet<Student> Students { get; set; }
+        public DbSet<Treehole> Treeholes { get; set; }
         public DbSet<Supervisor> Supervisors { get; set; }
         public DbSet<Building> Buildings { get; set; }
         public DbSet<Dorm> Dorms { get; set; }

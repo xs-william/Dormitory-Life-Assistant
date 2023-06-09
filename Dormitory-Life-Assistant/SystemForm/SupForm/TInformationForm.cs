@@ -38,7 +38,7 @@ namespace SystemForm
             me.Text = "添加通知";
             me.uiLabel1.Text = "通知内容";
             me.ShowDialog();
-            if(me.DormMessage.Content != "")
+            if (me.DormMessage.Content != "")
             {
                 messageService.AddDormMessage(me.DormMessage);
             }
@@ -75,6 +75,11 @@ namespace SystemForm
                     break;
             }
             dormMessageBindingSource.ResetBindings(false);
+        }
+
+        private void CostDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

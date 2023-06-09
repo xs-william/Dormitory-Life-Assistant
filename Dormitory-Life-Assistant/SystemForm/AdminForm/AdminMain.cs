@@ -1,4 +1,5 @@
 ﻿using Dormitory_Life_Assistant;
+
 using Dormitory_Life_Assistant.EntityClass;
 using Dormitory_Life_Assistant.Service;
 using MySql.Data.MySqlClient;
@@ -10,6 +11,7 @@ using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Intrinsics.Arm;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,16 +21,19 @@ namespace SystemForm
     public partial class AdminMain : UIPage
     {
         Administrator administrator = new Administrator();
+
         public AdminMain(Administrator administrator)
         {
             InitializeComponent();
+            AdministratorService adm = new AdministratorService();
             uiLabel1.Text = administrator.AdministratorName;
             phone.Text = administrator.Administratorphone;
             ID.Text = administrator.AdministratorId;
             major.Text = administrator.Administratorpost;
             sex.Text = administrator.Administratorgender;
+
             this.administrator = administrator;
-            if (pictureBox1.Image != null)
+            if (adm.IsExistImage('u' + administrator.AdministratorId))
             {
                 DisPlayImage('u' + administrator.AdministratorId);
             }
@@ -123,7 +128,7 @@ namespace SystemForm
         {
             AdministratorService adm = new AdministratorService();
 
-            if (adm.IsExistImage(administrator.AdministratorId))
+            if (adm.IsExistImage('u' + administrator.AdministratorId))
             {
                 adm.DeleteAdmImage('u' + administrator.AdministratorId);
             }

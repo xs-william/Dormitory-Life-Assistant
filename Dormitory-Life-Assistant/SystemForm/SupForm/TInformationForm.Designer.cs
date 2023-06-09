@@ -146,6 +146,7 @@
             CostDataGridView.SelectedIndex = -1;
             CostDataGridView.Size = new Size(975, 349);
             CostDataGridView.TabIndex = 1;
+            CostDataGridView.CellContentClick += CostDataGridView_CellContentClick;
             // 
             // IName
             // 
@@ -219,6 +220,7 @@
             BreakdownIndex.Margin = new Padding(4, 5, 4, 5);
             BreakdownIndex.MinimumSize = new Size(1, 16);
             BreakdownIndex.Name = "BreakdownIndex";
+            BreakdownIndex.Padding = new Padding(5);
             BreakdownIndex.ShowText = false;
             BreakdownIndex.Size = new Size(230, 38);
             BreakdownIndex.TabIndex = 1;

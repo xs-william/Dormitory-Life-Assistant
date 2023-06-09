@@ -113,6 +113,12 @@
     <Compile Update="SupForm\SubmitCostForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="SupForm\Supinformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SupForm\supPersonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="SupForm\TBreakdownForm.cs">
       <SubType>Form</SubType>
     </Compile>
