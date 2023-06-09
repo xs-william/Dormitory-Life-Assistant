@@ -75,7 +75,24 @@ namespace SystemForm
             for (int i = 0; i < listtreehole.Count; i++)
             {
                 string formattedMessage = $"[{listtreehole[i].time.ToString("HH:mm:ss")}] {listtreehole[i].name}: {listtreehole[i].content}";
-                uiRichTextBox1.AppendText(formattedMessage + Environment.NewLine);
+                if (listtreehole[i].content == "已撤回")
+                {
+                    uiRichTextBox1.SelectionStart = uiRichTextBox1.TextLength;
+                    // 插入文本
+                    uiRichTextBox1.AppendText(formattedMessage + Environment.NewLine);
+
+                    // 设置要标红的文本范围
+                    uiRichTextBox1.SelectionStart = uiRichTextBox1.Text.Length - (formattedMessage.Length + Environment.NewLine.Length);
+                    uiRichTextBox1.SelectionLength = formattedMessage.Length + 1;
+
+                    // 将文本设置为红色
+                    uiRichTextBox1.SelectionColor = Color.Red;
+
+                    // 恢复选择范围
+                    uiRichTextBox1.SelectionLength = 0;
+                }
+                else
+                    uiRichTextBox1.AppendText(formattedMessage + Environment.NewLine);
             }
             uiButton3.Visible = false;
         }
@@ -97,6 +114,8 @@ namespace SystemForm
             try
             {
                 Treehole treehole1 = GetlastTreehole();
+                Treehole treehole2 = treehole1;
+                treehole2.content = "已撤回";
                 if (treehole1.name == Student.StudentName)
                 {
                     if (treehole1.time < DateTime.Now && treehole1.time > DateTime.Now.AddSeconds(-30))
@@ -110,6 +129,7 @@ namespace SystemForm
                             ctx.Treeholes.Remove(treehole);
                             ctx.SaveChanges();
                         }
+                        AddTreehole(treehole2);
 
                         if (uiRichTextBox1.Lines.Length >= 2)
                         {
@@ -121,12 +141,32 @@ namespace SystemForm
 
                             // Set the remaining text as the new content of the RichTextBox
                             uiRichTextBox1.Text = remainingText + Environment.NewLine;
+                            string formattedMessage = $"[{treehole2.time.ToString("HH:mm:ss")}] {treehole2.name}: {treehole2.content}";
+
+                            // 将光标定位到要标红的文本开始位置
+                            uiRichTextBox1.SelectionStart = uiRichTextBox1.TextLength;
+                            // 插入文本
+                            uiRichTextBox1.AppendText(formattedMessage + Environment.NewLine);
+
+                            // 设置要标红的文本范围
+                            uiRichTextBox1.SelectionStart = uiRichTextBox1.Text.Length - (formattedMessage.Length + Environment.NewLine.Length);
+                            uiRichTextBox1.SelectionLength = formattedMessage.Length + 1;
+
+                            // 将文本设置为红色
+                            uiRichTextBox1.SelectionColor = Color.Red;
+
+                            // 恢复选择范围
+                            uiRichTextBox1.SelectionLength = 0;
 
                         }
                     }
                 }
             }
-            catch (Exception ex) { }
+            catch (Exception ex)
+            {
+
+            }
+
 
         }
 
